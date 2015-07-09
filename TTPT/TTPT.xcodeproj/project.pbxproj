@@ -38,6 +38,7 @@
 		797524EF1B4CFCF7003D37C8 /* ThumbnailGridCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524E51B4CFCF7003D37C8 /* ThumbnailGridCell.m */; };
 		797524F01B4CFCF7003D37C8 /* XPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524E71B4CFCF7003D37C8 /* XPhotoPicker.m */; };
 		797524F31B4D2E12003D37C8 /* PhotoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524F21B4D2E12003D37C8 /* PhotoCollectionCell.m */; };
+		797525031B4E7076003D37C8 /* BaseWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525021B4E7076003D37C8 /* BaseWorkViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		797524E71B4CFCF7003D37C8 /* XPhotoPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPhotoPicker.m; sourceTree = "<group>"; };
 		797524F11B4D2E12003D37C8 /* PhotoCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionCell.h; sourceTree = "<group>"; };
 		797524F21B4D2E12003D37C8 /* PhotoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionCell.m; sourceTree = "<group>"; };
+		797525011B4E7076003D37C8 /* BaseWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWorkViewController.h; sourceTree = "<group>"; };
+		797525021B4E7076003D37C8 /* BaseWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWorkViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +156,7 @@
 		797524861B4B8091003D37C8 /* TTPT */ = {
 			isa = PBXGroup;
 			children = (
+				797524F81B4E6D26003D37C8 /* ImageTools */,
 				797524D41B4CFCF7003D37C8 /* XPhotoPicker */,
 				797524C91B4BC6DF003D37C8 /* ViewController */,
 				797524BE1B4BB1BE003D37C8 /* Views */,
@@ -232,6 +236,8 @@
 				797524D21B4BD52B003D37C8 /* ZZEditPhotoViewController.m */,
 				797524F11B4D2E12003D37C8 /* PhotoCollectionCell.h */,
 				797524F21B4D2E12003D37C8 /* PhotoCollectionCell.m */,
+				797525011B4E7076003D37C8 /* BaseWorkViewController.h */,
+				797525021B4E7076003D37C8 /* BaseWorkViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -267,6 +273,21 @@
 				797524DF1B4CFCF7003D37C8 /* SelectPhotoPickerGroup.m */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		797524F81B4E6D26003D37C8 /* ImageTools */ = {
+			isa = PBXGroup;
+			children = (
+				797524FC1B4E6DB4003D37C8 /* ToolSettings */,
+			);
+			path = ImageTools;
+			sourceTree = "<group>";
+		};
+		797524FC1B4E6DB4003D37C8 /* ToolSettings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ToolSettings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +405,7 @@
 				797524D31B4BD52B003D37C8 /* ZZEditPhotoViewController.m in Sources */,
 				797524F01B4CFCF7003D37C8 /* XPhotoPicker.m in Sources */,
 				7975248D1B4B8091003D37C8 /* AppDelegate.m in Sources */,
+				797525031B4E7076003D37C8 /* BaseWorkViewController.m in Sources */,
 				797524C11B4BB246003D37C8 /* ZZEditSelectItemView.m in Sources */,
 				797524EC1B4CFCF7003D37C8 /* SelectPhotoPickerGroup.m in Sources */,
 				797524EF1B4CFCF7003D37C8 /* ThumbnailGridCell.m in Sources */,
