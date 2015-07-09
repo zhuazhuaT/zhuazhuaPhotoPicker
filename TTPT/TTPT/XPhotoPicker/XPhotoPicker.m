@@ -14,8 +14,8 @@
 #import "SelectPhotoAssets.h"
 @implementation XPhotoPicker
 - (instancetype)initWithViewController:(UIViewController*)vc
-    onOK:(onFinishBlock)okblock
-    onCancel:(onCancelBlock)cancelblock{
+    onOK:(onFinishPickerBlock)okblock
+    onCancel:(onCancelPickerBlock)cancelblock{
     self = [super init];
     self.viewcontroller = vc;
     cblock = cancelblock;

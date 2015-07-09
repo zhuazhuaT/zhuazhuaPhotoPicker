@@ -265,11 +265,11 @@ static NSString* albumCellID = @"AlbumCellID";
     return [NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO];
 }
 
-- (void)setCancelBlock:(onCancelBlock)block{
+- (void)setCancelBlock:(onCancelAlbumBlock)block{
     cblcok = block;
 }
 
-- (void)setFinishBlock:(onFinishBlock)block{
+- (void)setFinishBlock:(onFinishAlbumBlock)block{
     fblock = block;
 }
 

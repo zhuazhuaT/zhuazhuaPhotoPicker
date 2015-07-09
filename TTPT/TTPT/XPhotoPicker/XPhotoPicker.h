@@ -9,17 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @import Photos;
-typedef void (^onFinishBlock)(NSArray* assets);
-typedef void (^onCancelBlock)(void);
+typedef void (^onFinishPickerBlock)(NSArray* assets);
+typedef void (^onCancelPickerBlock)(void);
 
 @interface XPhotoPicker : NSObject{
-    onCancelBlock cblock;
-    onFinishBlock fblock;
+    onCancelPickerBlock cblock;
+    onFinishPickerBlock fblock;
 }
 @property (nonatomic)long maxCount;
 @property (nonatomic,strong)UIViewController* viewcontroller;
 - (instancetype)initWithViewController:(UIViewController*)vc
-                                  onOK:(onFinishBlock)finishblock
-                              onCancel:(onCancelBlock)cancelblock;
+                                  onOK:(onFinishPickerBlock)finishblock
+                              onCancel:(onCancelPickerBlock)cancelblock;
 - (void)show;
 @end

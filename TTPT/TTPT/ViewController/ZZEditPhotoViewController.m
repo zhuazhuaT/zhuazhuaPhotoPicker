@@ -9,6 +9,8 @@
 #import "ZZEditPhotoViewController.h"
 #import "PhotoCollectionCell.h"
 #import "XPhotoPicker.h"
+#import "StickerViewController.h"
+#import "StickerEditViewController.h"
 #define MAX_COUNT  9
 
 @implementation ZZEditPhotoViewController{
@@ -198,12 +200,8 @@
             [self onMark];
         }
             break;
+       
         case 3:
-        {
-            [self onMark];
-        }
-            break;
-        case 4:
         {
             [self onSticker];
         }
@@ -212,6 +210,8 @@
             break;
     }
 }
+
+#pragma action
 -(void)onFrame{
     
 }
@@ -224,7 +224,21 @@
 }
 
 - (void)onSticker{
+    StickerViewController* stickervc = [[StickerViewController alloc] init];
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:stickervc];
+    [stickervc setSelectBlock:^(Sticker *sticker) {
+        StickerEditViewController* stickerevc = [[StickerEditViewController alloc] initWithImage:self.currentImage sticker:sticker];
+        
+        [stickerevc setFinish:^(UIImage *image) {
+            [nav dismissViewControllerAnimated:YES completion:nil];
+            self.currentImage = image;
+        } Cancel:^{
+            [nav dismissViewControllerAnimated:YES completion:nil];
+        }];
+        [nav pushViewController:stickerevc animated:YES];
+    }];
     
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 //编辑选项视图点击事件

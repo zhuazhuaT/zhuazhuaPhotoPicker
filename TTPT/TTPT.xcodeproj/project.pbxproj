@@ -8,6 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		2373E9231B4E52180081B33B /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9221B4E52180081B33B /* UIActionSheet+Blocks.m */; };
+		2373E9511B4E89B30081B33B /* emoji0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E92A1B4E89B30081B33B /* emoji0.png */; };
+		2373E9521B4E89B30081B33B /* emoji1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E92B1B4E89B30081B33B /* emoji1.png */; };
+		2373E9531B4E89B30081B33B /* emoji10.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E92C1B4E89B30081B33B /* emoji10.png */; };
+		2373E9541B4E89B30081B33B /* emoji11.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E92D1B4E89B30081B33B /* emoji11.png */; };
+		2373E9551B4E89B30081B33B /* emoji12.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E92E1B4E89B30081B33B /* emoji12.png */; };
+		2373E9561B4E89B30081B33B /* emoji13.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E92F1B4E89B30081B33B /* emoji13.png */; };
+		2373E9571B4E89B30081B33B /* emoji14.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E9301B4E89B30081B33B /* emoji14.png */; };
+		2373E9581B4E89B30081B33B /* emoji15.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E9311B4E89B30081B33B /* emoji15.png */; };
+		2373E9591B4E89B30081B33B /* emoji16.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E9321B4E89B30081B33B /* emoji16.png */; };
+		2373E95A1B4E89B30081B33B /* emoji17.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E9331B4E89B30081B33B /* emoji17.png */; };
+		2373E95B1B4E89B30081B33B /* emoji18.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E9341B4E89B30081B33B /* emoji18.png */; };
+		2373E95C1B4E89B30081B33B /* emoji19.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E9351B4E89B30081B33B /* emoji19.png */; };
+		2373E95D1B4E89B30081B33B /* emoji2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E9361B4E89B30081B33B /* emoji2.png */; };
+		2373E95E1B4E89B30081B33B /* emoji20.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E9371B4E89B30081B33B /* emoji20.png */; };
+		2373E95F1B4E89B30081B33B /* emoji21.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E9381B4E89B30081B33B /* emoji21.png */; };
+		2373E9601B4E89B30081B33B /* emoji22.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E9391B4E89B30081B33B /* emoji22.png */; };
+		2373E9611B4E89B30081B33B /* emoji23.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E93A1B4E89B30081B33B /* emoji23.png */; };
+		2373E9621B4E89B30081B33B /* emoji3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E93B1B4E89B30081B33B /* emoji3.png */; };
+		2373E9631B4E89B30081B33B /* emoji4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E93C1B4E89B30081B33B /* emoji4.png */; };
+		2373E9641B4E89B30081B33B /* emoji5.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E93D1B4E89B30081B33B /* emoji5.png */; };
+		2373E9651B4E89B30081B33B /* emoji6.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E93E1B4E89B30081B33B /* emoji6.png */; };
+		2373E9661B4E89B30081B33B /* emoji7.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E93F1B4E89B30081B33B /* emoji7.png */; };
+		2373E9671B4E89B30081B33B /* emoji8.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E9401B4E89B30081B33B /* emoji8.png */; };
+		2373E9681B4E89B30081B33B /* emoji9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E9411B4E89B30081B33B /* emoji9.png */; };
+		2373E9691B4E89B30081B33B /* Sticker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9431B4E89B30081B33B /* Sticker.m */; };
+		2373E96A1B4E89B30081B33B /* StickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9451B4E89B30081B33B /* StickerCollectionViewCell.m */; };
+		2373E96B1B4E89B30081B33B /* StickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9471B4E89B30081B33B /* StickerViewController.m */; };
+		2373E96C1B4E89B30081B33B /* WorkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9491B4E89B30081B33B /* WorkView.m */; };
+		2373E96D1B4E89B30081B33B /* SPGripViewBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E94D1B4E89B30081B33B /* SPGripViewBorderView.m */; };
+		2373E96E1B4E89B30081B33B /* ZDStickerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2373E94E1B4E89B30081B33B /* ZDStickerView.bundle */; };
+		2373E96F1B4E89B30081B33B /* ZDStickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9501B4E89B30081B33B /* ZDStickerView.m */; };
+		2373E9721B4E8A300081B33B /* StickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9711B4E8A300081B33B /* StickerView.m */; };
+		2373E9751B4E8AF30081B33B /* StickerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9741B4E8AF30081B33B /* StickerEditViewController.m */; };
 		7975248A1B4B8091003D37C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524891B4B8091003D37C8 /* main.m */; };
 		7975248D1B4B8091003D37C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975248C1B4B8091003D37C8 /* AppDelegate.m */; };
 		797524901B4B8091003D37C8 /* TTPT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7975248E1B4B8091003D37C8 /* TTPT.xcdatamodeld */; };
@@ -55,6 +88,47 @@
 /* Begin PBXFileReference section */
 		2373E9211B4E52180081B33B /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
 		2373E9221B4E52180081B33B /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		2373E92A1B4E89B30081B33B /* emoji0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji0.png; sourceTree = "<group>"; };
+		2373E92B1B4E89B30081B33B /* emoji1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji1.png; sourceTree = "<group>"; };
+		2373E92C1B4E89B30081B33B /* emoji10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji10.png; sourceTree = "<group>"; };
+		2373E92D1B4E89B30081B33B /* emoji11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji11.png; sourceTree = "<group>"; };
+		2373E92E1B4E89B30081B33B /* emoji12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji12.png; sourceTree = "<group>"; };
+		2373E92F1B4E89B30081B33B /* emoji13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji13.png; sourceTree = "<group>"; };
+		2373E9301B4E89B30081B33B /* emoji14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji14.png; sourceTree = "<group>"; };
+		2373E9311B4E89B30081B33B /* emoji15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji15.png; sourceTree = "<group>"; };
+		2373E9321B4E89B30081B33B /* emoji16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji16.png; sourceTree = "<group>"; };
+		2373E9331B4E89B30081B33B /* emoji17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji17.png; sourceTree = "<group>"; };
+		2373E9341B4E89B30081B33B /* emoji18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji18.png; sourceTree = "<group>"; };
+		2373E9351B4E89B30081B33B /* emoji19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji19.png; sourceTree = "<group>"; };
+		2373E9361B4E89B30081B33B /* emoji2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji2.png; sourceTree = "<group>"; };
+		2373E9371B4E89B30081B33B /* emoji20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji20.png; sourceTree = "<group>"; };
+		2373E9381B4E89B30081B33B /* emoji21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji21.png; sourceTree = "<group>"; };
+		2373E9391B4E89B30081B33B /* emoji22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji22.png; sourceTree = "<group>"; };
+		2373E93A1B4E89B30081B33B /* emoji23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji23.png; sourceTree = "<group>"; };
+		2373E93B1B4E89B30081B33B /* emoji3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji3.png; sourceTree = "<group>"; };
+		2373E93C1B4E89B30081B33B /* emoji4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji4.png; sourceTree = "<group>"; };
+		2373E93D1B4E89B30081B33B /* emoji5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji5.png; sourceTree = "<group>"; };
+		2373E93E1B4E89B30081B33B /* emoji6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji6.png; sourceTree = "<group>"; };
+		2373E93F1B4E89B30081B33B /* emoji7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji7.png; sourceTree = "<group>"; };
+		2373E9401B4E89B30081B33B /* emoji8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji8.png; sourceTree = "<group>"; };
+		2373E9411B4E89B30081B33B /* emoji9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji9.png; sourceTree = "<group>"; };
+		2373E9421B4E89B30081B33B /* Sticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sticker.h; sourceTree = "<group>"; };
+		2373E9431B4E89B30081B33B /* Sticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sticker.m; sourceTree = "<group>"; };
+		2373E9441B4E89B30081B33B /* StickerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerCollectionViewCell.h; sourceTree = "<group>"; };
+		2373E9451B4E89B30081B33B /* StickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerCollectionViewCell.m; sourceTree = "<group>"; };
+		2373E9461B4E89B30081B33B /* StickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerViewController.h; sourceTree = "<group>"; };
+		2373E9471B4E89B30081B33B /* StickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerViewController.m; sourceTree = "<group>"; };
+		2373E9481B4E89B30081B33B /* WorkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkView.h; sourceTree = "<group>"; };
+		2373E9491B4E89B30081B33B /* WorkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkView.m; sourceTree = "<group>"; };
+		2373E94C1B4E89B30081B33B /* SPGripViewBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGripViewBorderView.h; sourceTree = "<group>"; };
+		2373E94D1B4E89B30081B33B /* SPGripViewBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPGripViewBorderView.m; sourceTree = "<group>"; };
+		2373E94E1B4E89B30081B33B /* ZDStickerView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZDStickerView.bundle; sourceTree = "<group>"; };
+		2373E94F1B4E89B30081B33B /* ZDStickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDStickerView.h; sourceTree = "<group>"; };
+		2373E9501B4E89B30081B33B /* ZDStickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDStickerView.m; sourceTree = "<group>"; };
+		2373E9701B4E8A300081B33B /* StickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerView.h; sourceTree = "<group>"; };
+		2373E9711B4E8A300081B33B /* StickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerView.m; sourceTree = "<group>"; };
+		2373E9731B4E8AF30081B33B /* StickerEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerEditViewController.h; sourceTree = "<group>"; };
+		2373E9741B4E8AF30081B33B /* StickerEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerEditViewController.m; sourceTree = "<group>"; };
 		797524841B4B8091003D37C8 /* TTPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797524881B4B8091003D37C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		797524891B4B8091003D37C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -136,6 +210,78 @@
 				2373E9221B4E52180081B33B /* UIActionSheet+Blocks.m */,
 			);
 			path = ActionSheetBlock;
+			sourceTree = "<group>";
+		};
+		2373E9281B4E89B30081B33B /* sticker */ = {
+			isa = PBXGroup;
+			children = (
+				2373E9291B4E89B30081B33B /* emojis */,
+				2373E9421B4E89B30081B33B /* Sticker.h */,
+				2373E9431B4E89B30081B33B /* Sticker.m */,
+				2373E9701B4E8A300081B33B /* StickerView.h */,
+				2373E9711B4E8A300081B33B /* StickerView.m */,
+				2373E9441B4E89B30081B33B /* StickerCollectionViewCell.h */,
+				2373E9451B4E89B30081B33B /* StickerCollectionViewCell.m */,
+				2373E9461B4E89B30081B33B /* StickerViewController.h */,
+				2373E9471B4E89B30081B33B /* StickerViewController.m */,
+				2373E9481B4E89B30081B33B /* WorkView.h */,
+				2373E9491B4E89B30081B33B /* WorkView.m */,
+				2373E9731B4E8AF30081B33B /* StickerEditViewController.h */,
+				2373E9741B4E8AF30081B33B /* StickerEditViewController.m */,
+				2373E94A1B4E89B30081B33B /* ZDStickerView */,
+			);
+			path = sticker;
+			sourceTree = "<group>";
+		};
+		2373E9291B4E89B30081B33B /* emojis */ = {
+			isa = PBXGroup;
+			children = (
+				2373E92A1B4E89B30081B33B /* emoji0.png */,
+				2373E92B1B4E89B30081B33B /* emoji1.png */,
+				2373E92C1B4E89B30081B33B /* emoji10.png */,
+				2373E92D1B4E89B30081B33B /* emoji11.png */,
+				2373E92E1B4E89B30081B33B /* emoji12.png */,
+				2373E92F1B4E89B30081B33B /* emoji13.png */,
+				2373E9301B4E89B30081B33B /* emoji14.png */,
+				2373E9311B4E89B30081B33B /* emoji15.png */,
+				2373E9321B4E89B30081B33B /* emoji16.png */,
+				2373E9331B4E89B30081B33B /* emoji17.png */,
+				2373E9341B4E89B30081B33B /* emoji18.png */,
+				2373E9351B4E89B30081B33B /* emoji19.png */,
+				2373E9361B4E89B30081B33B /* emoji2.png */,
+				2373E9371B4E89B30081B33B /* emoji20.png */,
+				2373E9381B4E89B30081B33B /* emoji21.png */,
+				2373E9391B4E89B30081B33B /* emoji22.png */,
+				2373E93A1B4E89B30081B33B /* emoji23.png */,
+				2373E93B1B4E89B30081B33B /* emoji3.png */,
+				2373E93C1B4E89B30081B33B /* emoji4.png */,
+				2373E93D1B4E89B30081B33B /* emoji5.png */,
+				2373E93E1B4E89B30081B33B /* emoji6.png */,
+				2373E93F1B4E89B30081B33B /* emoji7.png */,
+				2373E9401B4E89B30081B33B /* emoji8.png */,
+				2373E9411B4E89B30081B33B /* emoji9.png */,
+			);
+			path = emojis;
+			sourceTree = "<group>";
+		};
+		2373E94A1B4E89B30081B33B /* ZDStickerView */ = {
+			isa = PBXGroup;
+			children = (
+				2373E94B1B4E89B30081B33B /* ZDStickerView */,
+			);
+			path = ZDStickerView;
+			sourceTree = "<group>";
+		};
+		2373E94B1B4E89B30081B33B /* ZDStickerView */ = {
+			isa = PBXGroup;
+			children = (
+				2373E94C1B4E89B30081B33B /* SPGripViewBorderView.h */,
+				2373E94D1B4E89B30081B33B /* SPGripViewBorderView.m */,
+				2373E94E1B4E89B30081B33B /* ZDStickerView.bundle */,
+				2373E94F1B4E89B30081B33B /* ZDStickerView.h */,
+				2373E9501B4E89B30081B33B /* ZDStickerView.m */,
+			);
+			path = ZDStickerView;
 			sourceTree = "<group>";
 		};
 		7975247B1B4B8091003D37C8 = {
@@ -376,16 +522,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				797524BB1B4BAF6F003D37C8 /* edit_lomo_h.png in Resources */,
+				2373E95B1B4E89B30081B33B /* emoji18.png in Resources */,
+				2373E9581B4E89B30081B33B /* emoji15.png in Resources */,
+				2373E95D1B4E89B30081B33B /* emoji2.png in Resources */,
+				2373E9531B4E89B30081B33B /* emoji10.png in Resources */,
 				797524961B4B8091003D37C8 /* Main.storyboard in Resources */,
+				2373E95E1B4E89B30081B33B /* emoji20.png in Resources */,
+				2373E9681B4E89B30081B33B /* emoji9.png in Resources */,
+				2373E9651B4E89B30081B33B /* emoji6.png in Resources */,
+				2373E9631B4E89B30081B33B /* emoji4.png in Resources */,
 				797524BC1B4BAF6F003D37C8 /* edit_paint.png in Resources */,
+				2373E9521B4E89B30081B33B /* emoji1.png in Resources */,
+				2373E9551B4E89B30081B33B /* emoji12.png in Resources */,
+				2373E9621B4E89B30081B33B /* emoji3.png in Resources */,
+				2373E96E1B4E89B30081B33B /* ZDStickerView.bundle in Resources */,
 				797524BD1B4BAF6F003D37C8 /* edit_paint_h.png in Resources */,
+				2373E9611B4E89B30081B33B /* emoji23.png in Resources */,
 				797524B81B4BAF6F003D37C8 /* edit_frame.png in Resources */,
+				2373E9661B4E89B30081B33B /* emoji7.png in Resources */,
+				2373E9511B4E89B30081B33B /* emoji0.png in Resources */,
 				797524BA1B4BAF6F003D37C8 /* edit_lomo.png in Resources */,
 				7975249B1B4B8091003D37C8 /* LaunchScreen.xib in Resources */,
+				2373E9601B4E89B30081B33B /* emoji22.png in Resources */,
 				797524B91B4BAF6F003D37C8 /* edit_frame_h.png in Resources */,
 				797524C31B4BB579003D37C8 /* pe_bg_three.png in Resources */,
+				2373E9671B4E89B30081B33B /* emoji8.png in Resources */,
+				2373E9561B4E89B30081B33B /* emoji13.png in Resources */,
+				2373E95C1B4E89B30081B33B /* emoji19.png in Resources */,
+				2373E95A1B4E89B30081B33B /* emoji17.png in Resources */,
+				2373E9541B4E89B30081B33B /* emoji11.png in Resources */,
+				2373E95F1B4E89B30081B33B /* emoji21.png in Resources */,
+				2373E9571B4E89B30081B33B /* emoji14.png in Resources */,
+				2373E9591B4E89B30081B33B /* emoji16.png in Resources */,
 				797524C81B4BC176003D37C8 /* icon_frame_select.png in Resources */,
 				797524981B4B8091003D37C8 /* Images.xcassets in Resources */,
+				2373E9641B4E89B30081B33B /* emoji5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,25 +575,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				797524ED1B4CFCF7003D37C8 /* ImageGridViewController.m in Sources */,
+				2373E96A1B4E89B30081B33B /* StickerCollectionViewCell.m in Sources */,
+				2373E96F1B4E89B30081B33B /* ZDStickerView.m in Sources */,
 				797524EB1B4CFCF7003D37C8 /* SelectPhotoPickerDatas.m in Sources */,
 				797524CF1B4BCD0B003D37C8 /* ZZPasterPickViewController.m in Sources */,
+				2373E9691B4E89B30081B33B /* Sticker.m in Sources */,
 				797524EA1B4CFCF7003D37C8 /* SelectPhotoAssets.m in Sources */,
 				797524D31B4BD52B003D37C8 /* ZZEditPhotoViewController.m in Sources */,
 				797524F01B4CFCF7003D37C8 /* XPhotoPicker.m in Sources */,
 				7975250D1B4E9534003D37C8 /* AdjustmentViewController.m in Sources */,
 				7975248D1B4B8091003D37C8 /* AppDelegate.m in Sources */,
+				2373E9721B4E8A300081B33B /* StickerView.m in Sources */,
 				797525031B4E7076003D37C8 /* BaseWorkViewController.m in Sources */,
+				2373E9751B4E8AF30081B33B /* StickerEditViewController.m in Sources */,
 				797524C11B4BB246003D37C8 /* ZZEditSelectItemView.m in Sources */,
 				797524EC1B4CFCF7003D37C8 /* SelectPhotoPickerGroup.m in Sources */,
 				797524EF1B4CFCF7003D37C8 /* ThumbnailGridCell.m in Sources */,
 				797524F31B4D2E12003D37C8 /* PhotoCollectionCell.m in Sources */,
 				7975248A1B4B8091003D37C8 /* main.m in Sources */,
 				797524931B4B8091003D37C8 /* ViewController.m in Sources */,
+				2373E96C1B4E89B30081B33B /* WorkView.m in Sources */,
 				797524901B4B8091003D37C8 /* TTPT.xcdatamodeld in Sources */,
 				797524CC1B4BC9DF003D37C8 /* ZZBorderPickViewController.m in Sources */,
 				2373E9231B4E52180081B33B /* UIActionSheet+Blocks.m in Sources */,
 				797524E81B4CFCF7003D37C8 /* AlbumListViewController.m in Sources */,
+				2373E96D1B4E89B30081B33B /* SPGripViewBorderView.m in Sources */,
 				797524E91B4CFCF7003D37C8 /* AlbumTableviewCell.m in Sources */,
+				2373E96B1B4E89B30081B33B /* StickerViewController.m in Sources */,
 				797524EE1B4CFCF7003D37C8 /* SSCheckMark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
