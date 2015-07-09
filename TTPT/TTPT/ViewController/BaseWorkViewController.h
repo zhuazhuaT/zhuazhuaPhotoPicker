@@ -17,5 +17,6 @@ typedef void (^onCancelBlock)(void);
 -(instancetype)initWithImage:(UIImage *)image
                         onOK:(onFinishBlock)finishblock
                     onCancel:(onCancelBlock)cancelblock;
+-(void)setTitle:(NSString *)title;
 
 @end

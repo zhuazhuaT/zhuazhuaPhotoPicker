@@ -76,6 +76,8 @@
 
 
 
-
+-(void)setTitle:(NSString *)title{
+    [self.label setText:title];
+}
 
 @end
