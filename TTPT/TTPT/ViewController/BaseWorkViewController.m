@@ -8,17 +8,18 @@
 
 #import "BaseWorkViewController.h"
 
+#define width_bt 50
+#define bottom_height 50
+
 @interface BaseWorkViewController(){
     UIImage *_originalImage;
     UIImage *_destImage;
 }
 
 @property (nonatomic, strong) UIImageView *targetImageView;
-@property(strong, nonatomic) UIView *bottomView;
-//@property(strong, nonatomic) UIImageView *bottomBg;
-@property (strong, nonatomic) UIButton *btn_finish;
-@property(strong,nonatomic) UIButton *btn_cancel;
-@property(strong, nonatomic) UILabel *label;
+@property (strong, nonatomic) UIView *bottomView;
+@property (nonatomic, strong) UILabel* titlelabel;
+
 @end
 
 @implementation BaseWorkViewController
@@ -29,90 +30,51 @@
         _originalImage = image;
         cblock = cancelblock;
         fblock = finishblock;
+        [self initUI];
     }
     return self;
 }
--(UIView *)bottomView{
-    if(!_bottomView)
-    {
-        _bottomView = [[UIView alloc ] init];
-        [_bottomView addSubview:self.btn_finish];
-        [_bottomView addSubview:self.btn_cancel];
-        
-    }
-    return _bottomView;
-}
--(UILabel *)label{
-    if (_label) {
-        _label = [[UILabel alloc] init];
-        
-    }
-    return _label;
+
+- (void)initUI{
+    self.bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - bottom_height, self.view.bounds.size.width, bottom_height)];
+    [self.view addSubview:self.bottomView];
+    
+    UIButton* btn_cancel  = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - width_bt, 0, width_bt, width_bt)];
+    [btn_cancel setTitle:@"取消" forState:UIControlStateNormal];
+    [btn_cancel addTarget:self action:@selector(onClickCancel:) forControlEvents:UIControlEventTouchUpInside];
+    [self.bottomView addSubview:btn_cancel];
+    
+    UIButton* btn_finish  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, width_bt, width_bt)];
+    [btn_finish setTitle:@"完成" forState:UIControlStateNormal];
+    [btn_finish addTarget:self action:@selector(onClickFinish:) forControlEvents:UIControlEventTouchUpInside];
+    [self.bottomView addSubview:btn_finish];
+    
+    float w = 60;
+    float h = 30;
+    self.titlelabel = [[UILabel alloc] initWithFrame:CGRectMake((self.bottomView.bounds.size.width - w)/2, 0, w, h)];
+    [self.bottomView addSubview:self.titlelabel];
+    
 }
 
--(UIButton *)btn_cancel{
-    if (!_btn_cancel) {
-        _btn_cancel  = [[UIButton alloc] init];
-        [_btn_cancel setTitle:@"取消" forState:UIControlStateNormal];
-        [_btn_cancel addTarget:self action:@selector(onClickCancel:) forControlEvents:UIControlEventTouchUpInside];
-        
+- (void)setTitle:(NSString *)bottom_title{
+    if (self.titlelabel) {
+        self.titlelabel.text = bottom_title;
     }
-    return _btn_cancel;
-}
-
--(UIButton *)btn_finish{
-    if (!_btn_finish) {
-        _btn_finish = [[UIButton alloc] init];
-        [_btn_finish addTarget:self action:@selector(onClickFinish:) forControlEvents:UIControlEventTouchUpInside];
-        
-    }
-    return _btn_finish;
 }
 
 -(void) onClickCancel:(id)sender{
-    [self.navigationController popViewControllerAnimated:YES];
+    if (cblock) {
+        cblock();
+    }
 }
 
 -(void) onClickFinish:(id)sender{
-    
-    
     if (fblock) {
         fblock(_originalImage);
     }
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
--(void)viewDidLoad{
-    [super viewDidLoad];
-    [self.view addSubview:self.bottomView];
-    
-}
-
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-}
-
--(void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
 }
 
 
--(void)viewWillLayoutSubviews{
-    [super viewWillLayoutSubviews];
-    [self.bottomView setFrame:CGRectMake(0, self.view.bounds.size.height - 50, self.view.bounds.size.width, 50)];
-    [self.label setFrame:self.bottomView.frame];
-    [self.btn_finish setFrame:CGRectMake(0, 0, 50, 50)];
-    [self.btn_cancel setFrame:CGRectMake(self.view.bounds.size.width - 50, 0, 50, 50)];
-    
-    
-    
-}
 
 
 

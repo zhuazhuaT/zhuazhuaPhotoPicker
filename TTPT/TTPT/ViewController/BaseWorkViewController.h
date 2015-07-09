@@ -8,16 +8,14 @@
 
 #import <UIKit/UIKit.h>
 typedef void (^onFinishBlock)(UIImage* image);
-typedef void (^onCancelBlock)(UIImage* image);
+typedef void (^onCancelBlock)(void);
 @interface BaseWorkViewController : UIViewController{
     onCancelBlock cblock;
     onFinishBlock fblock;
 }
-/**
- 底部的标题
- */
-@property(strong, nonatomic) NSString *title_str;
--(instancetype)initWithImage:(UIImage *)image onOK:(onFinishBlock)finishblock
+@property (nonatomic,strong) NSString* bottom_title;
+-(instancetype)initWithImage:(UIImage *)image
+                        onOK:(onFinishBlock)finishblock
                     onCancel:(onCancelBlock)cancelblock;
 
 @end
