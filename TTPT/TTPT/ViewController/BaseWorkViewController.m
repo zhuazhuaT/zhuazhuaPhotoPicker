@@ -50,6 +50,14 @@
     return _label;
 }
 
+-(UIImageView *)targetImageView{
+    if (!_targetImageView) {
+        _targetImageView = [[UIImageView alloc] init];
+        [_targetImageView setContentMode:UIViewContentModeScaleAspectFit];
+    }
+    return _targetImageView;
+}
+
 -(UIButton *)btn_cancel{
     if (!_btn_cancel) {
         _btn_cancel  = [[UIButton alloc] init];
@@ -86,8 +94,12 @@
     [super viewDidLoad];
     [self.view addSubview:self.bottomView];
     
+    
 }
 
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
 
@@ -95,7 +107,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
@@ -114,6 +126,8 @@
     
 }
 
-
+-(void)setTitle:(NSString *)title{
+    [self.label setText:title];
+}
 
 @end

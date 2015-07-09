@@ -19,5 +19,6 @@ typedef void (^onCancelBlock)(UIImage* image);
 @property(strong, nonatomic) NSString *title_str;
 -(instancetype)initWithImage:(UIImage *)image onOK:(onFinishBlock)finishblock
                     onCancel:(onCancelBlock)cancelblock;
+-(void)setTitle:(NSString *)title;
 
 @end
