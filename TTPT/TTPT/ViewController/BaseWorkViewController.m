@@ -74,18 +74,10 @@
     }
 }
 
--(void)viewDidLoad{
-    [super viewDidLoad];
-    [self.view addSubview:self.bottomView];
-    
-    
-}
-
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
+
 
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -93,24 +85,7 @@
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
--(void)viewDidDisappear:(BOOL)animated{
-    [super viewDidDisappear:animated];
-}
 
 
--(void)viewWillLayoutSubviews{
-    [super viewWillLayoutSubviews];
-    [self.bottomView setFrame:CGRectMake(0, self.view.bounds.size.height - 50, self.view.bounds.size.width, 50)];
-    [self.label setFrame:self.bottomView.frame];
-    [self.btn_finish setFrame:CGRectMake(0, 0, 50, 50)];
-    [self.btn_cancel setFrame:CGRectMake(self.view.bounds.size.width - 50, 0, 50, 50)];
-    
-    
-    
-}
-
--(void)setTitle:(NSString *)title{
-    [self.label setText:title];
-}
 
 @end
