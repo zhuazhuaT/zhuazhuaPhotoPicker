@@ -9,16 +9,16 @@
 #import <UIKit/UIKit.h>
 @class PHFetchResult;
 
-typedef void (^onCancelBlock)(void);
-typedef void (^onFinishBlock)(NSArray* selectedAssets);
+typedef void (^onCancelSelectPhotoBlock)(void);
+typedef void (^onFinishSelectPhotoBlock)(NSArray* selectedAssets);
 
 @interface ImageGridViewController : UIViewController{
-    onCancelBlock cblock;
-    onFinishBlock fblock;
+    onCancelSelectPhotoBlock cblock;
+    onFinishSelectPhotoBlock fblock;
 }
 @property (strong) PHFetchResult *assetsFetchResults;
 @property (strong) NSMutableArray *assetsArray;
 @property (nonatomic) NSInteger maxcount;
-- (void)setCancelBlock:(onCancelBlock)blcok;
-- (void)setFinishBlock:(onFinishBlock)block;
+- (void)setCancelBlock:(onCancelSelectPhotoBlock)blcok;
+- (void)setFinishBlock:(onFinishSelectPhotoBlock)block;
 @end

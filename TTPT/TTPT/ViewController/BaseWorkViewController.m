@@ -16,7 +16,7 @@
     UIImage *_destImage;
 }
 
-@property (nonatomic, strong) UIImageView *targetImageView;
+
 @property (strong, nonatomic) UIView *bottomView;
 @property (nonatomic, strong) UILabel* titlelabel;
 
@@ -24,19 +24,28 @@
 
 @implementation BaseWorkViewController
 
--(instancetype)initWithImage:(UIImage *)image onOK:(onFinishBlock)finishblock onCancel:(onCancelBlock)cancelblock{
+-(instancetype)initWithImage:(UIImage *)image
+                        onOK:(onFinishBlock)finishblock
+                    onCancel:(onCancelBlock)cancelblock{
     self = [super init];
     if (self) {
         _originalImage = image;
         cblock = cancelblock;
         fblock = finishblock;
-        [self initUI];
+        
     }
     return self;
 }
 
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    [self initUI];
+}
+
 - (void)initUI{
     self.bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - bottom_height, self.view.bounds.size.width, bottom_height)];
+    self.bottomView.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.6];
+    [self.view bringSubviewToFront:self.bottomView];
     [self.view addSubview:self.bottomView];
     
     UIButton* btn_cancel  = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - width_bt, 0, width_bt, width_bt)];
@@ -78,7 +87,11 @@
     return YES;
 }
 
-
+- (void)setFinish:(onFinishBlock)finishblock
+           Cancel:(onCancelBlock)cancelblock{
+    fblock = finishblock;
+    cblock = cancelblock;
+}
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -86,6 +99,9 @@
 }
 
 
+- (void)setFinishBlock:(onFinishBlock)block{
+    fblock = block;
+}
 
 
 @end

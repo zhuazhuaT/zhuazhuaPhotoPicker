@@ -203,11 +203,11 @@ static NSString* gridCellId = @"AlbumCellID";
 }
 
 
-- (void)setCancelBlock:(onCancelBlock)block{
+- (void)setCancelBlock:(onCancelSelectPhotoBlock)block{
     cblock = block;
 }
 
-- (void)setFinishBlock:(onFinishBlock)block{
+- (void)setFinishBlock:(onFinishSelectPhotoBlock)block{
     fblock = block;
 }
 

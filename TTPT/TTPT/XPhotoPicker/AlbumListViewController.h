@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-typedef void (^onCancelBlock)(void);
-typedef void (^onFinishBlock)(NSArray* selectedAssets);
+typedef void (^onCancelAlbumBlock)(void);
+typedef void (^onFinishAlbumBlock)(NSArray* selectedAssets);
 @interface AlbumListViewController : UIViewController{
-    onCancelBlock cblcok;
-    onFinishBlock fblock;
+    onCancelAlbumBlock cblcok;
+    onFinishAlbumBlock fblock;
 }
 @property (nonatomic) NSArray *collectionArrays;
 @property (nonatomic) NSInteger maxcount;
-- (void)setCancelBlock:(onCancelBlock)block;
-- (void)setFinishBlock:(onFinishBlock)block;
+- (void)setCancelBlock:(onCancelAlbumBlock)block;
+- (void)setFinishBlock:(onFinishAlbumBlock)block;
 @end
