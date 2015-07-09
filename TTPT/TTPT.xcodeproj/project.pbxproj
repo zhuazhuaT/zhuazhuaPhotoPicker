@@ -39,6 +39,7 @@
 		797524F01B4CFCF7003D37C8 /* XPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524E71B4CFCF7003D37C8 /* XPhotoPicker.m */; };
 		797524F31B4D2E12003D37C8 /* PhotoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524F21B4D2E12003D37C8 /* PhotoCollectionCell.m */; };
 		797525031B4E7076003D37C8 /* BaseWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525021B4E7076003D37C8 /* BaseWorkViewController.m */; };
+		7975250D1B4E9534003D37C8 /* AdjustmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975250C1B4E9534003D37C8 /* AdjustmentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		797524F21B4D2E12003D37C8 /* PhotoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionCell.m; sourceTree = "<group>"; };
 		797525011B4E7076003D37C8 /* BaseWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWorkViewController.h; sourceTree = "<group>"; };
 		797525021B4E7076003D37C8 /* BaseWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWorkViewController.m; sourceTree = "<group>"; };
+		7975250B1B4E9534003D37C8 /* AdjustmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustmentViewController.h; sourceTree = "<group>"; };
+		7975250C1B4E9534003D37C8 /* AdjustmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdjustmentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +241,8 @@
 				797524F21B4D2E12003D37C8 /* PhotoCollectionCell.m */,
 				797525011B4E7076003D37C8 /* BaseWorkViewController.h */,
 				797525021B4E7076003D37C8 /* BaseWorkViewController.m */,
+				7975250B1B4E9534003D37C8 /* AdjustmentViewController.h */,
+				7975250C1B4E9534003D37C8 /* AdjustmentViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 				797524EA1B4CFCF7003D37C8 /* SelectPhotoAssets.m in Sources */,
 				797524D31B4BD52B003D37C8 /* ZZEditPhotoViewController.m in Sources */,
 				797524F01B4CFCF7003D37C8 /* XPhotoPicker.m in Sources */,
+				7975250D1B4E9534003D37C8 /* AdjustmentViewController.m in Sources */,
 				7975248D1B4B8091003D37C8 /* AppDelegate.m in Sources */,
 				797525031B4E7076003D37C8 /* BaseWorkViewController.m in Sources */,
 				797524C11B4BB246003D37C8 /* ZZEditSelectItemView.m in Sources */,
