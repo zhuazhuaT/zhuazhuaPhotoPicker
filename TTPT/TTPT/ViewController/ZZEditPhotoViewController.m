@@ -253,8 +253,9 @@
     [clipvc setFinish:^(UIImage *image) {
         self.currentImage = image;
         self.imageView.image = image;
+        [clipvc dismissViewControllerAnimated:YES completion:nil];
     } Cancel:^{
-        
+        [clipvc dismissViewControllerAnimated:YES completion:nil];
     }];
     [self presentViewController:clipvc animated:YES completion:nil];
 }
