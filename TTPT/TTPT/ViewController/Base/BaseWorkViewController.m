@@ -8,8 +8,7 @@
 
 #import "BaseWorkViewController.h"
 
-#define width_bt 50
-#define bottom_height 50
+
 
 @interface BaseWorkViewController(){
     UIImage *_originalImage;
@@ -45,10 +44,14 @@
 - (void)initUI{
     self.bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - bottom_height, self.view.bounds.size.width, bottom_height)];
     self.bottomView.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.6];
+    self.targetImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    [self.targetImageView setContentMode:UIViewContentModeScaleAspectFill];
+    [self.view addSubview:self.targetImageView];
     [self.view bringSubviewToFront:self.bottomView];
     [self.view addSubview:self.bottomView];
     
     UIButton* btn_cancel  = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - width_bt, 0, width_bt, width_bt)];
+    
     [btn_cancel setTitle:@"取消" forState:UIControlStateNormal];
     [btn_cancel addTarget:self action:@selector(onClickCancel:) forControlEvents:UIControlEventTouchUpInside];
     [self.bottomView addSubview:btn_cancel];

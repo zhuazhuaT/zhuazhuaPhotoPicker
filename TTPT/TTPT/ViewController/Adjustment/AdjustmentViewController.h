@@ -7,7 +7,11 @@
 //
 
 #import "BaseWorkViewController.h"
+#import "AdjustToolsView.h"
+
 
 @interface AdjustmentViewController : BaseWorkViewController
+
+-(instancetype)initWithImage:(UIImage *)image withType:(FilterMode)type;
 
 @end

@@ -11,11 +11,15 @@
 #import "XPhotoPicker.h"
 #import "StickerViewController.h"
 #import "StickerEditViewController.h"
+#import "AdjustmentViewController.h"
 #define MAX_COUNT  9
+#define STICKERITEM_HEIGHT 50
 
 @implementation ZZEditPhotoViewController{
     NSMutableArray *selectArray;
     NSMutableArray *delArray;
+    
+    
 }
 
 -(instancetype)init{
@@ -43,6 +47,28 @@
         _editPhotosView.dataSource = self;
     }
     return _editPhotosView;
+}
+
+-(AdjustToolsView *)adjustView{
+    if (!_adjustView) {
+        _adjustView = [[AdjustToolsView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - 0, self.view.bounds.size.width,50)];
+//        [self downEffect];
+        [_adjustView setOnSelectModeBlock:^(int mode) {
+            [self downEffect];
+            
+            AdjustmentViewController *avc = [[AdjustmentViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition] withType:Filter_brightness];
+            [avc setFinish:^(UIImage *image) {
+                [self.photoArray replaceObjectAtIndex:self.currentPosition withObject:image];
+                //            self.currentImage = image;
+                self.imageView.image = [self.photoArray objectAtIndex:self.currentPosition];
+                [self.editPhotosView reloadData];
+            } Cancel:^{
+                
+            }];
+            [self.navigationController pushViewController:avc animated:NO];
+        }];
+    }
+    return _adjustView;
 }
 
 -(NSArray *)buttonImages{
@@ -96,8 +122,9 @@
         [delArray addObject:@(NO)];
     }
     [selectArray replaceObjectAtIndex:0 withObject:@(YES)];
-    self.currentImage = [self.photoArray objectAtIndex:0];
-    self.imageView.image = self.currentImage;
+    self.currentPosition = 0;
+//    self.currentImage = [self.photoArray objectAtIndex:0];
+    self.imageView.image = [self.photoArray objectAtIndex:self.currentPosition];
 }
 
 -(UIView *)prePhotoView{
@@ -134,7 +161,9 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self.view addSubview:self.prePhotoView];
+    
     [self.view addSubview:self.editView];
+    [self.view addSubview:self.adjustView];
     [self.view addSubview:self.editSelectItem];
     
 }
@@ -192,7 +221,13 @@
             break;
         case 1:
         {
-            [self onEffect];
+            self.isEffect = !self.isEffect;
+            if (self.isEffect) {
+                [self onEffect];
+            }else{
+                [self downEffect];
+            }
+            
         }
             break;
         case 2:
@@ -221,17 +256,34 @@
 }
 - (void)onEffect{
     
+    CGRect frameStickerScrollView = CGRectMake(0, self.view.bounds.size.height - self.editSelectItem.bounds.size.height - STICKERITEM_HEIGHT,self.view.bounds.size.width, STICKERITEM_HEIGHT);
+    
+    [UIView animateWithDuration:.3 animations:^{
+        [self.adjustView setFrame:frameStickerScrollView];
+    }];
+    
+}
+
+-(void)downEffect{
+    CGRect frameStickerScrollView = CGRectMake(0, self.view.bounds.size.height - self.editSelectItem.bounds.size.height,self.view.bounds.size.width, STICKERITEM_HEIGHT);
+    
+    [UIView animateWithDuration:.3 animations:^{
+        [self.adjustView setFrame:frameStickerScrollView];
+    }];
 }
 
 - (void)onSticker{
     StickerViewController* stickervc = [[StickerViewController alloc] init];
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:stickervc];
     [stickervc setSelectBlock:^(Sticker *sticker) {
-        StickerEditViewController* stickerevc = [[StickerEditViewController alloc] initWithImage:self.currentImage sticker:sticker];
+        StickerEditViewController* stickerevc = [[StickerEditViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition] sticker:sticker];
         
         [stickerevc setFinish:^(UIImage *image) {
             [nav dismissViewControllerAnimated:YES completion:nil];
-            self.currentImage = image;
+            [self.photoArray replaceObjectAtIndex:self.currentPosition withObject:image];
+//            self.currentImage = image;
+            self.imageView.image = [self.photoArray objectAtIndex:self.currentPosition];
+            [self.editPhotosView reloadData];
         } Cancel:^{
             [nav dismissViewControllerAnimated:YES completion:nil];
         }];
@@ -240,81 +292,6 @@
     
     [self presentViewController:nav animated:YES completion:nil];
 }
-
-//编辑选项视图点击事件
--(void)selectedButton:(UIButton*)button{
-    
-    NSArray * array = self.buttonImages[([self.editSelectItem.items indexOfObject:button])];
-    
-    for (int i = 0; i < 3;i ++) {
-        NSArray * array = self.buttonImages[i];
-        UIButton * button_x = self.editSelectItem.items[i];
-        UIImage * image = array[0];
-        [button_x setBackgroundImage:image forState:UIControlStateNormal];
-        
-    }
-    
-    switch ([self.editSelectItem.items indexOfObject:button]) {
-        case 0:{
-            self.isFrames = !self.isFrames;
-            if (self.isFrames) {
-
-                [UIApplication sharedApplication].statusBarHidden = YES;
-                [self setNeedsStatusBarAppearanceUpdate];
-                [button setBackgroundImage:array[1] forState:UIControlStateNormal];
-                self.isEffect = NO;
-                self.isMark = NO;
-                
-
-            }else{
-                [button setBackgroundImage:array[0] forState:UIControlStateNormal];
-
-                
-            }
-            
-        }break;
-            
-        case 1:{
-            self.isEffect = !self.isEffect;
-            if (self.isEffect) {
-                self.isFrames = NO;
-                self.isMark = NO;
-                [button setBackgroundImage:array[1] forState:UIControlStateNormal];
-                
-                
-
-                
-                
-            }else{
-                [button setBackgroundImage:array[0] forState:UIControlStateNormal];
-
-            }
-        }
-            break;
-            
-        case 2:{
-            self.isMark = !self.isMark;
-            if (self.isMark) {
-                self.isFrames = NO;
-                self.isEffect = NO;
-
-                
-                
-                [button setBackgroundImage:array[1] forState:UIControlStateNormal];
-                
-            }else{
-                [button setBackgroundImage:array[0] forState:UIControlStateNormal];
-
-            }
-        }
-            break;
-            
-        default:
-            break;
-    }
-    
-}
-
 
 
 #pragma mark - delegate
@@ -352,9 +329,9 @@ static NSString * CellIdentifier = @"GradientCell";
     [selectArray replaceObjectAtIndex:indexPath.row withObject:@(YES)];
     [self.editPhotosView reloadData];
     
-    self.currentImage = [self.photoArray objectAtIndex:indexPath.row];
-    
-    self.imageView.image = self.currentImage;
+//    self.currentImage = [self.photoArray objectAtIndex:indexPath.row];
+    self.currentPosition = indexPath.row;
+    self.imageView.image = [self.photoArray objectAtIndex:self.currentPosition];
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
