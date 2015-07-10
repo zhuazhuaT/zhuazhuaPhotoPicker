@@ -11,6 +11,7 @@
 #import "XPhotoPicker.h"
 #import "StickerViewController.h"
 #import "StickerEditViewController.h"
+#import "ClipViewController.h"
 #define MAX_COUNT  9
 
 @implementation ZZEditPhotoViewController{
@@ -213,7 +214,14 @@
 
 #pragma action
 -(void)onFrame{
-    
+    ClipViewController* clipvc = [[ClipViewController alloc] initWithImage:self.currentImage];
+    [clipvc setFinish:^(UIImage *image) {
+        self.currentImage = image;
+        self.imageView.image = image;
+    } Cancel:^{
+        
+    }];
+    [self presentViewController:clipvc animated:YES completion:nil];
 }
 
 -(void)onMark{

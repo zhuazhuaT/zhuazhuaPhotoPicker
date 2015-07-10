@@ -41,6 +41,8 @@
 		2373E96F1B4E89B30081B33B /* ZDStickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9501B4E89B30081B33B /* ZDStickerView.m */; };
 		2373E9721B4E8A300081B33B /* StickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9711B4E8A300081B33B /* StickerView.m */; };
 		2373E9751B4E8AF30081B33B /* StickerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9741B4E8AF30081B33B /* StickerEditViewController.m */; };
+		2373E9791B4E998D0081B33B /* ClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9781B4E998D0081B33B /* ClipViewController.m */; };
+		2373E9811B4E9ACB0081B33B /* PhotoClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9801B4E9ACB0081B33B /* PhotoClipView.m */; };
 		7975248A1B4B8091003D37C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524891B4B8091003D37C8 /* main.m */; };
 		7975248D1B4B8091003D37C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975248C1B4B8091003D37C8 /* AppDelegate.m */; };
 		797524901B4B8091003D37C8 /* TTPT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7975248E1B4B8091003D37C8 /* TTPT.xcdatamodeld */; };
@@ -128,6 +130,10 @@
 		2373E9711B4E8A300081B33B /* StickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerView.m; sourceTree = "<group>"; };
 		2373E9731B4E8AF30081B33B /* StickerEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerEditViewController.h; sourceTree = "<group>"; };
 		2373E9741B4E8AF30081B33B /* StickerEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerEditViewController.m; sourceTree = "<group>"; };
+		2373E9771B4E998D0081B33B /* ClipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClipViewController.h; path = Clip/ClipViewController.h; sourceTree = "<group>"; };
+		2373E9781B4E998D0081B33B /* ClipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClipViewController.m; path = Clip/ClipViewController.m; sourceTree = "<group>"; };
+		2373E97F1B4E9ACB0081B33B /* PhotoClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoClipView.h; sourceTree = "<group>"; };
+		2373E9801B4E9ACB0081B33B /* PhotoClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoClipView.m; sourceTree = "<group>"; };
 		797524841B4B8091003D37C8 /* TTPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797524881B4B8091003D37C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		797524891B4B8091003D37C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -209,7 +215,7 @@
 			path = ActionSheetBlock;
 			sourceTree = "<group>";
 		};
-		2373E9281B4E89B30081B33B /* sticker */ = {
+		2373E9281B4E89B30081B33B /* Sticker */ = {
 			isa = PBXGroup;
 			children = (
 				2373E9291B4E89B30081B33B /* emojis */,
@@ -227,6 +233,7 @@
 				2373E9741B4E8AF30081B33B /* StickerEditViewController.m */,
 				2373E94A1B4E89B30081B33B /* ZDStickerView */,
 			);
+			name = Sticker;
 			path = sticker;
 			sourceTree = "<group>";
 		};
@@ -279,6 +286,17 @@
 				2373E9501B4E89B30081B33B /* ZDStickerView.m */,
 			);
 			path = ZDStickerView;
+			sourceTree = "<group>";
+		};
+		2373E9761B4E98320081B33B /* Clip */ = {
+			isa = PBXGroup;
+			children = (
+				2373E97F1B4E9ACB0081B33B /* PhotoClipView.h */,
+				2373E9801B4E9ACB0081B33B /* PhotoClipView.m */,
+				2373E9771B4E998D0081B33B /* ClipViewController.h */,
+				2373E9781B4E998D0081B33B /* ClipViewController.m */,
+			);
+			name = Clip;
 			sourceTree = "<group>";
 		};
 		7975247B1B4B8091003D37C8 = {
@@ -384,7 +402,8 @@
 				797524F21B4D2E12003D37C8 /* PhotoCollectionCell.m */,
 				797525011B4E7076003D37C8 /* BaseWorkViewController.h */,
 				797525021B4E7076003D37C8 /* BaseWorkViewController.m */,
-				2373E9281B4E89B30081B33B /* sticker */,
+				2373E9761B4E98320081B33B /* Clip */,
+				2373E9281B4E89B30081B33B /* Sticker */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -579,8 +598,10 @@
 				797524EA1B4CFCF7003D37C8 /* SelectPhotoAssets.m in Sources */,
 				797524D31B4BD52B003D37C8 /* ZZEditPhotoViewController.m in Sources */,
 				797524F01B4CFCF7003D37C8 /* XPhotoPicker.m in Sources */,
+				2373E9811B4E9ACB0081B33B /* PhotoClipView.m in Sources */,
 				7975248D1B4B8091003D37C8 /* AppDelegate.m in Sources */,
 				2373E9721B4E8A300081B33B /* StickerView.m in Sources */,
+				2373E9791B4E998D0081B33B /* ClipViewController.m in Sources */,
 				797525031B4E7076003D37C8 /* BaseWorkViewController.m in Sources */,
 				2373E9751B4E8AF30081B33B /* StickerEditViewController.m in Sources */,
 				797524C11B4BB246003D37C8 /* ZZEditSelectItemView.m in Sources */,

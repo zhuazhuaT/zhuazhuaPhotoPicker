@@ -9,7 +9,7 @@
 #import "BaseWorkViewController.h"
 
 #define width_bt 50
-#define bottom_height 50
+
 
 @interface BaseWorkViewController(){
     UIImage *_originalImage;

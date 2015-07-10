@@ -6,16 +6,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TTPT/ViewController/sticker/StickerViewController.m"
-            timestampString = "458132716.67257"
+            filePath = "TTPT/ViewController/PhotoClipView.m"
+            timestampString = "458202861.001528"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "-onClose"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
+            landmarkName = "-resetImagebyRate:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TTPT/ViewController/PhotoClipView.m"
+            timestampString = "458202861.001528"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "310"
+            endingLineNumber = "310"
+            landmarkName = "-resetImagebyRate:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
