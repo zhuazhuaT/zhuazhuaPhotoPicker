@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^OnSelectMode)(int mode);
+typedef void (^OnSelectMode)(NSInteger mode);
 
 @interface BaseToolsView : UIScrollView{
     OnSelectMode onSelectModeBlock;

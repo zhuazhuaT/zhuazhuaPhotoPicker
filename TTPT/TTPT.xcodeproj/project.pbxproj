@@ -41,8 +41,6 @@
 		2373E96F1B4E89B30081B33B /* ZDStickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9501B4E89B30081B33B /* ZDStickerView.m */; };
 		2373E9721B4E8A300081B33B /* StickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9711B4E8A300081B33B /* StickerView.m */; };
 		2373E9751B4E8AF30081B33B /* StickerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9741B4E8AF30081B33B /* StickerEditViewController.m */; };
-		2373E9791B4E998D0081B33B /* ClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9781B4E998D0081B33B /* ClipViewController.m */; };
-		2373E9811B4E9ACB0081B33B /* PhotoClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9801B4E9ACB0081B33B /* PhotoClipView.m */; };
 		7975248A1B4B8091003D37C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524891B4B8091003D37C8 /* main.m */; };
 		7975248D1B4B8091003D37C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975248C1B4B8091003D37C8 /* AppDelegate.m */; };
 		797524901B4B8091003D37C8 /* TTPT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7975248E1B4B8091003D37C8 /* TTPT.xcdatamodeld */; };
@@ -74,13 +72,20 @@
 		797524F01B4CFCF7003D37C8 /* XPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524E71B4CFCF7003D37C8 /* XPhotoPicker.m */; };
 		797524F31B4D2E12003D37C8 /* PhotoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524F21B4D2E12003D37C8 /* PhotoCollectionCell.m */; };
 		797525111B4E96F6003D37C8 /* AdjustmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525101B4E96F6003D37C8 /* AdjustmentViewController.m */; };
-		7975251A1B4EC38F003D37C8 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525191B4EC38F003D37C8 /* UIImage+Utility.m */; };
 		7975251E1B4F63B9003D37C8 /* AdjustToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975251D1B4F63B9003D37C8 /* AdjustToolsView.m */; };
 		797525281B4F6894003D37C8 /* BaseToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525251B4F6894003D37C8 /* BaseToolsView.m */; };
 		797525291B4F6894003D37C8 /* BaseWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525271B4F6894003D37C8 /* BaseWorkViewController.m */; };
 		7975252C1B4F6C04003D37C8 /* ToolbarMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975252B1B4F6C04003D37C8 /* ToolbarMenuItem.m */; };
 		7975252F1B4F6DA2003D37C8 /* ImageToolInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975252E1B4F6DA2003D37C8 /* ImageToolInfo.m */; };
-		797525321B4F7198003D37C8 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525311B4F7198003D37C8 /* UIView+Frame.m */; };
+		7975253A1B4FA7B0003D37C8 /* ClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525391B4FA7B0003D37C8 /* ClipViewController.m */; };
+		797525451B4FA862003D37C8 /* PhotoClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525441B4FA862003D37C8 /* PhotoClipView.m */; };
+		7975254B1B4FA879003D37C8 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525481B4FA879003D37C8 /* UIImage+Utility.m */; };
+		7975254C1B4FA879003D37C8 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975254A1B4FA879003D37C8 /* UIView+Frame.m */; };
+		797525501B4FAF0D003D37C8 /* RotateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975254F1B4FAF0D003D37C8 /* RotateViewController.m */; };
+		797525551B4FB63D003D37C8 /* btn_flip1.png in Resources */ = {isa = PBXBuildFile; fileRef = 797525511B4FB63D003D37C8 /* btn_flip1.png */; };
+		797525561B4FB63D003D37C8 /* btn_flip2.png in Resources */ = {isa = PBXBuildFile; fileRef = 797525521B4FB63D003D37C8 /* btn_flip2.png */; };
+		797525571B4FB63D003D37C8 /* btn_rotate.png in Resources */ = {isa = PBXBuildFile; fileRef = 797525531B4FB63D003D37C8 /* btn_rotate.png */; };
+		797525581B4FB63D003D37C8 /* icon_rotate.png in Resources */ = {isa = PBXBuildFile; fileRef = 797525541B4FB63D003D37C8 /* icon_rotate.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,10 +142,6 @@
 		2373E9711B4E8A300081B33B /* StickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerView.m; sourceTree = "<group>"; };
 		2373E9731B4E8AF30081B33B /* StickerEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerEditViewController.h; sourceTree = "<group>"; };
 		2373E9741B4E8AF30081B33B /* StickerEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerEditViewController.m; sourceTree = "<group>"; };
-		2373E9771B4E998D0081B33B /* ClipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClipViewController.h; path = Clip/ClipViewController.h; sourceTree = "<group>"; };
-		2373E9781B4E998D0081B33B /* ClipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClipViewController.m; path = Clip/ClipViewController.m; sourceTree = "<group>"; };
-		2373E97F1B4E9ACB0081B33B /* PhotoClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoClipView.h; sourceTree = "<group>"; };
-		2373E9801B4E9ACB0081B33B /* PhotoClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoClipView.m; sourceTree = "<group>"; };
 		797524841B4B8091003D37C8 /* TTPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797524881B4B8091003D37C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		797524891B4B8091003D37C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -193,8 +194,6 @@
 		797524F21B4D2E12003D37C8 /* PhotoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionCell.m; sourceTree = "<group>"; };
 		7975250F1B4E96F6003D37C8 /* AdjustmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustmentViewController.h; sourceTree = "<group>"; };
 		797525101B4E96F6003D37C8 /* AdjustmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdjustmentViewController.m; sourceTree = "<group>"; };
-		797525181B4EC38F003D37C8 /* UIImage+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utility.h"; sourceTree = "<group>"; };
-		797525191B4EC38F003D37C8 /* UIImage+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
 		7975251C1B4F63B9003D37C8 /* AdjustToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AdjustToolsView.h; path = ToolsView/AdjustToolsView.h; sourceTree = "<group>"; };
 		7975251D1B4F63B9003D37C8 /* AdjustToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdjustToolsView.m; path = ToolsView/AdjustToolsView.m; sourceTree = "<group>"; };
 		797525241B4F6894003D37C8 /* BaseToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseToolsView.h; sourceTree = "<group>"; };
@@ -205,8 +204,20 @@
 		7975252B1B4F6C04003D37C8 /* ToolbarMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarMenuItem.m; sourceTree = "<group>"; };
 		7975252D1B4F6DA2003D37C8 /* ImageToolInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageToolInfo.h; sourceTree = "<group>"; };
 		7975252E1B4F6DA2003D37C8 /* ImageToolInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageToolInfo.m; sourceTree = "<group>"; };
-		797525301B4F7198003D37C8 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
-		797525311B4F7198003D37C8 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		797525381B4FA7B0003D37C8 /* ClipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClipViewController.h; sourceTree = "<group>"; };
+		797525391B4FA7B0003D37C8 /* ClipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipViewController.m; sourceTree = "<group>"; };
+		797525431B4FA862003D37C8 /* PhotoClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoClipView.h; sourceTree = "<group>"; };
+		797525441B4FA862003D37C8 /* PhotoClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoClipView.m; sourceTree = "<group>"; };
+		797525471B4FA879003D37C8 /* UIImage+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utility.h"; sourceTree = "<group>"; };
+		797525481B4FA879003D37C8 /* UIImage+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
+		797525491B4FA879003D37C8 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		7975254A1B4FA879003D37C8 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		7975254E1B4FAF0D003D37C8 /* RotateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RotateViewController.h; path = Rotate/RotateViewController.h; sourceTree = "<group>"; };
+		7975254F1B4FAF0D003D37C8 /* RotateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RotateViewController.m; path = Rotate/RotateViewController.m; sourceTree = "<group>"; };
+		797525511B4FB63D003D37C8 /* btn_flip1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_flip1.png; sourceTree = "<group>"; };
+		797525521B4FB63D003D37C8 /* btn_flip2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_flip2.png; sourceTree = "<group>"; };
+		797525531B4FB63D003D37C8 /* btn_rotate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_rotate.png; sourceTree = "<group>"; };
+		797525541B4FB63D003D37C8 /* icon_rotate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_rotate.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,17 +320,6 @@
 			path = ZDStickerView;
 			sourceTree = "<group>";
 		};
-		2373E9761B4E98320081B33B /* Clip */ = {
-			isa = PBXGroup;
-			children = (
-				2373E97F1B4E9ACB0081B33B /* PhotoClipView.h */,
-				2373E9801B4E9ACB0081B33B /* PhotoClipView.m */,
-				2373E9771B4E998D0081B33B /* ClipViewController.h */,
-				2373E9781B4E998D0081B33B /* ClipViewController.m */,
-			);
-			name = Clip;
-			sourceTree = "<group>";
-		};
 		7975247B1B4B8091003D37C8 = {
 			isa = PBXGroup;
 			children = (
@@ -341,7 +341,6 @@
 		797524861B4B8091003D37C8 /* TTPT */ = {
 			isa = PBXGroup;
 			children = (
-				797525141B4EC351003D37C8 /* Util */,
 				797524C91B4BC6DF003D37C8 /* ViewController */,
 				797524D41B4CFCF7003D37C8 /* XPhotoPicker */,
 				797524BE1B4BB1BE003D37C8 /* Views */,
@@ -389,6 +388,10 @@
 		797524B11B4BAF62003D37C8 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				797525511B4FB63D003D37C8 /* btn_flip1.png */,
+				797525521B4FB63D003D37C8 /* btn_flip2.png */,
+				797525531B4FB63D003D37C8 /* btn_rotate.png */,
+				797525541B4FB63D003D37C8 /* icon_rotate.png */,
 				797524C71B4BC176003D37C8 /* icon_frame_select.png */,
 				797524C21B4BB579003D37C8 /* pe_bg_three.png */,
 				797524B21B4BAF6E003D37C8 /* edit_frame.png */,
@@ -413,8 +416,11 @@
 		797524C91B4BC6DF003D37C8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7975254D1B4FAE69003D37C8 /* Rotate */,
+				797525461B4FA879003D37C8 /* Util */,
+				797525371B4FA7B0003D37C8 /* Clip */,
 				797525231B4F6894003D37C8 /* Base */,
-				2373E9281B4E89B30081B33B /* sticker */,
+				2373E9281B4E89B30081B33B /* Sticker */,
 				7975250E1B4E96F6003D37C8 /* Adjustment */,
 				797524F11B4D2E12003D37C8 /* PhotoCollectionCell.h */,
 				797524F21B4D2E12003D37C8 /* PhotoCollectionCell.m */,
@@ -471,17 +477,6 @@
 			path = Adjustment;
 			sourceTree = "<group>";
 		};
-		797525141B4EC351003D37C8 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				797525301B4F7198003D37C8 /* UIView+Frame.h */,
-				797525311B4F7198003D37C8 /* UIView+Frame.m */,
-				797525181B4EC38F003D37C8 /* UIImage+Utility.h */,
-				797525191B4EC38F003D37C8 /* UIImage+Utility.m */,
-			);
-			name = Util;
-			sourceTree = "<group>";
-		};
 		7975251B1B4F637E003D37C8 /* AdjustTools */ = {
 			isa = PBXGroup;
 			children = (
@@ -504,6 +499,45 @@
 				7975252E1B4F6DA2003D37C8 /* ImageToolInfo.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		797525371B4FA7B0003D37C8 /* Clip */ = {
+			isa = PBXGroup;
+			children = (
+				797525421B4FA862003D37C8 /* ClipView */,
+				797525381B4FA7B0003D37C8 /* ClipViewController.h */,
+				797525391B4FA7B0003D37C8 /* ClipViewController.m */,
+			);
+			path = Clip;
+			sourceTree = "<group>";
+		};
+		797525421B4FA862003D37C8 /* ClipView */ = {
+			isa = PBXGroup;
+			children = (
+				797525431B4FA862003D37C8 /* PhotoClipView.h */,
+				797525441B4FA862003D37C8 /* PhotoClipView.m */,
+			);
+			path = ClipView;
+			sourceTree = "<group>";
+		};
+		797525461B4FA879003D37C8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				797525471B4FA879003D37C8 /* UIImage+Utility.h */,
+				797525481B4FA879003D37C8 /* UIImage+Utility.m */,
+				797525491B4FA879003D37C8 /* UIView+Frame.h */,
+				7975254A1B4FA879003D37C8 /* UIView+Frame.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		7975254D1B4FAE69003D37C8 /* Rotate */ = {
+			isa = PBXGroup;
+			children = (
+				7975254E1B4FAF0D003D37C8 /* RotateViewController.h */,
+				7975254F1B4FAF0D003D37C8 /* RotateViewController.m */,
+			);
+			name = Rotate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -594,6 +628,7 @@
 				797524961B4B8091003D37C8 /* Main.storyboard in Resources */,
 				2373E95E1B4E89B30081B33B /* emoji20.png in Resources */,
 				2373E9681B4E89B30081B33B /* emoji9.png in Resources */,
+				797525561B4FB63D003D37C8 /* btn_flip2.png in Resources */,
 				2373E9651B4E89B30081B33B /* emoji6.png in Resources */,
 				2373E9631B4E89B30081B33B /* emoji4.png in Resources */,
 				797524BC1B4BAF6F003D37C8 /* edit_paint.png in Resources */,
@@ -603,6 +638,7 @@
 				2373E96E1B4E89B30081B33B /* ZDStickerView.bundle in Resources */,
 				797524BD1B4BAF6F003D37C8 /* edit_paint_h.png in Resources */,
 				2373E9611B4E89B30081B33B /* emoji23.png in Resources */,
+				797525551B4FB63D003D37C8 /* btn_flip1.png in Resources */,
 				797524B81B4BAF6F003D37C8 /* edit_frame.png in Resources */,
 				2373E9661B4E89B30081B33B /* emoji7.png in Resources */,
 				2373E9511B4E89B30081B33B /* emoji0.png in Resources */,
@@ -616,9 +652,11 @@
 				2373E95C1B4E89B30081B33B /* emoji19.png in Resources */,
 				2373E95A1B4E89B30081B33B /* emoji17.png in Resources */,
 				2373E9541B4E89B30081B33B /* emoji11.png in Resources */,
+				797525571B4FB63D003D37C8 /* btn_rotate.png in Resources */,
 				2373E95F1B4E89B30081B33B /* emoji21.png in Resources */,
 				2373E9571B4E89B30081B33B /* emoji14.png in Resources */,
 				2373E9591B4E89B30081B33B /* emoji16.png in Resources */,
+				797525581B4FB63D003D37C8 /* icon_rotate.png in Resources */,
 				797524C81B4BC176003D37C8 /* icon_frame_select.png in Resources */,
 				797524981B4B8091003D37C8 /* Images.xcassets in Resources */,
 				2373E9641B4E89B30081B33B /* emoji5.png in Resources */,
@@ -640,17 +678,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				797524ED1B4CFCF7003D37C8 /* ImageGridViewController.m in Sources */,
+				7975254B1B4FA879003D37C8 /* UIImage+Utility.m in Sources */,
 				7975252C1B4F6C04003D37C8 /* ToolbarMenuItem.m in Sources */,
 				2373E96A1B4E89B30081B33B /* StickerCollectionViewCell.m in Sources */,
-				797525321B4F7198003D37C8 /* UIView+Frame.m in Sources */,
 				2373E96F1B4E89B30081B33B /* ZDStickerView.m in Sources */,
 				797524EB1B4CFCF7003D37C8 /* SelectPhotoPickerDatas.m in Sources */,
 				797524CF1B4BCD0B003D37C8 /* ZZPasterPickViewController.m in Sources */,
 				2373E9691B4E89B30081B33B /* Sticker.m in Sources */,
 				797524EA1B4CFCF7003D37C8 /* SelectPhotoAssets.m in Sources */,
 				797524D31B4BD52B003D37C8 /* ZZEditPhotoViewController.m in Sources */,
+				7975254C1B4FA879003D37C8 /* UIView+Frame.m in Sources */,
 				797524F01B4CFCF7003D37C8 /* XPhotoPicker.m in Sources */,
-				2373E9811B4E9ACB0081B33B /* PhotoClipView.m in Sources */,
 				7975248D1B4B8091003D37C8 /* AppDelegate.m in Sources */,
 				7975251E1B4F63B9003D37C8 /* AdjustToolsView.m in Sources */,
 				2373E9721B4E8A300081B33B /* StickerView.m in Sources */,
@@ -665,7 +703,8 @@
 				797524931B4B8091003D37C8 /* ViewController.m in Sources */,
 				2373E96C1B4E89B30081B33B /* WorkView.m in Sources */,
 				797524901B4B8091003D37C8 /* TTPT.xcdatamodeld in Sources */,
-				7975251A1B4EC38F003D37C8 /* UIImage+Utility.m in Sources */,
+				7975253A1B4FA7B0003D37C8 /* ClipViewController.m in Sources */,
+				797525501B4FAF0D003D37C8 /* RotateViewController.m in Sources */,
 				797524CC1B4BC9DF003D37C8 /* ZZBorderPickViewController.m in Sources */,
 				2373E9231B4E52180081B33B /* UIActionSheet+Blocks.m in Sources */,
 				797524E81B4CFCF7003D37C8 /* AlbumListViewController.m in Sources */,
@@ -675,6 +714,7 @@
 				797524E91B4CFCF7003D37C8 /* AlbumTableviewCell.m in Sources */,
 				2373E96B1B4E89B30081B33B /* StickerViewController.m in Sources */,
 				797524EE1B4CFCF7003D37C8 /* SSCheckMark.m in Sources */,
+				797525451B4FA862003D37C8 /* PhotoClipView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

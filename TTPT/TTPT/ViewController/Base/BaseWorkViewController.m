@@ -11,12 +11,11 @@
 
 
 @interface BaseWorkViewController(){
-    UIImage *_originalImage;
     UIImage *_destImage;
 }
 
 
-@property (strong, nonatomic) UIView *bottomView;
+
 @property (nonatomic, strong) UILabel* titlelabel;
 
 @end
@@ -61,9 +60,10 @@
     [btn_finish addTarget:self action:@selector(onClickFinish:) forControlEvents:UIControlEventTouchUpInside];
     [self.bottomView addSubview:btn_finish];
     
-    float w = 60;
-    float h = 30;
-    self.titlelabel = [[UILabel alloc] initWithFrame:CGRectMake((self.bottomView.bounds.size.width - w)/2, 0, w, h)];
+    float w = 160;
+    float h = bottom_height;
+    self.titlelabel = [[UILabel alloc] initWithFrame:CGRectMake((self.bottomView.frame.size.width - w)/2, 0, w, h)];
+    [self.titlelabel setTextAlignment:NSTextAlignmentCenter];
     [self.bottomView addSubview:self.titlelabel];
     
 }

@@ -16,7 +16,7 @@
 @property (nonatomic, strong)   NSString *title;
 @property (nonatomic, strong)   NSString *iconImagePath;
 @property (nonatomic, strong) UIImage  *iconImage;
-@property (assign) int mode;
+@property (assign) NSInteger mode;
 
 -(instancetype)initWithDict:(NSDictionary *)dict;
 @end

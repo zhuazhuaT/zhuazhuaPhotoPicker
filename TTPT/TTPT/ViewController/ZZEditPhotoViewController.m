@@ -13,8 +13,9 @@
 #import "StickerEditViewController.h"
 #import "AdjustmentViewController.h"
 #import "ClipViewController.h"
+#import "RotateViewController.h"
 #define MAX_COUNT  9
-#define STICKERITEM_HEIGHT 50
+#define ADJUSTMENT_HEIGHT 70
 
 @implementation ZZEditPhotoViewController{
     NSMutableArray *selectArray;
@@ -52,12 +53,13 @@
 
 -(AdjustToolsView *)adjustView{
     if (!_adjustView) {
-        _adjustView = [[AdjustToolsView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - 0, self.view.bounds.size.width,50)];
+        _adjustView = [[AdjustToolsView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - 0, self.view.bounds.size.width,ADJUSTMENT_HEIGHT)];
 //        [self downEffect];
-        [_adjustView setOnSelectModeBlock:^(int mode) {
+        [_adjustView setOnSelectModeBlock:^(NSInteger mode) {
+            self.isEffect = !self.isEffect;
             [self downEffect];
             
-            AdjustmentViewController *avc = [[AdjustmentViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition] withType:Filter_brightness];
+            AdjustmentViewController *avc = [[AdjustmentViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition] withType:mode];
             [avc setFinish:^(UIImage *image) {
                 [self.photoArray replaceObjectAtIndex:self.currentPosition withObject:image];
                 //            self.currentImage = image;
@@ -209,6 +211,14 @@
 //    [self.navigationController setNavigationBarHidden:NO animated:YES];
     
 }
+
+-(void)setNewImage:(UIImage *) image{
+    [self.photoArray replaceObjectAtIndex:self.currentPosition withObject:image];
+    //            self.currentImage = image;
+    self.imageView.image = [self.photoArray objectAtIndex:self.currentPosition];
+    [self.editPhotosView reloadData];
+}
+
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
@@ -249,10 +259,9 @@
 
 #pragma action
 -(void)onFrame{
-    ClipViewController* clipvc = [[ClipViewController alloc] initWithImage:self.currentImage];
+    ClipViewController* clipvc = [[ClipViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition]];
     [clipvc setFinish:^(UIImage *image) {
-        self.currentImage = image;
-        self.imageView.image = image;
+        [self setNewImage:image];
         [clipvc dismissViewControllerAnimated:YES completion:nil];
     } Cancel:^{
         [clipvc dismissViewControllerAnimated:YES completion:nil];
@@ -262,10 +271,16 @@
 
 -(void)onMark{
     
+    RotateViewController *rvc = [[RotateViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition] onOK:^(UIImage *image) {
+         [self setNewImage:image];
+    } onCancel:^{
+        
+    }];
+    [self.navigationController pushViewController:rvc animated:YES];
 }
 - (void)onEffect{
     
-    CGRect frameStickerScrollView = CGRectMake(0, self.view.bounds.size.height - self.editSelectItem.bounds.size.height - STICKERITEM_HEIGHT,self.view.bounds.size.width, STICKERITEM_HEIGHT);
+    CGRect frameStickerScrollView = CGRectMake(0, self.view.bounds.size.height - self.editSelectItem.bounds.size.height - ADJUSTMENT_HEIGHT,self.view.bounds.size.width, ADJUSTMENT_HEIGHT);
     
     [UIView animateWithDuration:.3 animations:^{
         [self.adjustView setFrame:frameStickerScrollView];
@@ -274,7 +289,7 @@
 }
 
 -(void)downEffect{
-    CGRect frameStickerScrollView = CGRectMake(0, self.view.bounds.size.height - self.editSelectItem.bounds.size.height,self.view.bounds.size.width, STICKERITEM_HEIGHT);
+    CGRect frameStickerScrollView = CGRectMake(0, self.view.bounds.size.height - self.editSelectItem.bounds.size.height,self.view.bounds.size.width, ADJUSTMENT_HEIGHT);
     
     [UIView animateWithDuration:.3 animations:^{
         [self.adjustView setFrame:frameStickerScrollView];
@@ -289,10 +304,7 @@
         
         [stickerevc setFinish:^(UIImage *image) {
             [nav dismissViewControllerAnimated:YES completion:nil];
-            [self.photoArray replaceObjectAtIndex:self.currentPosition withObject:image];
-//            self.currentImage = image;
-            self.imageView.image = [self.photoArray objectAtIndex:self.currentPosition];
-            [self.editPhotosView reloadData];
+             [self setNewImage:image];
         } Cancel:^{
             [nav dismissViewControllerAnimated:YES completion:nil];
         }];

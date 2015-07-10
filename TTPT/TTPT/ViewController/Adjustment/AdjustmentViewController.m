@@ -12,7 +12,7 @@
 @implementation AdjustmentViewController{
     UISlider *_actionSlider;
     FilterMode mode;
-    UIImage *_originalImage;
+    
 //    UIImage *_thumbnailImage;
 }
 

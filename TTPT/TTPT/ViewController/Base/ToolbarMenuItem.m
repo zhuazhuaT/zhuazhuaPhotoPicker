@@ -22,6 +22,8 @@
         
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, _iconView.bottom + 5, W, 15)];
         _titleLabel.backgroundColor = [UIColor clearColor];
+        _titleLabel.textColor = [UIColor whiteColor];
+        
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:_titleLabel];
     }
@@ -35,6 +37,8 @@
         [self addGestureRecognizer:gesture];
         
         self.toolInfo = toolInfo;
+        [self setTitle:toolInfo.title];
+        [self setIconImage:toolInfo.iconImage];
     }
     return self;
 }
@@ -60,16 +64,7 @@
     [super setUserInteractionEnabled:userInteractionEnabled];
     self.alpha = (userInteractionEnabled) ? 1 : 0.3;
 }
-- (void)setToolInfo:(ImageToolInfo *)toolInfo
-{
-    self.title = self.toolInfo.title;
-    if(self.toolInfo.iconImagePath){
-        self.iconImage = self.toolInfo.iconImage;
-    }
-    else{
-        self.iconImage = nil;
-    }
-}
+
 
 - (void)setSelected:(BOOL)selected
 {

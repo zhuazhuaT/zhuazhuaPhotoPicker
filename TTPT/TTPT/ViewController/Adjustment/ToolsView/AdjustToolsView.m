@@ -44,7 +44,8 @@ static const CGFloat kCLImageToolAnimationDuration = 0.3;
     }
     
     for (int i =0; i<toolCount; i++) {
-        ToolbarMenuItem *item = [[ToolbarMenuItem alloc] initWithFrame:CGRectMake(x+padding, 0, W, H)  target:self action:@selector(tappedMenuView:) toolInfo:array[i]];
+        ToolbarMenuItem *item = [[ToolbarMenuItem alloc] initWithFrame:CGRectMake(x+padding, 0, W, H)  target:self action:@selector(tappedMenuView:) toolInfo:[[ImageToolInfo alloc] initWithDict:array[i]]];
+        item.backgroundColor = [UIColor blueColor];
         [self addSubview:item];
         x += W+padding;
     }
