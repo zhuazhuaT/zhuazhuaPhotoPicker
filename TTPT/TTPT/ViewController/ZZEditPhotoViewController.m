@@ -264,7 +264,7 @@
         [self setNewImage:image];
         [clipvc dismissViewControllerAnimated:YES completion:nil];
     } Cancel:^{
-        [wkclipvc dismissViewControllerAnimated:YES completion:nil];
+        [clipvc dismissViewControllerAnimated:YES completion:nil];
     }];
     [self presentViewController:clipvc animated:YES completion:nil];
 }
