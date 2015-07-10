@@ -85,9 +85,6 @@
     self.imageview.contentMode = UIViewContentModeScaleAspectFill;
     [self.contentscrollv addSubview:self.imageview];
     
-    
-    
-    
         self.clipFrameView =[[UIView alloc] initWithFrame:[self getClipRect]];
     //    sview.center = self.center;
         self.clipFrameView.backgroundColor = [UIColor clearColor];
