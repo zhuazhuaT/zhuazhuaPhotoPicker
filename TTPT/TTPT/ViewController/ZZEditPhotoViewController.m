@@ -215,12 +215,13 @@
 #pragma action
 -(void)onFrame{
     ClipViewController* clipvc = [[ClipViewController alloc] initWithImage:self.currentImage];
+    __weak ClipViewController* wkclipvc = clipvc;
     [clipvc setFinish:^(UIImage *image) {
         self.currentImage = image;
         self.imageView.image = image;
-        [clipvc dismissViewControllerAnimated:YES completion:nil];
+        [wkclipvc dismissViewControllerAnimated:YES completion:nil];
     } Cancel:^{
-        [clipvc dismissViewControllerAnimated:YES completion:nil];
+        [wkclipvc dismissViewControllerAnimated:YES completion:nil];
     }];
     [self presentViewController:clipvc animated:YES completion:nil];
 }
