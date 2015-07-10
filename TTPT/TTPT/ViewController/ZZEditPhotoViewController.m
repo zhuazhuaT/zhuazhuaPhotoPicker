@@ -12,6 +12,7 @@
 #import "StickerViewController.h"
 #import "StickerEditViewController.h"
 #import "AdjustmentViewController.h"
+#import "ClipViewController.h"
 #define MAX_COUNT  9
 #define STICKERITEM_HEIGHT 50
 
