@@ -248,7 +248,14 @@
 
 #pragma action
 -(void)onFrame{
-    
+    ClipViewController* clipvc = [[ClipViewController alloc] initWithImage:self.currentImage];
+    [clipvc setFinish:^(UIImage *image) {
+        self.currentImage = image;
+        self.imageView.image = image;
+    } Cancel:^{
+        
+    }];
+    [self presentViewController:clipvc animated:YES completion:nil];
 }
 
 -(void)onMark{

@@ -8,6 +8,7 @@
 #define width_bt 50
 #define bottom_height 50
 #import <UIKit/UIKit.h>
+#define bottom_height 50
 typedef void (^onFinishBlock)(UIImage* image);
 typedef void (^onCancelBlock)(void);
 @interface BaseWorkViewController : UIViewController{
