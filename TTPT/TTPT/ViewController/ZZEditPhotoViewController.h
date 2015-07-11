@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "ZZBorderPickViewController.h"
-#import "ZZPasterPickViewController.h"
 #import "ZZEditSelectItemView.h"
 #import "AdjustToolsView.h"
 typedef void  (^ReturnEditedPhotos)(NSArray *photoArray);

@@ -44,19 +44,23 @@
     self.bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - bottom_height, self.view.bounds.size.width, bottom_height)];
     self.bottomView.backgroundColor = [UIColor colorWithWhite:0.8 alpha:0.6];
     self.targetImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    [self.targetImageView setContentMode:UIViewContentModeScaleAspectFill];
+    [self.targetImageView setContentMode:UIViewContentModeScaleAspectFit];
     [self.view addSubview:self.targetImageView];
     [self.view bringSubviewToFront:self.bottomView];
     [self.view addSubview:self.bottomView];
-    
+    UIFont *iconfont = [UIFont fontWithName:@"iconfont" size:20];
     UIButton* btn_cancel  = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - width_bt, 0, width_bt, width_bt)];
-    
-    [btn_cancel setTitle:@"取消" forState:UIControlStateNormal];
+    [btn_cancel setFont:iconfont];
+    [btn_cancel setTitle:@"\U0000e64a" forState:UIControlStateNormal];
+    [btn_cancel setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [btn_cancel addTarget:self action:@selector(onClickCancel:) forControlEvents:UIControlEventTouchUpInside];
     [self.bottomView addSubview:btn_cancel];
     
     UIButton* btn_finish  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, width_bt, width_bt)];
-    [btn_finish setTitle:@"完成" forState:UIControlStateNormal];
+    [btn_finish setFont:iconfont];
+    
+    [btn_finish setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn_finish setTitle:@"\U0000e64d" forState:UIControlStateNormal];
     [btn_finish addTarget:self action:@selector(onClickFinish:) forControlEvents:UIControlEventTouchUpInside];
     [self.bottomView addSubview:btn_finish];
     

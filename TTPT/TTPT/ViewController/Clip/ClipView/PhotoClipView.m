@@ -35,7 +35,7 @@
     
     
     self.imageview = [[UIImageView alloc] initWithFrame:self.bounds];
-    self.imageview.contentMode = UIViewContentModeScaleAspectFill;
+    self.imageview.contentMode = UIViewContentModeScaleAspectFit;
     [self.contentscrollv addSubview:self.imageview];
     
     
@@ -82,7 +82,7 @@
     
     
     self.imageview = [[UIImageView alloc] initWithFrame:self.bounds];
-    self.imageview.contentMode = UIViewContentModeScaleAspectFill;
+    self.imageview.contentMode = UIViewContentModeScaleAspectFit;
     [self.contentscrollv addSubview:self.imageview];
     
         self.clipFrameView =[[UIView alloc] initWithFrame:[self getClipRect]];

@@ -15,7 +15,7 @@
 #import "ClipViewController.h"
 #import "RotateViewController.h"
 #define MAX_COUNT  9
-#define ADJUSTMENT_HEIGHT 70
+#define ADJUSTMENT_HEIGHT 100
 
 @implementation ZZEditPhotoViewController{
     NSMutableArray *selectArray;
@@ -105,7 +105,7 @@
 -(UIImageView *)imageView{//编辑中的图Imageview
     if(!_imageView){
         _imageView = [[UIImageView alloc]init];
-        [_imageView setContentMode:UIViewContentModeScaleAspectFill];
+        [_imageView setContentMode:UIViewContentModeScaleAspectFit];
         [_imageView.layer setBorderColor:[UIColor darkGrayColor].CGColor];
         [_imageView.layer setBorderWidth:2.0];
 //        [_imageView.layer setCornerRadius:10.0];

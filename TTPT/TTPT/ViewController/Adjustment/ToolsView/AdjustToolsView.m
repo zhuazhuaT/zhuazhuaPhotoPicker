@@ -20,9 +20,9 @@ static const CGFloat kCLImageToolAnimationDuration = 0.3;
     self = [super initWithFrame:frame];
     if (self) {
         array = [NSArray arrayWithObjects:
-  @{iconMode: [NSNumber numberWithInt:Filter_brightness],iconTitle:@"亮度",iconImageName:@""},
-  @{iconMode: [NSNumber numberWithInt:Filter_Saturation],iconTitle:@"锐度",iconImageName:@""},
-  @{iconMode: [NSNumber numberWithInt:Filter_Contrast],iconTitle:@"对比度",iconImageName:@""}, nil];
+  @{iconMode: [NSNumber numberWithInt:Filter_brightness],iconTitle:@"亮度",iconfontString:@""},
+  @{iconMode: [NSNumber numberWithInt:Filter_Sharpen],iconTitle:@"锐度",iconfontString:@""},
+  @{iconMode: [NSNumber numberWithInt:Filter_Contrast],iconTitle:@"对比度",iconfontString:@""}, nil];
         
         [self show];
         
@@ -33,19 +33,19 @@ static const CGFloat kCLImageToolAnimationDuration = 0.3;
 
 -(void)show{
     CGFloat x = 0;
-    CGFloat W = 70;
+    CGFloat W = 80;
     CGFloat H = self.height;
     
     NSInteger toolCount = array.count;
-    CGFloat padding = 0;
-    CGFloat diff = self.frame.size.width - toolCount * W;
-    if (0<diff && diff<2*W) {
-        padding = diff/(toolCount+1);
-    }
+    CGFloat padding = 10;
+//    CGFloat diff = self.frame.size.width - toolCount * W;
+//    if (0<diff && diff<2*W) {
+//        padding = diff/(toolCount+1);
+//    }
     
     for (int i =0; i<toolCount; i++) {
         ToolbarMenuItem *item = [[ToolbarMenuItem alloc] initWithFrame:CGRectMake(x+padding, 0, W, H)  target:self action:@selector(tappedMenuView:) toolInfo:[[ImageToolInfo alloc] initWithDict:array[i]]];
-        item.backgroundColor = [UIColor blueColor];
+//        item.backgroundColor = [UIColor blueColor];
         [self addSubview:item];
         x += W+padding;
     }

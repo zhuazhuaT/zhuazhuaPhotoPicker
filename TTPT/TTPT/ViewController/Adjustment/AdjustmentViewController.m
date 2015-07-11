@@ -49,6 +49,11 @@
             _actionSlider = [self sliderWithValue:1 minimumValue:0 maximumValue:2 action:@selector(sliderDidChange:)];
         }
             break;
+        case Filter_Sharpen:
+        {
+            _actionSlider = [self sliderWithValue:0 minimumValue:0 maximumValue:10 action:@selector(sliderDidChange:)];
+        }
+            break;
         default:
             break;
     }
@@ -80,32 +85,13 @@
             
             [filter setDefaults];
             [filter setValue:[NSNumber numberWithFloat:_actionSlider.value] forKey:@"inputSaturation"];
-            
-            filter = [CIFilter filterWithName:@"CIExposureAdjust" keysAndValues:kCIInputImageKey, [filter outputImage], nil];
-            [filter setDefaults];
-            CGFloat brightness = 0;
-            [filter setValue:[NSNumber numberWithFloat:brightness] forKey:@"inputEV"];
-            
-            filter = [CIFilter filterWithName:@"CIGammaAdjust" keysAndValues:kCIInputImageKey, [filter outputImage], nil];
-            [filter setDefaults];
-            CGFloat contrast   = 1;
-            [filter setValue:[NSNumber numberWithFloat:contrast] forKey:@"inputPower"];
-            
+
         }
             break;
         case Filter_Contrast:
         {
-            filter = [CIFilter filterWithName:@"CIColorControls" keysAndValues:kCIInputImageKey, ciImage, nil];
             
-            [filter setDefaults];
-            [filter setValue:[NSNumber numberWithFloat:1] forKey:@"inputSaturation"];
-            
-            filter = [CIFilter filterWithName:@"CIExposureAdjust" keysAndValues:kCIInputImageKey, [filter outputImage], nil];
-            [filter setDefaults];
-            CGFloat brightness = 0;
-            [filter setValue:[NSNumber numberWithFloat:brightness] forKey:@"inputEV"];
-            
-            filter = [CIFilter filterWithName:@"CIGammaAdjust" keysAndValues:kCIInputImageKey, [filter outputImage], nil];
+            filter = [CIFilter filterWithName:@"CIGammaAdjust" keysAndValues:kCIInputImageKey, ciImage, nil];
             [filter setDefaults];
             CGFloat contrast   = _actionSlider.value*_actionSlider.value;
             [filter setValue:[NSNumber numberWithFloat:contrast] forKey:@"inputPower"];
@@ -113,20 +99,20 @@
             break;
         case Filter_brightness:
         {
-            filter = [CIFilter filterWithName:@"CIColorControls" keysAndValues:kCIInputImageKey, ciImage, nil];
             
-            [filter setDefaults];
-            [filter setValue:[NSNumber numberWithFloat:1] forKey:@"inputSaturation"];
-            
-            filter = [CIFilter filterWithName:@"CIExposureAdjust" keysAndValues:kCIInputImageKey, [filter outputImage], nil];
+            filter = [CIFilter filterWithName:@"CIExposureAdjust" keysAndValues:kCIInputImageKey, ciImage, nil];
             [filter setDefaults];
             CGFloat brightness = 2*_actionSlider.value;
             [filter setValue:[NSNumber numberWithFloat:brightness] forKey:@"inputEV"];
             
-            filter = [CIFilter filterWithName:@"CIGammaAdjust" keysAndValues:kCIInputImageKey, [filter outputImage], nil];
+        }
+            break;
+        case Filter_Sharpen:
+        {
+            filter = [CIFilter filterWithName:@"CISharpenLuminance" keysAndValues:kCIInputImageKey, ciImage, nil];
             [filter setDefaults];
-            CGFloat contrast   = 1;
-            [filter setValue:[NSNumber numberWithFloat:contrast] forKey:@"inputPower"];
+            CGFloat brightness = 2*_actionSlider.value;
+            [filter setValue:[NSNumber numberWithFloat:brightness] forKey:@"inputSharpness"];
         }
             break;
         default:

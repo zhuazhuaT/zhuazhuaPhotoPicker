@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 
 #define iconTitle           @"title"
-#define iconImageName   @"iconimage"
+//#define iconImageName   @"iconimage"
+#define iconfontString      @"iconstring"
 #define iconMode        @"iconMode"
 
 @interface ImageToolInfo : NSObject
 @property (nonatomic, strong)   NSString *title;
 @property (nonatomic, strong)   NSString *iconImagePath;
-@property (nonatomic, strong) UIImage  *iconImage;
+@property (nonatomic, strong)   NSString  *iconString;
 @property (assign) NSInteger mode;
 
 -(instancetype)initWithDict:(NSDictionary *)dict;

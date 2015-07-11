@@ -58,8 +58,6 @@
 		797524C11B4BB246003D37C8 /* ZZEditSelectItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524C01B4BB246003D37C8 /* ZZEditSelectItemView.m */; };
 		797524C31B4BB579003D37C8 /* pe_bg_three.png in Resources */ = {isa = PBXBuildFile; fileRef = 797524C21B4BB579003D37C8 /* pe_bg_three.png */; };
 		797524C81B4BC176003D37C8 /* icon_frame_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 797524C71B4BC176003D37C8 /* icon_frame_select.png */; };
-		797524CC1B4BC9DF003D37C8 /* ZZBorderPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524CB1B4BC9DF003D37C8 /* ZZBorderPickViewController.m */; };
-		797524CF1B4BCD0B003D37C8 /* ZZPasterPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524CE1B4BCD0B003D37C8 /* ZZPasterPickViewController.m */; };
 		797524D31B4BD52B003D37C8 /* ZZEditPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524D21B4BD52B003D37C8 /* ZZEditPhotoViewController.m */; };
 		797524E81B4CFCF7003D37C8 /* AlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524D61B4CFCF7003D37C8 /* AlbumListViewController.m */; };
 		797524E91B4CFCF7003D37C8 /* AlbumTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524D81B4CFCF7003D37C8 /* AlbumTableviewCell.m */; };
@@ -86,6 +84,12 @@
 		797525561B4FB63D003D37C8 /* btn_flip2.png in Resources */ = {isa = PBXBuildFile; fileRef = 797525521B4FB63D003D37C8 /* btn_flip2.png */; };
 		797525571B4FB63D003D37C8 /* btn_rotate.png in Resources */ = {isa = PBXBuildFile; fileRef = 797525531B4FB63D003D37C8 /* btn_rotate.png */; };
 		797525581B4FB63D003D37C8 /* icon_rotate.png in Resources */ = {isa = PBXBuildFile; fileRef = 797525541B4FB63D003D37C8 /* icon_rotate.png */; };
+		797525701B50EF08003D37C8 /* iconfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = 7975256C1B50EF08003D37C8 /* iconfont.eot */; };
+		797525711B50EF08003D37C8 /* iconfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = 7975256D1B50EF08003D37C8 /* iconfont.svg */; };
+		797525721B50EF08003D37C8 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7975256E1B50EF08003D37C8 /* iconfont.ttf */; };
+		797525731B50EF08003D37C8 /* iconfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7975256F1B50EF08003D37C8 /* iconfont.woff */; };
+		797525781B511B2A003D37C8 /* ZZBorderPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525771B511B2A003D37C8 /* ZZBorderPickViewController.m */; };
+		7975257C1B511BD2003D37C8 /* BorderToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975257B1B511BD2003D37C8 /* BorderToolsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,10 +170,6 @@
 		797524C01B4BB246003D37C8 /* ZZEditSelectItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZEditSelectItemView.m; sourceTree = "<group>"; };
 		797524C21B4BB579003D37C8 /* pe_bg_three.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pe_bg_three.png; sourceTree = "<group>"; };
 		797524C71B4BC176003D37C8 /* icon_frame_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_frame_select.png; sourceTree = "<group>"; };
-		797524CA1B4BC9DF003D37C8 /* ZZBorderPickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZBorderPickViewController.h; sourceTree = "<group>"; };
-		797524CB1B4BC9DF003D37C8 /* ZZBorderPickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZBorderPickViewController.m; sourceTree = "<group>"; };
-		797524CD1B4BCD0B003D37C8 /* ZZPasterPickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZPasterPickViewController.h; sourceTree = "<group>"; };
-		797524CE1B4BCD0B003D37C8 /* ZZPasterPickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZPasterPickViewController.m; sourceTree = "<group>"; };
 		797524D11B4BD52B003D37C8 /* ZZEditPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZEditPhotoViewController.h; sourceTree = "<group>"; };
 		797524D21B4BD52B003D37C8 /* ZZEditPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZEditPhotoViewController.m; sourceTree = "<group>"; };
 		797524D51B4CFCF7003D37C8 /* AlbumListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumListViewController.h; sourceTree = "<group>"; };
@@ -218,6 +218,14 @@
 		797525521B4FB63D003D37C8 /* btn_flip2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_flip2.png; sourceTree = "<group>"; };
 		797525531B4FB63D003D37C8 /* btn_rotate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_rotate.png; sourceTree = "<group>"; };
 		797525541B4FB63D003D37C8 /* icon_rotate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_rotate.png; sourceTree = "<group>"; };
+		7975256C1B50EF08003D37C8 /* iconfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.eot; sourceTree = "<group>"; };
+		7975256D1B50EF08003D37C8 /* iconfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = iconfont.svg; sourceTree = "<group>"; };
+		7975256E1B50EF08003D37C8 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		7975256F1B50EF08003D37C8 /* iconfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.woff; sourceTree = "<group>"; };
+		797525761B511B2A003D37C8 /* ZZBorderPickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZBorderPickViewController.h; sourceTree = "<group>"; };
+		797525771B511B2A003D37C8 /* ZZBorderPickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZBorderPickViewController.m; sourceTree = "<group>"; };
+		7975257A1B511BD2003D37C8 /* BorderToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BorderToolsView.h; path = BorderTools/BorderToolsView.h; sourceTree = "<group>"; };
+		7975257B1B511BD2003D37C8 /* BorderToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BorderToolsView.m; path = BorderTools/BorderToolsView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +349,7 @@
 		797524861B4B8091003D37C8 /* TTPT */ = {
 			isa = PBXGroup;
 			children = (
+				7975256B1B50EF08003D37C8 /* iconfont */,
 				797524C91B4BC6DF003D37C8 /* ViewController */,
 				797524D41B4CFCF7003D37C8 /* XPhotoPicker */,
 				797524BE1B4BB1BE003D37C8 /* Views */,
@@ -416,6 +425,7 @@
 		797524C91B4BC6DF003D37C8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				797525751B511B2A003D37C8 /* Border */,
 				7975254D1B4FAE69003D37C8 /* Rotate */,
 				797525461B4FA879003D37C8 /* Util */,
 				797525371B4FA7B0003D37C8 /* Clip */,
@@ -424,12 +434,8 @@
 				7975250E1B4E96F6003D37C8 /* Adjustment */,
 				797524F11B4D2E12003D37C8 /* PhotoCollectionCell.h */,
 				797524F21B4D2E12003D37C8 /* PhotoCollectionCell.m */,
-				797524CA1B4BC9DF003D37C8 /* ZZBorderPickViewController.h */,
-				797524CB1B4BC9DF003D37C8 /* ZZBorderPickViewController.m */,
 				797524D11B4BD52B003D37C8 /* ZZEditPhotoViewController.h */,
 				797524D21B4BD52B003D37C8 /* ZZEditPhotoViewController.m */,
-				797524CD1B4BCD0B003D37C8 /* ZZPasterPickViewController.h */,
-				797524CE1B4BCD0B003D37C8 /* ZZPasterPickViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -540,6 +546,37 @@
 			name = Rotate;
 			sourceTree = "<group>";
 		};
+		7975256B1B50EF08003D37C8 /* iconfont */ = {
+			isa = PBXGroup;
+			children = (
+				7975256C1B50EF08003D37C8 /* iconfont.eot */,
+				7975256D1B50EF08003D37C8 /* iconfont.svg */,
+				7975256E1B50EF08003D37C8 /* iconfont.ttf */,
+				7975256F1B50EF08003D37C8 /* iconfont.woff */,
+			);
+			name = iconfont;
+			path = ../../../zhuazhua/zhuazhua/UI/ExternalLibs/iconfont;
+			sourceTree = "<group>";
+		};
+		797525751B511B2A003D37C8 /* Border */ = {
+			isa = PBXGroup;
+			children = (
+				797525791B511B37003D37C8 /* BorderTools */,
+				797525761B511B2A003D37C8 /* ZZBorderPickViewController.h */,
+				797525771B511B2A003D37C8 /* ZZBorderPickViewController.m */,
+			);
+			path = Border;
+			sourceTree = "<group>";
+		};
+		797525791B511B37003D37C8 /* BorderTools */ = {
+			isa = PBXGroup;
+			children = (
+				7975257A1B511BD2003D37C8 /* BorderToolsView.h */,
+				7975257B1B511BD2003D37C8 /* BorderToolsView.m */,
+			);
+			name = BorderTools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -633,9 +670,11 @@
 				2373E9631B4E89B30081B33B /* emoji4.png in Resources */,
 				797524BC1B4BAF6F003D37C8 /* edit_paint.png in Resources */,
 				2373E9521B4E89B30081B33B /* emoji1.png in Resources */,
+				797525721B50EF08003D37C8 /* iconfont.ttf in Resources */,
 				2373E9551B4E89B30081B33B /* emoji12.png in Resources */,
 				2373E9621B4E89B30081B33B /* emoji3.png in Resources */,
 				2373E96E1B4E89B30081B33B /* ZDStickerView.bundle in Resources */,
+				797525711B50EF08003D37C8 /* iconfont.svg in Resources */,
 				797524BD1B4BAF6F003D37C8 /* edit_paint_h.png in Resources */,
 				2373E9611B4E89B30081B33B /* emoji23.png in Resources */,
 				797525551B4FB63D003D37C8 /* btn_flip1.png in Resources */,
@@ -643,11 +682,13 @@
 				2373E9661B4E89B30081B33B /* emoji7.png in Resources */,
 				2373E9511B4E89B30081B33B /* emoji0.png in Resources */,
 				797524BA1B4BAF6F003D37C8 /* edit_lomo.png in Resources */,
+				797525731B50EF08003D37C8 /* iconfont.woff in Resources */,
 				7975249B1B4B8091003D37C8 /* LaunchScreen.xib in Resources */,
 				2373E9601B4E89B30081B33B /* emoji22.png in Resources */,
 				797524B91B4BAF6F003D37C8 /* edit_frame_h.png in Resources */,
 				797524C31B4BB579003D37C8 /* pe_bg_three.png in Resources */,
 				2373E9671B4E89B30081B33B /* emoji8.png in Resources */,
+				797525701B50EF08003D37C8 /* iconfont.eot in Resources */,
 				2373E9561B4E89B30081B33B /* emoji13.png in Resources */,
 				2373E95C1B4E89B30081B33B /* emoji19.png in Resources */,
 				2373E95A1B4E89B30081B33B /* emoji17.png in Resources */,
@@ -683,7 +724,6 @@
 				2373E96A1B4E89B30081B33B /* StickerCollectionViewCell.m in Sources */,
 				2373E96F1B4E89B30081B33B /* ZDStickerView.m in Sources */,
 				797524EB1B4CFCF7003D37C8 /* SelectPhotoPickerDatas.m in Sources */,
-				797524CF1B4BCD0B003D37C8 /* ZZPasterPickViewController.m in Sources */,
 				2373E9691B4E89B30081B33B /* Sticker.m in Sources */,
 				797524EA1B4CFCF7003D37C8 /* SelectPhotoAssets.m in Sources */,
 				797524D31B4BD52B003D37C8 /* ZZEditPhotoViewController.m in Sources */,
@@ -698,14 +738,15 @@
 				797524EC1B4CFCF7003D37C8 /* SelectPhotoPickerGroup.m in Sources */,
 				797525291B4F6894003D37C8 /* BaseWorkViewController.m in Sources */,
 				797524EF1B4CFCF7003D37C8 /* ThumbnailGridCell.m in Sources */,
+				7975257C1B511BD2003D37C8 /* BorderToolsView.m in Sources */,
 				797524F31B4D2E12003D37C8 /* PhotoCollectionCell.m in Sources */,
 				7975248A1B4B8091003D37C8 /* main.m in Sources */,
 				797524931B4B8091003D37C8 /* ViewController.m in Sources */,
 				2373E96C1B4E89B30081B33B /* WorkView.m in Sources */,
 				797524901B4B8091003D37C8 /* TTPT.xcdatamodeld in Sources */,
+				797525781B511B2A003D37C8 /* ZZBorderPickViewController.m in Sources */,
 				7975253A1B4FA7B0003D37C8 /* ClipViewController.m in Sources */,
 				797525501B4FAF0D003D37C8 /* RotateViewController.m in Sources */,
-				797524CC1B4BC9DF003D37C8 /* ZZBorderPickViewController.m in Sources */,
 				2373E9231B4E52180081B33B /* UIActionSheet+Blocks.m in Sources */,
 				797524E81B4CFCF7003D37C8 /* AlbumListViewController.m in Sources */,
 				2373E96D1B4E89B30081B33B /* SPGripViewBorderView.m in Sources */,

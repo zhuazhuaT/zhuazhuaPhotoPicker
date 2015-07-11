@@ -14,9 +14,9 @@
     self = [super init];
     if (self) {
         self.title = [dict objectForKey:iconTitle];
-        self.iconImagePath = [dict objectForKey:iconImageName];
+//        self.iconImagePath = [dict objectForKey:iconImageName];
         self.mode = [[dict objectForKey:iconMode] integerValue];
-        self.iconImage = [UIImage imageNamed:_iconImagePath];
+        self.iconString = [dict objectForKey:iconfontString];;
     }
     return self;
 }

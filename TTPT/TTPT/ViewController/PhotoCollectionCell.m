@@ -20,7 +20,7 @@
         _i_del.backgroundColor = [UIColor orangeColor];
         _imgBg = [[UIImageView alloc] initWithFrame:_img.frame];
         [_img setClipsToBounds:YES];
-        [_img setContentMode:UIViewContentModeScaleAspectFill];
+        [_img setContentMode:UIViewContentModeScaleAspectFit];
         [_imgBg setBackgroundColor:[UIColor clearColor]];
         _imgBg.layer.borderColor = [UIColor redColor].CGColor;
         _imgBg.layer.borderWidth = 2;

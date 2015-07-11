@@ -63,7 +63,7 @@ static NSString* const kCLRotateToolFlipVerticalIconName = @"flipVerticalIconAss
     
     
     _rotateImageView = [[UIImageView alloc] initWithFrame:_initialRect];
-    [_rotateImageView setContentMode:UIViewContentModeScaleAspectFill];
+    [_rotateImageView setContentMode:UIViewContentModeScaleAspectFit];
     _rotateImageView.image = _originalImage;
     [_gridView.superview insertSubview:_rotateImageView belowSubview:_gridView];
     

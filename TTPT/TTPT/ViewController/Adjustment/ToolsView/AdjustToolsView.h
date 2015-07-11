@@ -11,7 +11,8 @@
 typedef enum {
     Filter_brightness = 10,
     Filter_Saturation,
-    Filter_Contrast
+    Filter_Contrast,
+    Filter_Sharpen
 }FilterMode;
 
 @interface AdjustToolsView : BaseToolsView
