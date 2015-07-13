@@ -12,6 +12,7 @@
 #import "StickerViewController.h"
 #import "StickerEditViewController.h"
 #import "ClipViewController.h"
+#import "FilterViewController.h"
 #define MAX_COUNT  9
 
 @implementation ZZEditPhotoViewController{
@@ -231,6 +232,16 @@
 }
 - (void)onEffect{
     
+    FilterViewController* filtervc = [[FilterViewController alloc] init];
+    filtervc.originalImage = self.currentImage;
+    [filtervc setFinish:^(UIImage *image) {
+        [filtervc dismissViewControllerAnimated:YES completion:nil];
+    } Cancel:^{
+        [filtervc dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    
+    [self presentViewController:filtervc animated:YES completion:nil];
 }
 
 - (void)onSticker{

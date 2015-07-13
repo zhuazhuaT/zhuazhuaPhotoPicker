@@ -14,11 +14,17 @@ typedef void (^onCancelBlock)(void);
     onCancelBlock cblock;
     onFinishBlock fblock;
 }
+@property (nonatomic,strong) UIImage *originalImage;
 @property (nonatomic, strong) UIImageView *targetImageView;
 @property (nonatomic,strong) NSString* bottom_title;
 -(instancetype)initWithImage:(UIImage *)image
                         onOK:(onFinishBlock)finishblock
                     onCancel:(onCancelBlock)cancelblock;
+
+-(instancetype)initWithImageView:(UIImage *)image
+                            onOK:(onFinishBlock)finishblock
+                        onCancel:(onCancelBlock)cancelblock;
+
 -(void)setTitle:(NSString *)title;
 
 - (void)setFinish:(onFinishBlock)fblock

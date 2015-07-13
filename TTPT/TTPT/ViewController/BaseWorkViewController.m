@@ -12,18 +12,17 @@
 
 
 @interface BaseWorkViewController(){
-    UIImage *_originalImage;
+    
     UIImage *_destImage;
 }
 
-
+@property (nonatomic,strong) UIImageView* imageview;
 @property (strong, nonatomic) UIView *bottomView;
 @property (nonatomic, strong) UILabel* titlelabel;
 
 @end
 
 @implementation BaseWorkViewController
-
 -(instancetype)initWithImage:(UIImage *)image
                         onOK:(onFinishBlock)finishblock
                     onCancel:(onCancelBlock)cancelblock{
@@ -40,6 +39,26 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     [self initUI];
+}
+
+-(instancetype)initWithImageView:(UIImage *)image
+                        onOK:(onFinishBlock)finishblock
+                    onCancel:(onCancelBlock)cancelblock{
+    self = [super init];
+    if (self) {
+        _originalImage = image;
+        float h = [UIScreen mainScreen].bounds.size.height;
+        float w = [UIScreen mainScreen].bounds.size.width;
+        self.view.backgroundColor = [UIColor blackColor];
+        self.imageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, w, h)];
+        [self.view addSubview:self.imageview];
+        self.imageview.image = image;
+        self.imageview.contentMode = UIViewContentModeScaleAspectFit;
+        cblock = cancelblock;
+        fblock = finishblock;
+        
+    }
+    return self;
 }
 
 - (void)initUI{
