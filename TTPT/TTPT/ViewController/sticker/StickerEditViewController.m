@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (instancetype)initWithImage:(UIImage*)image
@@ -57,17 +57,4 @@
         }];
     }
 }
-
-//- (void)initBottomView{
-//    
-//    float w = self.view.frame.size.width;
-//    float h = self.view.frame.size.height;
-//    float bottom_h = 50;
-//    UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, h - bottom_h, w, h)];
-//    view.backgroundColor = [UIColor groupTableViewBackgroundColor];
-//    [self.view addSubview:view];
-//    
-//    UIButton* bt_ok = [UIButton];
-//}
-
 @end

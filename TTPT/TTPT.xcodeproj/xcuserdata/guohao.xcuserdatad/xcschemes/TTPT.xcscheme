@@ -20,20 +20,6 @@
                ReferencedContainer = "container:TTPT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7975249F1B4B8091003D37C8"
-               BuildableName = "TTPTTests.xctest"
-               BlueprintName = "TTPTTests"
-               ReferencedContainer = "container:TTPT.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -42,16 +28,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7975249F1B4B8091003D37C8"
-               BuildableName = "TTPTTests.xctest"
-               BlueprintName = "TTPTTests"
-               ReferencedContainer = "container:TTPT.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

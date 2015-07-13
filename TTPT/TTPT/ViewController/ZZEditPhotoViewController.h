@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ZZBorderPickViewController.h"
-#import "ZZPasterPickViewController.h"
 #import "ZZEditSelectItemView.h"
+#import "AdjustToolsView.h"
 typedef void  (^ReturnEditedPhotos)(NSArray *photoArray);
 @interface ZZEditPhotoViewController : UIViewController<UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UICollectionViewDelegate>
 
-@property(strong, nonatomic) UIImage *currentImage;//当前编辑的视图
+//@property(strong, nonatomic) UIImage *currentImage;//当前编辑的视图
+@property NSInteger currentPosition;//当前编辑的视图编号
+
 @property(strong, nonatomic) NSMutableArray *photoArray;//要编辑的图片数组
 @property(strong, nonatomic) UIView *prePhotoView;//顶部的视图--包括
 
@@ -22,7 +24,7 @@ typedef void  (^ReturnEditedPhotos)(NSArray *photoArray);
 
 @property(nonatomic,strong)UIImageView * imageSticker;//边框
 @property(nonatomic,strong)ZZEditSelectItemView * editSelectItem;//选项卡
-
+@property(nonatomic,strong)AdjustToolsView *adjustView;
 @property(nonatomic)NSInteger selectedItemIndex;//选择的
 
 @property(nonatomic,strong)NSArray * buttonImages;//选项卡按钮图片 二维数组

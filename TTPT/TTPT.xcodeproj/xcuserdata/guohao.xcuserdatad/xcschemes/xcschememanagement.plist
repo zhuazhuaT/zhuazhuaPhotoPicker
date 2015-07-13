@@ -7,17 +7,12 @@
 		<key>TTPT.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>797524831B4B8091003D37C8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7975249F1B4B8091003D37C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
