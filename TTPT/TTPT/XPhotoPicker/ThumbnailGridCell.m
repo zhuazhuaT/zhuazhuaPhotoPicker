@@ -21,7 +21,7 @@
     
     self.thumbimv = [[UIImageView alloc] initWithFrame:self.bounds];
     [self addSubview:self.thumbimv];
-    self.thumbimv.contentMode = UIViewContentModeScaleAspectFit;
+    self.thumbimv.contentMode = UIViewContentModeScaleAspectFill;
     self.thumbimv.clipsToBounds = YES;
     
     float x = self.bounds.size.width - 22;
