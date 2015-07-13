@@ -401,6 +401,8 @@ static NSString * CellIdentifier = @"GradientCell";
         [cell.img setBackgroundColor:[UIColor redColor]];
         [cell.img setImage:nil];
         return cell;
+    }else{
+        [cell.img setBackgroundColor:[UIColor clearColor]];
     }
     [cell.img setImage:[self.photoArray objectAtIndex:indexPath.row]];
     BOOL delVisi = [[delArray objectAtIndex:indexPath.row] boolValue];
