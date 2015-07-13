@@ -7,7 +7,13 @@
 //
 
 #import "BaseToolsView.h"
-
+#import "BorderItemView.h"
+#define STICKERITEM_WIDTH 50
+#define STICKERITEM_HEIGHT 80
+typedef void (^SelectBorder)(UIImage *image);
 @interface BorderToolsView : BaseToolsView
+
+
+@property(nonatomic,strong) SelectBorder selectBlock;
 
 @end

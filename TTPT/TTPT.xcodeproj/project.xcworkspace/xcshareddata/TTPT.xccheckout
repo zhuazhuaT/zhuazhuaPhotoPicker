@@ -10,6 +10,8 @@
 	<string>TTPT</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>3a1d586f-7aff-48d1-b1c1-e1f209865880++2719</key>
+		<string>http://svn/public-depot/Yahoo/trunk/Wretchcam_v2.0/stickers</string>
 		<key>DFE900B2F1AB96C750813EEB43F3F3D3AAC8BCFA</key>
 		<string>https://github.com/zhuazhuaT/zhuazhuaPhotoPicker.git</string>
 	</dict>
@@ -17,8 +19,15 @@
 	<string>TTPT/TTPT.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>3a1d586f-7aff-48d1-b1c1-e1f209865880++2719</key>
+		<string>../../../TTPT/TTPT/Resource/frame/</string>
 		<key>DFE900B2F1AB96C750813EEB43F3F3D3AAC8BCFA</key>
 		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>3a1d586f-7aff-48d1-b1c1-e1f209865880++2719</key>
+		<string>http://svn/public-depot</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/zhuazhuaT/zhuazhuaPhotoPicker.git</string>
@@ -28,6 +37,14 @@
 	<string>DFE900B2F1AB96C750813EEB43F3F3D3AAC8BCFA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3a1d586f-7aff-48d1-b1c1-e1f209865880++2719</string>
+			<key>IDESourceControlWCCName</key>
+			<string>frame</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

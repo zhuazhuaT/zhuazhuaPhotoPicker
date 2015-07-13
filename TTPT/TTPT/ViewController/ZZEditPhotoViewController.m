@@ -14,6 +14,7 @@
 #import "AdjustmentViewController.h"
 #import "ClipViewController.h"
 #import "RotateViewController.h"
+
 #define MAX_COUNT  9
 #define ADJUSTMENT_HEIGHT 100
 
@@ -259,6 +260,17 @@
 
 #pragma action
 -(void)onFrame{
+    
+    ZZBorderPickViewController *bvc = [[ZZBorderPickViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition]];
+    [bvc setFinish:^(UIImage *image) {
+        
+        [bvc dismissViewControllerAnimated:YES completion:nil];
+    } Cancel:^{
+        [bvc dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [self presentViewController:bvc animated:YES completion:nil];
+    return;
+    
     ClipViewController* clipvc = [[ClipViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition]];
     [clipvc setFinish:^(UIImage *image) {
         [self setNewImage:image];

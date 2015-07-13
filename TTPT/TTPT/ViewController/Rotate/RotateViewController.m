@@ -47,7 +47,7 @@ static NSString* const kCLRotateToolFlipVerticalIconName = @"flipVerticalIconAss
     [super viewDidLoad];
     float w = self.view.width;
     float h = self.view.height;
-    self.view.backgroundColor = [UIColor whiteColor];
+    
     [self.targetImageView setImage:_originalImage];
     
     [self setTitle:@"旋转"];
@@ -65,10 +65,10 @@ static NSString* const kCLRotateToolFlipVerticalIconName = @"flipVerticalIconAss
     _rotateImageView = [[UIImageView alloc] initWithFrame:_initialRect];
     [_rotateImageView setContentMode:UIViewContentModeScaleAspectFit];
     _rotateImageView.image = _originalImage;
-    [_gridView.superview insertSubview:_rotateImageView belowSubview:_gridView];
+    [_gridView.superview insertSubview:_rotateImageView belowSubview:self.bottomView];
     
     self.targetImageView.hidden = YES;
-    [self.view bringSubviewToFront:self.bottomView];
+    [self.view bringSubviewToFront:funView];
     [self initFuntionView:h];
 }
 -(void)initFuntionView :(int)h{
@@ -192,7 +192,7 @@ static NSString* const kCLRotateToolFlipVerticalIconName = @"flipVerticalIconAss
     
     CGFloat Rw = _gridView.width / Wnew;
     CGFloat Rh = _gridView.height / Hnew;
-    CGFloat scale = MIN(Rw, Rh) * 0.95;
+    CGFloat scale = MIN(Rw, Rh) * 1;
     
     transform = CATransform3DScale(transform, scale, scale, 1);
     _rotateImageView.layer.transform = transform;
