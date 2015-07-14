@@ -164,7 +164,15 @@
     glGenRenderbuffers(1, &displayRenderbuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, displayRenderbuffer);
 	
-    [[[GPUImageContext sharedImageProcessingContext] context] renderbufferStorage:GL_RENDERBUFFER fromDrawable:(CAEAGLLayer*)self.layer];
+    EAGLContext* context = [[GPUImageContext sharedImageProcessingContext] context];
+    if (context) {
+        if (self.layer) {
+            
+            [context renderbufferStorage:GL_RENDERBUFFER fromDrawable:(CAEAGLLayer*)self.layer];
+        }
+        
+    }
+    
 	
     GLint backingWidth, backingHeight;
 
