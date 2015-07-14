@@ -58,6 +58,7 @@
     
     [self initFilterCollectionview];
     [super viewDidLoad];
+    [self setTitle:@"滤镜"];
 }
 
 - (void)initFilterCollectionview{

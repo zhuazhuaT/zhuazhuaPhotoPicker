@@ -12,11 +12,11 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.clipsToBounds = YES;
+//        self.clipsToBounds = YES;
         isCanLongPress = YES;
         _img = [[UIImageView alloc] initWithFrame:CGRectMake(2, 5, 58, 58)];
-        _i_del = [[UIImageView alloc] initWithFrame:CGRectMake(48, 0, 20, 20)];
-        _i_del.layer.cornerRadius = 10;
+        _i_del = [[UIImageView alloc] initWithFrame:CGRectMake(51, 0, 15, 15)];
+        _i_del.layer.cornerRadius = 7.5;
         _i_del.backgroundColor = [UIColor orangeColor];
         _imgBg = [[UIImageView alloc] initWithFrame:_img.frame];
         [_img setClipsToBounds:YES];
@@ -38,6 +38,10 @@
     }
     return self;
 }
+-(void)setLongPressEnable{
+    isCanLongPress = YES;
+}
+
 -(void)setLongPressDisable{
     isCanLongPress = NO;
 }

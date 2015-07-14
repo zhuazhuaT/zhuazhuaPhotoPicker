@@ -21,5 +21,5 @@ typedef void (^OnClickDel)(int position);
 @property (strong, nonatomic) OnClickDel onClickDel;
 
 -(void)setLongPressDisable;
-
+-(void)setLongPressEnable;
 @end

@@ -19,12 +19,10 @@
 
 #define MAX_COUNT  9
 #define ADJUSTMENT_HEIGHT 100
-
+#define BOTTOM_HEIGHT    70
 @implementation ZZEditPhotoViewController{
     NSMutableArray *selectArray;
     NSMutableArray *delArray;
-    
-    
 }
 
 -(instancetype)init{
@@ -91,7 +89,7 @@
 
 -(ZZEditSelectItemView *)editSelectItem{
     if(!_editSelectItem){
-        _editSelectItem = [[ZZEditSelectItemView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height - 50, self.view.bounds.size.width,50)];
+        _editSelectItem = [[ZZEditSelectItemView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height - BOTTOM_HEIGHT, self.view.bounds.size.width,BOTTOM_HEIGHT)];
         [_editSelectItem setOnClickButtonBlock:^(NSInteger position) {
             [self selectButton:position];
         }];
@@ -147,8 +145,11 @@
 //        [_editPhotosView setFrame:CGRectMake(5+30+5, 0, self.view.frame.size.width - 40 - 60-10, 64)];
         [_prePhotoView setBackgroundColor:[UIColor lightGrayColor]];
         UIButton *backbtn = [[UIButton alloc] initWithFrame:CGRectMake(5, 17, 30, 30)];
-        [backbtn setFont:[UIFont systemFontOfSize:15]];
-        [backbtn setTitle:@"返回" forState:UIControlStateNormal];
+        UIFont *font = [UIFont fontWithName:@"iconfont" size:20];
+        
+        [backbtn setFont:font];
+        [backbtn setTitle:@"\U0000e617" forState:UIControlStateNormal];
+        
         [backbtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [backbtn addTarget:self action:@selector(onclickback) forControlEvents:UIControlEventTouchUpInside];
         [_prePhotoView addSubview:backbtn];
@@ -237,29 +238,32 @@
     switch (tag) {
         case 0:
         {
-            [self onFrame];
+            
+            [self onMark];
         }
             break;
         case 1:
         {
+            [self onFrame];
+            
+        }
+            break;
+        case 2:
+        {
+            
+             [self onSticker];
+        }
+            break;
+       
+        case 3:
+        {
+           
             self.isEffect = !self.isEffect;
             if (self.isEffect) {
                 [self onEffect];
             }else{
                 [self downEffect];
             }
-            
-        }
-            break;
-        case 2:
-        {
-            [self onMark];
-        }
-            break;
-       
-        case 3:
-        {
-            [self onSticker];
         }
             break;
         default:
@@ -428,10 +432,11 @@ static NSString * CellIdentifier = @"GradientCell";
         cell.i_del.hidden = YES;
         cell.imgBg.hidden = YES;
         [cell setLongPressDisable];
-        [cell.img setBackgroundColor:[UIColor redColor]];
-        [cell.img setImage:nil];
+        [cell.img setImage:[UIImage imageNamed:@"add"]];
+//        [cell.img setImage:nil];
         return cell;
     }else{
+        [cell setLongPressEnable];
         [cell.img setBackgroundColor:[UIColor clearColor]];
     }
     [cell.img setImage:[self.photoArray objectAtIndex:indexPath.row]];

@@ -17,6 +17,7 @@
 @property (nonatomic,strong)UIView* clipFrameView;
 @end
 
+
 @implementation PhotoClipView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -24,8 +25,7 @@
     self = [super initWithFrame:frame];
     float width = frame.size.width;
     type = ctype;
-    curRate = 1;
-    self.contentscrollv = [[UIScrollView alloc] initWithFrame:self.bounds];
+    curRate = 1;    self.contentscrollv = [[UIScrollView alloc] initWithFrame:self.bounds];
     self.contentscrollv.delegate = self;
     minScale = 1;
     self.contentscrollv.minimumZoomScale = minScale;

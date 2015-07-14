@@ -17,6 +17,7 @@ typedef void (^OnClickButton)(NSInteger position);
 //@property(nonatomic,strong)UIButton * button4;
 @property(nonatomic,strong)NSArray * items;
 @property(nonatomic,strong)NSArray * itemtitles;
+@property(nonatomic,strong)NSArray * itemIconStrings;
 
 -(void)setOnClickButtonBlock:(OnClickButton)block;
 

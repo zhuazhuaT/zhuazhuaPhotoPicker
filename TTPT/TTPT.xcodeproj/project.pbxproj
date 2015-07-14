@@ -246,6 +246,8 @@
 		794D7B461B54BB630008F588 /* iconfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = 794D7B421B54BB630008F588 /* iconfont.svg */; };
 		794D7B471B54BB630008F588 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 794D7B431B54BB630008F588 /* iconfont.ttf */; };
 		794D7B481B54BB630008F588 /* iconfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 794D7B441B54BB630008F588 /* iconfont.woff */; };
+		794D7B511B54E87F0008F588 /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 794D7B501B54E87F0008F588 /* ButtonView.m */; };
+		794D7B561B54F4330008F588 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 794D7B551B54F4330008F588 /* add.png */; };
 		7975248A1B4B8091003D37C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524891B4B8091003D37C8 /* main.m */; };
 		7975248D1B4B8091003D37C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975248C1B4B8091003D37C8 /* AppDelegate.m */; };
 		797524901B4B8091003D37C8 /* TTPT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7975248E1B4B8091003D37C8 /* TTPT.xcdatamodeld */; };
@@ -809,6 +811,9 @@
 		794D7B421B54BB630008F588 /* iconfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = iconfont.svg; sourceTree = "<group>"; };
 		794D7B431B54BB630008F588 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		794D7B441B54BB630008F588 /* iconfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.woff; sourceTree = "<group>"; };
+		794D7B4F1B54E87F0008F588 /* ButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonView.h; sourceTree = "<group>"; };
+		794D7B501B54E87F0008F588 /* ButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonView.m; sourceTree = "<group>"; };
+		794D7B551B54F4330008F588 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		797524841B4B8091003D37C8 /* TTPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797524881B4B8091003D37C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		797524891B4B8091003D37C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1571,6 +1576,7 @@
 		797524B11B4BAF62003D37C8 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				794D7B551B54F4330008F588 /* add.png */,
 				7990F5B51B53B281004EB1A5 /* frame */,
 				797525511B4FB63D003D37C8 /* btn_flip1.png */,
 				797525521B4FB63D003D37C8 /* btn_flip2.png */,
@@ -1591,6 +1597,8 @@
 		797524BE1B4BB1BE003D37C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				794D7B4F1B54E87F0008F588 /* ButtonView.h */,
+				794D7B501B54E87F0008F588 /* ButtonView.m */,
 				797524BF1B4BB246003D37C8 /* ZZEditSelectItemView.h */,
 				797524C01B4BB246003D37C8 /* ZZEditSelectItemView.m */,
 			);
@@ -1961,6 +1969,7 @@
 				7990F6291B53B281004EB1A5 /* s-04.png in Resources */,
 				23003FB71B54C4A500CFA972 /* 7@2x.jpg in Resources */,
 				2373E9611B4E89B30081B33B /* emoji23.png in Resources */,
+				794D7B561B54F4330008F588 /* add.png in Resources */,
 				23003FA91B54C4A500CFA972 /* 10.jpg in Resources */,
 				797524B81B4BAF6F003D37C8 /* edit_frame.png in Resources */,
 				794D7B481B54BB630008F588 /* iconfont.woff in Resources */,
@@ -2119,6 +2128,7 @@
 				230041F31B54C52000CFA972 /* GPUImageErosionFilter.m in Sources */,
 				230041F41B54C52000CFA972 /* GPUImageExclusionBlendFilter.m in Sources */,
 				797524EA1B4CFCF7003D37C8 /* SelectPhotoAssets.m in Sources */,
+				794D7B511B54E87F0008F588 /* ButtonView.m in Sources */,
 				230042611B54C52000CFA972 /* GPUImageTwoInputFilter.m in Sources */,
 				2300420F1B54C52000CFA972 /* GPUImageHueFilter.m in Sources */,
 				230041E01B54C52000CFA972 /* GPUImageClosingFilter.m in Sources */,

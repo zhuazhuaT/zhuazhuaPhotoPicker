@@ -7,6 +7,7 @@
 //
 
 #import "ZZEditSelectItemView.h"
+#import "ButtonView.h"
 @interface ZZEditSelectItemView()
 @property(nonatomic,strong)UIImageView * backGroundImageView;
 @end
@@ -16,8 +17,10 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        [self addSubview:self.backGroundImageView];
-        self.itemtitles = @[@"edit_frame",@"edit_lomo",@"edit_paint",@"edit_paint"];
+//        [self addSubview:self.backGroundImageView];
+        self.backgroundColor = [UIColor grayColor];
+        self.itemtitles =@[@"滤镜",@"边框",@"贴纸",@"编辑"];
+        self.itemIconStrings = @[@"\U0000e64b",@"\U0000e64c",@"\U0000e64c",@"\U0000e64c"];
     }
     return self;
 }
@@ -39,15 +42,14 @@
         NSInteger n = self.itemtitles.count;
         
         for (int i = 0; i < n; i++) {
-            UIButton* button = [[UIButton alloc]init];
+            ButtonView* button = [[ButtonView alloc]init];
             [button setBackgroundColor:[UIColor clearColor]];
             
             NSString* bt_title = self.itemtitles[i];
-            NSString* bt_title_h = [NSString stringWithFormat:@"%@_h",bt_title];
-            [button setBackgroundImage:[UIImage imageNamed:bt_title] forState:UIControlStateNormal];
-            [button setBackgroundImage:[UIImage imageNamed:bt_title_h] forState:UIControlStateHighlighted];
-            [button addTarget:self action:@selector(onclickBlock:) forControlEvents:UIControlEventTouchUpInside];
-            [button setTag:i];
+            [button setTitle:bt_title];
+            [button setIconString:self.itemIconStrings[i]];
+            [button.btnframe addTarget:self action:@selector(onclickBlock:) forControlEvents:UIControlEventTouchUpInside];
+            [button.btnframe setTag:i];
             [self addSubview:button];
             [marray addObject:button];
         }
@@ -57,7 +59,7 @@
 }
 
 -(void)onclickBlock:(id)sender{
-    UIButton *btn = sender;
+    UIView *btn = sender;
     if (onClickButtonBlock) {
         onClickButtonBlock(btn.tag);
     }
@@ -68,11 +70,11 @@
     long n = self.itemtitles.count;
     float btWidth = self.bounds.size.width / n;
     for (int i = 0; i < n; i++) {
-        UIButton* bt = self.items[i];
+        ButtonView* bt = self.items[i];
         CGRect frameButton = CGRectMake(btWidth * (i), 0, self.bounds.size.width / n,self.bounds.size.height);
         [bt setFrame:frameButton];
     }
-    [self.backGroundImageView setFrame:self.bounds];
+//    [self.backGroundImageView setFrame:self.bounds];
    
 }
 

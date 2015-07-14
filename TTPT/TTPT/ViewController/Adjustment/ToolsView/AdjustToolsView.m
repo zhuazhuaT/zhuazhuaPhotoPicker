@@ -52,7 +52,7 @@ static const CGFloat kCLImageToolAnimationDuration = 0.3;
         [self addSubview:item];
         x += W+padding;
     }
-     self.contentSize = CGSizeMake(MAX(x, self.frame.size.width+1), 0);
+     self.contentSize = CGSizeMake(MAX(x, self.frame.size.width+1)+padding, 0);
 }
 - (void)tappedMenuView:(UITapGestureRecognizer*)sender
 {
