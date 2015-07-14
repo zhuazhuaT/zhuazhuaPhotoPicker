@@ -61,17 +61,24 @@
         [_adjustView setOnSelectModeBlock:^(NSInteger mode) {
             self.isEffect = !self.isEffect;
             [self downEffect];
-            
-            AdjustmentViewController *avc = [[AdjustmentViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition] withType:mode];
-            [avc setFinish:^(UIImage *image) {
-                [self.photoArray replaceObjectAtIndex:self.currentPosition withObject:image];
-                //            self.currentImage = image;
-                self.imageView.image = [self.photoArray objectAtIndex:self.currentPosition];
-                [self.editPhotosView reloadData];
-            } Cancel:^{
+            if ( mode==Mode_mirror) {
                 
-            }];
-            [self.navigationController pushViewController:avc animated:NO];
+                [self onRotate];
+            }else if(mode == Mode_clip){
+                [self onClip];
+            }else if (mode>Filter_brightness) {
+                AdjustmentViewController *avc = [[AdjustmentViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition] withType:mode];
+                [avc setFinish:^(UIImage *image) {
+                    [self.photoArray replaceObjectAtIndex:self.currentPosition withObject:image];
+                    //            self.currentImage = image;
+                    self.imageView.image = [self.photoArray objectAtIndex:self.currentPosition];
+                    [self.editPhotosView reloadData];
+                } Cancel:^{
+                    
+                }];
+                [self.navigationController pushViewController:avc animated:NO];
+            }
+            
         }];
     }
     return _adjustView;
@@ -261,6 +268,27 @@
 }
 
 #pragma action
+
+-(void)onRotate{
+    RotateViewController *rvc = [[RotateViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition] onOK:^(UIImage *image) {
+        [self setNewImage:image];
+    } onCancel:^{
+        
+    }];
+    [self.navigationController pushViewController:rvc animated:YES];
+}
+
+-(void)onClip{
+    ClipViewController* clipvc = [[ClipViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition]];
+    [clipvc setFinish:^(UIImage *image) {
+        [self setNewImage:image];
+        [clipvc dismissViewControllerAnimated:YES completion:nil];
+    } Cancel:^{
+        [clipvc dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [self presentViewController:clipvc animated:YES completion:nil];
+}
+
 -(void)onFrame{
     
     ZZBorderPickViewController *bvc = [[ZZBorderPickViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition]];
@@ -271,16 +299,9 @@
         [bvc dismissViewControllerAnimated:YES completion:nil];
     }];
     [self presentViewController:bvc animated:YES completion:nil];
-    return;
+//    return;
     
-    ClipViewController* clipvc = [[ClipViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition]];
-    [clipvc setFinish:^(UIImage *image) {
-        [self setNewImage:image];
-        [clipvc dismissViewControllerAnimated:YES completion:nil];
-    } Cancel:^{
-        [clipvc dismissViewControllerAnimated:YES completion:nil];
-    }];
-    [self presentViewController:clipvc animated:YES completion:nil];
+    
 }
 
 -(void)onMark{
@@ -295,13 +316,7 @@
     
     
     [self presentViewController:filtervc animated:YES completion:nil];
-//    
-//    RotateViewController *rvc = [[RotateViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition] onOK:^(UIImage *image) {
-//         [self setNewImage:image];
-//    } onCancel:^{
-//        
-//    }];
-//    [self.navigationController pushViewController:rvc animated:YES];
+
 }
 - (void)onEffect{
     
