@@ -20,6 +20,9 @@ static const CGFloat kCLImageToolAnimationDuration = 0.3;
     self = [super initWithFrame:frame];
     if (self) {
         array = [NSArray arrayWithObjects:
+  @{iconMode: [NSNumber numberWithInt:Mode_clip],iconTitle:@"裁剪",iconfontString:@""},
+  @{iconMode: [NSNumber numberWithInt:Mode_mirror],iconTitle:@"镜像",iconfontString:@""},
+                 
   @{iconMode: [NSNumber numberWithInt:Filter_brightness],iconTitle:@"亮度",iconfontString:@""},
   @{iconMode: [NSNumber numberWithInt:Filter_Sharpen],iconTitle:@"锐度",iconfontString:@""},
   @{iconMode: [NSNumber numberWithInt:Filter_Contrast],iconTitle:@"对比度",iconfontString:@""}, nil];

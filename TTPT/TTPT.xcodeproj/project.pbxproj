@@ -242,6 +242,10 @@
 		2373E96F1B4E89B30081B33B /* ZDStickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9501B4E89B30081B33B /* ZDStickerView.m */; };
 		2373E9721B4E8A300081B33B /* StickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9711B4E8A300081B33B /* StickerView.m */; };
 		2373E9751B4E8AF30081B33B /* StickerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9741B4E8AF30081B33B /* StickerEditViewController.m */; };
+		794D7B451B54BB630008F588 /* iconfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = 794D7B411B54BB630008F588 /* iconfont.eot */; };
+		794D7B461B54BB630008F588 /* iconfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = 794D7B421B54BB630008F588 /* iconfont.svg */; };
+		794D7B471B54BB630008F588 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 794D7B431B54BB630008F588 /* iconfont.ttf */; };
+		794D7B481B54BB630008F588 /* iconfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = 794D7B441B54BB630008F588 /* iconfont.woff */; };
 		7975248A1B4B8091003D37C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524891B4B8091003D37C8 /* main.m */; };
 		7975248D1B4B8091003D37C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975248C1B4B8091003D37C8 /* AppDelegate.m */; };
 		797524901B4B8091003D37C8 /* TTPT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7975248E1B4B8091003D37C8 /* TTPT.xcdatamodeld */; };
@@ -801,6 +805,10 @@
 		2373E9711B4E8A300081B33B /* StickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerView.m; sourceTree = "<group>"; };
 		2373E9731B4E8AF30081B33B /* StickerEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerEditViewController.h; sourceTree = "<group>"; };
 		2373E9741B4E8AF30081B33B /* StickerEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerEditViewController.m; sourceTree = "<group>"; };
+		794D7B411B54BB630008F588 /* iconfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.eot; sourceTree = "<group>"; };
+		794D7B421B54BB630008F588 /* iconfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = iconfont.svg; sourceTree = "<group>"; };
+		794D7B431B54BB630008F588 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		794D7B441B54BB630008F588 /* iconfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.woff; sourceTree = "<group>"; };
 		797524841B4B8091003D37C8 /* TTPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797524881B4B8091003D37C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		797524891B4B8091003D37C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1484,6 +1492,17 @@
 			path = ZDStickerView;
 			sourceTree = "<group>";
 		};
+		794D7B401B54BB630008F588 /* iconfont */ = {
+			isa = PBXGroup;
+			children = (
+				794D7B411B54BB630008F588 /* iconfont.eot */,
+				794D7B421B54BB630008F588 /* iconfont.svg */,
+				794D7B431B54BB630008F588 /* iconfont.ttf */,
+				794D7B441B54BB630008F588 /* iconfont.woff */,
+			);
+			path = iconfont;
+			sourceTree = "<group>";
+		};
 		7975247B1B4B8091003D37C8 = {
 			isa = PBXGroup;
 			children = (
@@ -1504,7 +1523,7 @@
 		797524861B4B8091003D37C8 /* TTPT */ = {
 			isa = PBXGroup;
 			children = (
-				7975256B1B50EF08003D37C8 /* iconfont */,
+				794D7B401B54BB630008F588 /* iconfont */,
 				797524C91B4BC6DF003D37C8 /* ViewController */,
 				797524D41B4CFCF7003D37C8 /* XPhotoPicker */,
 				797524BE1B4BB1BE003D37C8 /* Views */,
@@ -1703,14 +1722,6 @@
 			name = Rotate;
 			sourceTree = "<group>";
 		};
-		7975256B1B50EF08003D37C8 /* iconfont */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = iconfont;
-			path = ../../../zhuazhua/zhuazhua/UI/ExternalLibs/iconfont;
-			sourceTree = "<group>";
-		};
 		797525751B511B2A003D37C8 /* Border */ = {
 			isa = PBXGroup;
 			children = (
@@ -1903,6 +1914,7 @@
 				2373E9581B4E89B30081B33B /* emoji15.png in Resources */,
 				23071B2F1B537F0900C7BFCC /* 5.jpg in Resources */,
 				23071B061B5368DA00C7BFCC /* 02.acv in Resources */,
+				794D7B451B54BB630008F588 /* iconfont.eot in Resources */,
 				23071B321B537F0900C7BFCC /* 6@2x.jpg in Resources */,
 				23071B071B5368DA00C7BFCC /* 06.acv in Resources */,
 				23071B2B1B537F0900C7BFCC /* 3.jpg in Resources */,
@@ -1954,6 +1966,7 @@
 				2373E9611B4E89B30081B33B /* emoji23.png in Resources */,
 				23071B2C1B537F0900C7BFCC /* 3@2x.jpg in Resources */,
 				797524B81B4BAF6F003D37C8 /* edit_frame.png in Resources */,
+				794D7B481B54BB630008F588 /* iconfont.woff in Resources */,
 				23071B2A1B537F0900C7BFCC /* 2@2x.jpg in Resources */,
 				2373E9661B4E89B30081B33B /* emoji7.png in Resources */,
 				2373E9511B4E89B30081B33B /* emoji0.png in Resources */,
@@ -1962,6 +1975,7 @@
 				23071B301B537F0900C7BFCC /* 5@2x.jpg in Resources */,
 				7990F62D1B53B281004EB1A5 /* s-08.png in Resources */,
 				7990F60F1B53B281004EB1A5 /* i-00.png in Resources */,
+				794D7B471B54BB630008F588 /* iconfont.ttf in Resources */,
 				7990F6321B53B281004EB1A5 /* s-13.png in Resources */,
 				7990F6211B53B281004EB1A5 /* i-18.png in Resources */,
 				7990F5FA1B53B281004EB1A5 /* 02.png in Resources */,
@@ -2028,6 +2042,7 @@
 				797524C81B4BC176003D37C8 /* icon_frame_select.png in Resources */,
 				7990F5FC1B53B281004EB1A5 /* 04.png in Resources */,
 				7990F6241B53B281004EB1A5 /* i-21.png in Resources */,
+				794D7B461B54BB630008F588 /* iconfont.svg in Resources */,
 				797524981B4B8091003D37C8 /* Images.xcassets in Resources */,
 				2373E9641B4E89B30081B33B /* emoji5.png in Resources */,
 				7990F6271B53B281004EB1A5 /* s-02.png in Resources */,

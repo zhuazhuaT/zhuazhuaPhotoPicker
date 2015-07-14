@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BaseToolsView.h"
 typedef enum {
+    Mode_clip = 0,
+    Mode_mirror,
+    
     Filter_brightness = 10,
     Filter_Saturation,
     Filter_Contrast,
