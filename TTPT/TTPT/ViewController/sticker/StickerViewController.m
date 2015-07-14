@@ -15,7 +15,7 @@
 
 #define TitleHeight 64
 #define CategoryHeight 40
-#define LeftMenuWidth 60
+#define LeftMenuWidth 100
 #define space 5
 
 #define LeftCellID @"leftCellID"
@@ -51,7 +51,7 @@
 
 - (void)prepareData{
     self.categoryarray = @[@"分类0",@"分类1",@"分类2",@"分类3",@"分类4",@"分类5",@"分类5",@"分类5",@"分类5",@"分类5"];
-    self.titlearray = @[@"标0",@"标1",@"标2",@"标3",@"标4",@"标5",@"标5",@"标5",@"标5",@"标5",@"标5",@"标5",];
+    self.titlearray = @[@"全部"];
     self.stickerarray = [NSMutableArray new];
     for (int i = 0; i < 24; i++) {
         Sticker* sticker = [[Sticker alloc] init];
@@ -100,16 +100,16 @@
 - (void)initLeftMenu{
     self.leftTableview = [[UITableView alloc] initWithFrame:CGRectMake(0, TitleHeight+CategoryHeight, LeftMenuWidth, ScreenH - TitleHeight-CategoryHeight)];
     [self.leftTableview registerClass:[UITableViewCell class] forCellReuseIdentifier:LeftCellID];
-    self.leftTableview.backgroundColor = [UIColor blueColor];
+    self.leftTableview.backgroundColor = [UIColor clearColor];
     self.leftTableview.delegate = self;
     self.leftTableview.dataSource = self;
+    self.leftTableview.tableFooterView = [[UIView alloc] init];
     [self.view addSubview:self.leftTableview];
 }
 
-
 - (void)initStickers{
     self.collectview = [[UICollectionView alloc] initWithFrame:CGRectMake(LeftMenuWidth, TitleHeight+CategoryHeight,ScreenW - LeftMenuWidth , ScreenH - TitleHeight-CategoryHeight) collectionViewLayout:[self collectionViewFlowLayout]];
-    self.collectview.backgroundColor = [UIColor purpleColor];
+    self.collectview.backgroundColor = [UIColor clearColor];
     self.collectview.delegate = self;
     self.collectview.dataSource = self;
     
@@ -167,7 +167,7 @@
     
     portraitLayout.minimumInteritemSpacing = space;
     int cellTotalUsableWidth = [UIScreen mainScreen].bounds.size.width - 5*space;
-    portraitLayout.itemSize = CGSizeMake(40, 40);
+    portraitLayout.itemSize = CGSizeMake(100, 100);
     portraitLayout.minimumLineSpacing = space;
     portraitLayout.headerReferenceSize = CGSizeMake(ScreenW, 10.f);
     return portraitLayout;
