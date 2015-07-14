@@ -28,7 +28,10 @@
     float w = self.view.frame.size.width;
     float h = self.view.frame.size.height;
     
-    self.workview = [[WorkView alloc] initWithFrame:CGRectMake(0, 0, w , h)];
+    float r = image.size.width/image.size.height;
+    
+    self.workview = [[WorkView alloc] initWithFrame:CGRectMake(0, 0, w , w/r)];
+    self.workview.center = self.view.center;
     [self.view addSubview:self.workview];
     [self.view sendSubviewToBack:self.workview];
     [self.workview setBaseImage:image];
