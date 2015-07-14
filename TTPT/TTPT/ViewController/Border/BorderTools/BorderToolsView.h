@@ -8,8 +8,8 @@
 
 #import "BaseToolsView.h"
 #import "BorderItemView.h"
-#define STICKERITEM_WIDTH 50
-#define STICKERITEM_HEIGHT 80
+#define STICKERITEM_WIDTH 100
+#define STICKERITEM_HEIGHT 100
 typedef void (^SelectBorder)(UIImage *image);
 @interface BorderToolsView : BaseToolsView
 

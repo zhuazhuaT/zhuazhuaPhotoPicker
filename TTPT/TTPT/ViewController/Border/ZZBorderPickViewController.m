@@ -23,23 +23,39 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     [self.targetImageView setImage:_originalImage];
-    frameView  = [[UIImageView alloc] initWithFrame:self.targetImageView.frame];
+    float w = self.view.width;
+    float h= self.view.height;
+    float r = _originalImage.size.width/_originalImage.size.height;
+    
+    frameView  = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, w, w/r)];
+    frameView.center = self.view.center;
 //    [self.view addSubview:frameView];
+    [self.view sendSubviewToBack:frameView];
     [self.view insertSubview:frameView belowSubview:self.bottomView];
     
     [self setTitle:@"边框"];
-    
+//    self.navigationController.navigationBarHidden = YES;
     [self initFuntionView];
 }
 -(void)onClickFinish:(id)sender{
     
     if (fblock) {
-        fblock([self buildImage:_originalImage]);
+        
+        [self generateWithBlock:^(UIImage *image, NSError *error) {
+            if (error==nil) {
+                fblock(image);
+            }
+            
+        }];
     }
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+//    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+}
+
 -(void)initFuntionView{
-    float w = self.view.width;
-    float h= self.view.height;
     
     _borderToolsView = [[BorderToolsView alloc ]initWithFrame:CGRectMake(0, self.view.bounds.size.height - 50 - STICKERITEM_HEIGHT, self.view.bounds.size.width,STICKERITEM_HEIGHT)];
     [_borderToolsView setSelectBlock:^(UIImage *image){
@@ -47,14 +63,31 @@
     }];
     [self.view addSubview:_borderToolsView];
 }
-- (UIImage*)buildImage:(UIImage*)image
-{
-    UIImage *frameImage = frameView.image;
-    UIImage *result = [UIImage imageNamed:@""];
-    if (!frameImage) {
-        return _originalImage;
-    }
+
+
+- (void)generateWithBlock:(void (^)(UIImage *, NSError *))block{
     
-    return result;
+    UIGraphicsBeginImageContextWithOptions(frameView.frame.size, YES, 0.0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    [_originalImage drawInRect:frameView.bounds];
+    CGContextSaveGState(context);
+    [frameView.image drawInRect:frameView.bounds];
+//    UIView *view = frameView;
+    // Center the context around the view's anchor point
+//    CGContextTranslateCTM(context, [view center].x, view.center.y);
+    // Apply the view's transform about the anchor point
+//    CGContextConcatCTM(context, [view transform]);
+    // Offset by the portion of the bounds left of and above the anchor point
+//    CGContextTranslateCTM(context,
+//                          -[view bounds].size.width * [[view layer] anchorPoint].x,
+//                          -[view bounds].size.height * [[view layer] anchorPoint].y);
+//    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    CGContextRestoreGState(context);
+    
+    UIImage *ret = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    block(ret, nil);
 }
+
 @end

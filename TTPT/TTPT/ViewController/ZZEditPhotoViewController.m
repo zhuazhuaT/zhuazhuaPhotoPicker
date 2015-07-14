@@ -297,7 +297,7 @@
     
     ZZBorderPickViewController *bvc = [[ZZBorderPickViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition]];
     [bvc setFinish:^(UIImage *image) {
-        
+         [self setNewImage:image];
         [bvc dismissViewControllerAnimated:YES completion:nil];
     } Cancel:^{
         [bvc dismissViewControllerAnimated:YES completion:nil];
@@ -313,6 +313,7 @@
     FilterViewController* filtervc = [[FilterViewController alloc] init];
     filtervc.originalImage = [self.photoArray objectAtIndex:self.currentPosition];
     [filtervc setFinish:^(UIImage *image) {
+        [self setNewImage:image];
         [filtervc dismissViewControllerAnimated:YES completion:nil];
     } Cancel:^{
         [filtervc dismissViewControllerAnimated:YES completion:nil];

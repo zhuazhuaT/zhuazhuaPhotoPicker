@@ -7,7 +7,7 @@
 //
 
 #import "FilterCollectionViewCell.h"
-#define length 35
+#define length 80
 #define titleheight 30
 @implementation FilterCollectionViewCell
 
@@ -25,9 +25,9 @@
 
 - (void)setSelected:(BOOL)selected{
     if (!selected) {
-        self.backgroundColor = [UIColor blackColor];
+        self.backgroundColor = [UIColor lightGrayColor];
     }else{
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor grayColor];
     }
 }
 

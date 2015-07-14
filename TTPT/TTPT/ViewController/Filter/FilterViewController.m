@@ -64,8 +64,10 @@
 - (void)initFilterCollectionview{
     float y = self.view.bounds.size.height;
     float w = self.view.bounds.size.width;
-    float h_tool = 50;
+    float h_tool = 100;
     self.collectionview = [[UICollectionView alloc] initWithFrame:CGRectMake(0, y - bottom_height-h_tool, w, h_tool) collectionViewLayout:[self collectionViewFlowLayout]];
+    self.collectionview.backgroundColor = [UIColor lightGrayColor];
+    
     self.collectionview.delegate = self;
     self.collectionview.dataSource = self;
     [self.collectionview registerClass:[FilterCollectionViewCell class] forCellWithReuseIdentifier:cellid];
@@ -79,7 +81,7 @@
     UICollectionViewFlowLayout* portraitLayout = [[UICollectionViewFlowLayout alloc] init];
     
     portraitLayout.minimumInteritemSpacing = space;
-    portraitLayout.itemSize = CGSizeMake(40, 40);
+    portraitLayout.itemSize = CGSizeMake(100, 100);
     portraitLayout.minimumLineSpacing = space;
     portraitLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     return portraitLayout;
