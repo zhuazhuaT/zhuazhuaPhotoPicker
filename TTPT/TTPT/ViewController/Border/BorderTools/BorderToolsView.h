@@ -10,7 +10,7 @@
 #import "BorderItemView.h"
 #define STICKERITEM_WIDTH 100
 #define STICKERITEM_HEIGHT 100
-typedef void (^SelectBorder)(UIImage *image);
+typedef void (^SelectBorder)(UIImage *image,UIEdgeInsets insert);
 @interface BorderToolsView : BaseToolsView
 
 

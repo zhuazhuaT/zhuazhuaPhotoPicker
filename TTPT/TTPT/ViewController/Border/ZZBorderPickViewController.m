@@ -59,14 +59,14 @@
 -(void)initFuntionView{
     
     _borderToolsView = [[BorderToolsView alloc ]initWithFrame:CGRectMake(0, self.view.bounds.size.height - 50 - STICKERITEM_HEIGHT, self.view.bounds.size.width,STICKERITEM_HEIGHT)];
-    [_borderToolsView setSelectBlock:^(UIImage *image){
+    [_borderToolsView setSelectBlock:^(UIImage *image,UIEdgeInsets insets){
         // 左端盖宽度
-        CGFloat top = 0; // 顶端盖高度
-        CGFloat bottom = 0; // 底端盖高度
-        CGFloat left = 14; // 左端盖宽度
-        CGFloat right = 106; // 右端盖宽度
-        UIEdgeInsets insets = UIEdgeInsetsMake(0, 14, 0,106);
-        image = [image resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
+//        CGFloat top = 56/2; // 顶端盖高度
+//        CGFloat bottom = 210/2; // 底端盖高度
+//        CGFloat left = 89/2; // 左端盖宽度
+//        CGFloat right = 340/2; // 右端盖宽度
+//        UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom,right);
+        image = [image resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeTile];
         [frameView setImage:image];
     }];
     [self.view addSubview:_borderToolsView];
