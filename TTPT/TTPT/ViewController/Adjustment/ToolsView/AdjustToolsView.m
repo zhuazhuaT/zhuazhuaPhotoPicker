@@ -20,12 +20,13 @@ static const CGFloat kCLImageToolAnimationDuration = 0.3;
     self = [super initWithFrame:frame];
     if (self) {
         array = [NSArray arrayWithObjects:
-  @{iconMode: [NSNumber numberWithInt:Mode_clip],iconTitle:@"裁剪",iconfontString:@""},
-  @{iconMode: [NSNumber numberWithInt:Mode_mirror],iconTitle:@"镜像",iconfontString:@""},
+  @{iconMode: [NSNumber numberWithInt:Mode_clip],iconTitle:@"裁剪",iconfontString:@"\U0000e650"},
+  @{iconMode: [NSNumber numberWithInt:Mode_mirror],iconTitle:@"镜像",iconfontString:@"\U0000e652"},
 
-  @{iconMode: [NSNumber numberWithInt:Filter_brightness],iconTitle:@"亮度",iconfontString:@""},
-  @{iconMode: [NSNumber numberWithInt:Filter_Sharpen],iconTitle:@"锐度",iconfontString:@""},
-  @{iconMode: [NSNumber numberWithInt:Filter_Contrast],iconTitle:@"对比度",iconfontString:@""}, nil];
+  @{iconMode: [NSNumber numberWithInt:Filter_brightness],iconTitle:@"亮度",iconfontString:@"\U0000e654"},
+  @{iconMode: [NSNumber numberWithInt:Filter_Saturation],iconTitle:@"饱和度",iconfontString:@"\U0000e64f"},
+  @{iconMode: [NSNumber numberWithInt:Filter_Sharpen],iconTitle:@"锐度",iconfontString:@"\U0000e653"},
+  @{iconMode: [NSNumber numberWithInt:Filter_Contrast],iconTitle:@"对比度",iconfontString:@"\U0000e651"}, nil];
         
         [self show];
         
@@ -53,6 +54,8 @@ static const CGFloat kCLImageToolAnimationDuration = 0.3;
         x += W+padding;
     }
      self.contentSize = CGSizeMake(MAX(x, self.frame.size.width+1)+padding, 0);
+    self.showsHorizontalScrollIndicator = NO;
+    
 }
 - (void)tappedMenuView:(UITapGestureRecognizer*)sender
 {

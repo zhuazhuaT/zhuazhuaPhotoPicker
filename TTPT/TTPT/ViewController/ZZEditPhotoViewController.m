@@ -15,10 +15,10 @@
 #import "ClipViewController.h"
 #import "FilterViewController.h"
 #import "RotateViewController.h"
-
-
+#import "CropViewController.h"
+#define TOP_HEIGHT  70
 #define MAX_COUNT  9
-#define ADJUSTMENT_HEIGHT 100
+#define ADJUSTMENT_HEIGHT 80
 #define BOTTOM_HEIGHT    70
 @implementation ZZEditPhotoViewController{
     NSMutableArray *selectArray;
@@ -64,7 +64,7 @@
                 [self onRotate];
             }else if(mode == Mode_clip){
                 [self onClip];
-            }else if (mode>Filter_brightness) {
+            }else if (mode>=Filter_brightness) {
                 AdjustmentViewController *avc = [[AdjustmentViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition] withType:mode];
                 [avc setFinish:^(UIImage *image) {
                     [self.photoArray replaceObjectAtIndex:self.currentPosition withObject:image];
@@ -188,11 +188,11 @@
 //    
 //    [self.editSelectItem setFrame:frameEditSelectFrame];
     
-    CGRect framePreView = CGRectMake(0, 0, self.view.bounds.size.width, 64);
+    CGRect framePreView = CGRectMake(0, 0, self.view.bounds.size.width, TOP_HEIGHT);
     
     [self.prePhotoView setFrame:framePreView];
     
-    CGRect frameEditView = CGRectMake(20, 20 + 64, self.view.bounds.size.width - 40,self.view.bounds.size.height - self.editSelectItem.frame.size.height - 40 - 64);
+    CGRect frameEditView = CGRectMake(20, 20 + TOP_HEIGHT, self.view.bounds.size.width - 40,self.view.bounds.size.height - self.editSelectItem.frame.size.height - 40 - TOP_HEIGHT);
     [self.editView setFrame:frameEditView];
     
     [self.imageSticker setFrame:self.editView.bounds];
@@ -274,15 +274,27 @@
 #pragma action
 
 -(void)onRotate{
-    RotateViewController *rvc = [[RotateViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition] onOK:^(UIImage *image) {
+    RotateViewController *rvc = [[RotateViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition]];
+    [rvc setFinish:^(UIImage *image) {
         [self setNewImage:image];
-    } onCancel:^{
+    } Cancel:^{
         
     }];
     [self.navigationController pushViewController:rvc animated:YES];
 }
 
 -(void)onClip{
+    UIImage * oimage =[self.photoArray objectAtIndex:self.currentPosition];
+    CropViewController *cropvc = [[CropViewController alloc ]initWithImage:oimage];
+    
+    [cropvc setFinish:^(UIImage *image) {
+        [self setNewImage:image];
+        [cropvc dismissViewControllerAnimated:YES completion:nil];
+    } Cancel:^{
+        [cropvc dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [self presentViewController:cropvc animated:YES completion:nil];
+    return;
     ClipViewController* clipvc = [[ClipViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition]];
     [clipvc setFinish:^(UIImage *image) {
         [self setNewImage:image];

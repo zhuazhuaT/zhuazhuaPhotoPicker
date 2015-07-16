@@ -20,7 +20,7 @@
 //        [self addSubview:self.backGroundImageView];
         self.backgroundColor = [UIColor grayColor];
         self.itemtitles =@[@"滤镜",@"边框",@"贴纸",@"编辑"];
-        self.itemIconStrings = @[@"\U0000e64b",@"\U0000e64c",@"\U0000e64c",@"\U0000e64c"];
+        self.itemIconStrings = @[@"\U0000e64b",@"\U0000e655",@"\U0000e656",@"\U0000e64c"];
     }
     return self;
 }

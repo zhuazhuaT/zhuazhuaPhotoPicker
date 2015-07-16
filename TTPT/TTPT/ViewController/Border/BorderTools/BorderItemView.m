@@ -12,6 +12,7 @@
 -(UIImageView *)stickerImageView{
     if (!_stickerImageView) {
         _stickerImageView = [[UIImageView alloc]initWithImage:self.image];
+        [_stickerImageView setContentMode:UIViewContentModeScaleAspectFit];
         [_stickerImageView setBackgroundColor:[UIColor clearColor]];
     }
     return _stickerImageView;

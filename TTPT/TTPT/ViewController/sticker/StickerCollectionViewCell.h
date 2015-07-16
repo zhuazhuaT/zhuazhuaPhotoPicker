@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface StickerCollectionViewCell : UICollectionViewCell
+@property (nonatomic,strong)UIView *imageContainer;
 @property (nonatomic,strong)UIImageView* imageview;
 @end

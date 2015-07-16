@@ -245,10 +245,6 @@ static NSString* gridCellId = @"AlbumCellID";
                 }
             }
         }
-            
-        
-        
-        
     }
 }
 

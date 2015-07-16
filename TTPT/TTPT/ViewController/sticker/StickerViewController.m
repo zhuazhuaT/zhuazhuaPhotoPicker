@@ -36,7 +36,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     currentSection = 0;
     scrollLock = NO;
     [self prepareData];
@@ -100,7 +100,7 @@
 - (void)initLeftMenu{
     self.leftTableview = [[UITableView alloc] initWithFrame:CGRectMake(0, TitleHeight+CategoryHeight, LeftMenuWidth, ScreenH - TitleHeight-CategoryHeight)];
     [self.leftTableview registerClass:[UITableViewCell class] forCellReuseIdentifier:LeftCellID];
-    self.leftTableview.backgroundColor = [UIColor clearColor];
+    self.leftTableview.backgroundColor = [UIColor whiteColor];
     self.leftTableview.delegate = self;
     self.leftTableview.dataSource = self;
     self.leftTableview.tableFooterView = [[UIView alloc] init];
@@ -108,8 +108,8 @@
 }
 
 - (void)initStickers{
-    self.collectview = [[UICollectionView alloc] initWithFrame:CGRectMake(LeftMenuWidth, TitleHeight+CategoryHeight,ScreenW - LeftMenuWidth , ScreenH - TitleHeight-CategoryHeight) collectionViewLayout:[self collectionViewFlowLayout]];
-    self.collectview.backgroundColor = [UIColor clearColor];
+    self.collectview = [[UICollectionView alloc] initWithFrame:CGRectMake(LeftMenuWidth+space, TitleHeight+CategoryHeight,ScreenW - LeftMenuWidth-space*2 , ScreenH - TitleHeight-CategoryHeight) collectionViewLayout:[self collectionViewFlowLayout]];
+    self.collectview.backgroundColor = [UIColor lightGrayColor];
     self.collectview.delegate = self;
     self.collectview.dataSource = self;
     
@@ -167,7 +167,7 @@
     
     portraitLayout.minimumInteritemSpacing = space;
     int cellTotalUsableWidth = [UIScreen mainScreen].bounds.size.width - 5*space;
-    portraitLayout.itemSize = CGSizeMake(100, 100);
+    portraitLayout.itemSize = CGSizeMake(90, 90);
     portraitLayout.minimumLineSpacing = space;
     portraitLayout.headerReferenceSize = CGSizeMake(ScreenW, 10.f);
     return portraitLayout;

@@ -8,6 +8,7 @@
 
 #import "RotateViewController.h"
 #import "UIView+Frame.h"
+#import "ButtonView.h"
 static NSString* const kCLRotateToolRotateIconName = @"rotateIconAssetsName";
 static NSString* const kCLRotateToolFlipHorizontalIconName = @"flipHorizontalIconAssetsName";
 static NSString* const kCLRotateToolFlipVerticalIconName = @"flipVerticalIconAssetsName";
@@ -66,43 +67,53 @@ static NSString* const kCLRotateToolFlipVerticalIconName = @"flipVerticalIconAss
     [_rotateImageView setContentMode:UIViewContentModeScaleAspectFit];
     _rotateImageView.image = _originalImage;
     [_gridView.superview insertSubview:_rotateImageView belowSubview:self.bottomView];
-    
+    [self.view bringSubviewToFront:self.bottomView];
     self.targetImageView.hidden = YES;
-    [self.view bringSubviewToFront:funView];
+//
     [self initFuntionView:h];
 }
 -(void)initFuntionView :(int)h{
     float w = self.view.bounds.size.width;
-    float height = w /5;
+    float height = 60;
     float width = w/4;
-    float left =(width - height)/2  ;
+    float left =0 ;
     funView = [[UIView alloc] initWithFrame:CGRectMake(0, h- bottom_height - height, self.view.bounds.size.width, height)];
     [funView setBackgroundColor:[UIColor lightGrayColor]];
-    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(left, 0, height, height)];
-    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(left+width, 0, height, height)];
-    UIButton *btn3 = [[UIButton alloc] initWithFrame:CGRectMake(left+width *2, 0, height, height)];
-    UIButton *btn4 = [[UIButton alloc] initWithFrame:CGRectMake(left+width *3, 0, height, height)];
+    ButtonView *btn1 = [[ButtonView alloc] initWithFrame:CGRectMake(left, 0, width, height)];
+    ButtonView *btn2 = [[ButtonView alloc] initWithFrame:CGRectMake(left+width, 0, width, height)];
+    ButtonView *btn3 = [[ButtonView alloc] initWithFrame:CGRectMake(left+width *2, 0, width, height)];
+    ButtonView *btn4 = [[ButtonView alloc] initWithFrame:CGRectMake(left+width *3, 0, width, height)];
     
-    [btn1 setImage:[UIImage imageNamed:@"btn_flip1.png"] forState:UIControlStateNormal];
-    [btn2 setImage:[UIImage imageNamed:@"btn_flip2.png"] forState:UIControlStateNormal];
-    [btn3 setImage:[UIImage imageNamed:@"btn_rotate.png"] forState:UIControlStateNormal];
-    [btn4 setImage:[UIImage imageNamed:@"icon_rotate.png"] forState:UIControlStateNormal];
-    int inseth = 12;
-    int insetw = 12;
-    [btn1 setContentEdgeInsets:UIEdgeInsetsMake(insetw, inseth, insetw, inseth)];
-    [btn2 setContentEdgeInsets:UIEdgeInsetsMake(insetw, inseth, insetw, inseth)];
-    [btn3 setContentEdgeInsets:UIEdgeInsetsMake(insetw, inseth, insetw, inseth)];
-    [btn4 setContentEdgeInsets:UIEdgeInsetsMake(insetw, inseth, insetw, inseth)];
+    [btn1 setTitle:@"向左旋转"];
+    [btn2 setTitle:@"向右旋转"];
+    [btn3 setTitle:@"水平翻转"];
+    [btn4 setTitle:@"垂直翻转"];
     
-    btn1.tag = 111;
-    btn2.tag = 112;
-    btn3.tag = 113;
-    btn4.tag = 114;
+    [btn1 setIconString:@"\U0000e64e"];
+    [btn2 setIconString:@"\U0000e64e"];
+    [btn3 setIconString:@"\U0000e652"];
+    [btn4 setIconString:@"\U0000e657"];
     
-    [btn1 addTarget:self action:@selector(onFunctionClick:) forControlEvents:UIControlEventTouchUpInside];
-    [btn2 addTarget:self action:@selector(onFunctionClick:) forControlEvents:UIControlEventTouchUpInside];
-    [btn3 addTarget:self action:@selector(onFunctionClick:) forControlEvents:UIControlEventTouchUpInside];
-    [btn4 addTarget:self action:@selector(onFunctionClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [btn1 setImage:[UIImage imageNamed:@"btn_flip1.png"] forState:UIControlStateNormal];
+//    [btn2 setImage:[UIImage imageNamed:@"btn_flip2.png"] forState:UIControlStateNormal];
+//    [btn3 setImage:[UIImage imageNamed:@"btn_rotate.png"] forState:UIControlStateNormal];
+//    [btn4 setImage:[UIImage imageNamed:@"icon_rotate.png"] forState:UIControlStateNormal];
+//    int inseth = 12;
+//    int insetw = 12;
+//    [btn1 setContentEdgeInsets:UIEdgeInsetsMake(insetw, inseth, insetw, inseth)];
+//    [btn2 setContentEdgeInsets:UIEdgeInsetsMake(insetw, inseth, insetw, inseth)];
+//    [btn3 setContentEdgeInsets:UIEdgeInsetsMake(insetw, inseth, insetw, inseth)];
+//    [btn4 setContentEdgeInsets:UIEdgeInsetsMake(insetw, inseth, insetw, inseth)];
+    
+    btn1.btnframe.tag = 111;
+    btn2.btnframe.tag = 112;
+    btn3.btnframe.tag = 113;
+    btn4.btnframe.tag = 114;
+    
+    [btn1.btnframe addTarget:self action:@selector(onFunctionClick:) forControlEvents:UIControlEventTouchUpInside];
+    [btn2.btnframe addTarget:self action:@selector(onFunctionClick:) forControlEvents:UIControlEventTouchUpInside];
+    [btn3.btnframe addTarget:self action:@selector(onFunctionClick:) forControlEvents:UIControlEventTouchUpInside];
+    [btn4.btnframe addTarget:self action:@selector(onFunctionClick:) forControlEvents:UIControlEventTouchUpInside];
     [funView addSubview:btn1];
     [funView addSubview:btn2];
     [funView addSubview:btn3];
@@ -113,7 +124,7 @@ static NSString* const kCLRotateToolFlipVerticalIconName = @"flipVerticalIconAss
     
     
     [self.view addSubview:funView];
-    
+    [self.view bringSubviewToFront:funView];
 }
 
 #pragma mark - function
@@ -122,51 +133,118 @@ static NSString* const kCLRotateToolFlipVerticalIconName = @"flipVerticalIconAss
     switch (sender.tag) {
         case 111:
         {
-            _flipState1 = (_flipState1==0) ? 1 : 0;
+//            CGFloat value = (int)floorf((rotatedegree - 1)*2) - 1;
+//            if(value<0){
+//                value += 4;
+//            }
+//            rotatedegree = value / 2 + 1;
+//            
+//            _gridView.hidden = YES;
+            
+            _originalImage = [self image:_originalImage rotation:UIImageOrientationLeft];
+            _rotateImageView.image = _originalImage;
         }
-            break;
+            return;
         case 112:
         {
-            _flipState2 = (_flipState2==0) ? 1 : 0;
+            
+//            CGFloat value = (int)floorf((rotatedegree + 1)*2) + 1;
+//            if(value>4){
+//                value -= 4;
+//            }
+//            rotatedegree = value / 2 - 1;
+//            
+//            _gridView.hidden = YES;
+            _originalImage = [self image:_originalImage rotation:UIImageOrientationRight];
+            _rotateImageView.image = _originalImage;
+            
         }
-            break;
+            return;
         case 113:
         {
-            CGFloat value = (int)floorf((rotatedegree + 1)*2) + 1;
-            if(value>4){
-                value -= 4;
-            }
-            rotatedegree = value / 2 - 1;
+            _flipState1 = (_flipState1==0) ? 1 : 0;
             
-            _gridView.hidden = YES;
         }
             break;
             
         case 114:
         {
-            CGFloat value = (int)floorf((rotatedegree - 1)*2) - 1;
-            if(value<0){
-                value += 4;
-            }
-            rotatedegree = value / 2 + 1;
+            _flipState2 = (_flipState2==0) ? 1 : 0;
             
-            _gridView.hidden = YES;
         }
             break;
             
         default:
             break;
     }
-    [UIView animateWithDuration:0.3
-                     animations:^{
+//    [UIView animateWithDuration:0.3
+//                     animations:^{
                          [self rotateStateDidChange];
-                     }
-                     completion:^(BOOL finished) {
-                         _gridView.hidden = YES;
-                     }
-     ];
+//                     }
+//                     completion:^(BOOL finished) {
+//                         _gridView.hidden = YES;
+//                     }
+//     ];
     
 }
+
+- (UIImage *)image:(UIImage *)image rotation:(UIImageOrientation)orientation
+{
+    long double rotate = 0.0;
+    CGRect rect;
+    float translateX = 0;
+    float translateY = 0;
+    float scaleX = 1.0;
+    float scaleY = 1.0;
+    
+    switch (orientation) {
+        case UIImageOrientationLeft:
+            rotate = M_PI_2;
+            rect = CGRectMake(0, 0, image.size.height, image.size.width);
+            translateX = 0;
+            translateY = -rect.size.width;
+            scaleY = rect.size.width/rect.size.height;
+            scaleX = rect.size.height/rect.size.width;
+            break;
+        case UIImageOrientationRight:
+            rotate = 3 * M_PI_2;
+            rect = CGRectMake(0, 0, image.size.height, image.size.width);
+            translateX = -rect.size.height;
+            translateY = 0;
+            scaleY = rect.size.width/rect.size.height;
+            scaleX = rect.size.height/rect.size.width;
+            break;
+        case UIImageOrientationDown:
+            rotate = M_PI;
+            rect = CGRectMake(0, 0, image.size.width, image.size.height);
+            translateX = -rect.size.width;
+            translateY = -rect.size.height;
+            break;
+        default:
+            rotate = 0.0;
+            rect = CGRectMake(0, 0, image.size.width, image.size.height);
+            translateX = 0;
+            translateY = 0;
+            break;
+    }
+    
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    //做CTM变换
+    CGContextTranslateCTM(context, 0.0, rect.size.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    CGContextRotateCTM(context, rotate);
+    CGContextTranslateCTM(context, translateX, translateY);
+    
+    CGContextScaleCTM(context, scaleX, scaleY);
+    //绘制图片
+    CGContextDrawImage(context, CGRectMake(0, 0, rect.size.width, rect.size.height), image.CGImage);
+    
+    UIImage *newPic = UIGraphicsGetImageFromCurrentImageContext();
+    
+    return newPic;
+}
+
 - (CATransform3D)rotateTransform:(CATransform3D)initialTransform clockwise:(BOOL)clockwise
 {
     CGFloat arg = rotatedegree*M_PI;

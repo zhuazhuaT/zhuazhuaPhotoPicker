@@ -15,18 +15,20 @@
     if (self) {
         CGFloat W = frame.size.width;
         CGFloat H = frame.size.height;
-        UIFont *font = [UIFont fontWithName:@"iconfont" size:20];
-        [_iconView setFont:font];
+        
         _iconView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, W, H-20)];
-        _iconView.backgroundColor = [UIColor redColor];
+        _iconView.backgroundColor = [UIColor clearColor];
+        UIFont *font = [UIFont fontWithName:@"iconfont" size:40];
+        [_iconView setFont:font];
 //        _iconView.clipsToBounds = YES;
 //        _iconView.layer.cornerRadius = (W - 20)/2;
-        _iconView.contentMode = UIViewContentModeScaleAspectFit;
+        [_iconView setTextAlignment:NSTextAlignmentCenter];
+//        _iconView.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:_iconView];
         
         
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, _iconView.bottom, W, 20)];
-        _titleLabel.backgroundColor = [UIColor orangeColor];
+        _titleLabel.backgroundColor = [UIColor clearColor];
         _titleLabel.textColor = [UIColor blackColor];
         
         _titleLabel.textAlignment = NSTextAlignmentCenter;

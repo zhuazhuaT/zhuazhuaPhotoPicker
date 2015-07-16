@@ -7,7 +7,7 @@
 //
 
 #import "BorderToolsView.h"
-#define FRAME_COUNT    23
+#define FRAME_COUNT    25
 
 
 
@@ -21,18 +21,18 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        NSString * path = [[NSBundle mainBundle]resourcePath];
-        NSFileManager * fm = [NSFileManager defaultManager];
+ //       NSString * path = [[NSBundle mainBundle]resourcePath];
+ //       NSFileManager * fm = [NSFileManager defaultManager];
         frameImagearray = [[NSMutableArray alloc]init];
         frameBigImagearray = [[NSMutableArray alloc]init];
-        NSArray * array = [fm contentsOfDirectoryAtPath:path error:nil];
-        for (NSString * fileName in array) {
-            if ([fileName hasPrefix:@"i-"]) {
-                [frameImagearray addObject:[UIImage imageNamed:fileName]];
-            }
-            if ([fileName hasPrefix:@"s-"]) {
-                [frameBigImagearray addObject:[UIImage imageNamed:fileName]];
-            }
+ //       NSArray * array = [fm contentsOfDirectoryAtPath:path error:nil];
+        for (int i=0;i<FRAME_COUNT;i++) {
+            NSString *fileNames = [NSString stringWithFormat:@"s_%d",i];
+            [frameImagearray addObject:[UIImage imageNamed:fileNames]];
+            
+            NSString *fileNameb =[NSString stringWithFormat:@"i_%d",i];
+            [frameBigImagearray addObject:[UIImage imageNamed:fileNameb]];
+            
         }
         for (int i = 0; i < FRAME_COUNT; i ++) {
             BorderItemView * sticker = [BorderItemView stickerViewWithFrame:CGRectMake(STICKERITEM_WIDTH * i,0, STICKERITEM_WIDTH, STICKERITEM_HEIGHT) Image:frameImagearray[i]];
@@ -47,7 +47,7 @@
 }
 
 -(void)changeSelfView:(BorderItemView *)view image:(UIImage *)image{
-    NSInteger index = [[self subviews] indexOfObject:view] - 1;
+    NSInteger index = [[self subviews] indexOfObject:view];
     UIImage * stickerImage;
     if (index == -1) {
         stickerImage = [UIImage imageNamed:@""];

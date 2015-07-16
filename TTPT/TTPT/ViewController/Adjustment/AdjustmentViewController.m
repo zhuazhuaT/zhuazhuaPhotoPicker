@@ -8,7 +8,7 @@
 
 #import "AdjustmentViewController.h"
 #import "UIImage+Utility.h"
-#define slide_height  35
+#define slide_height  50
 @implementation AdjustmentViewController{
     UISlider *_actionSlider;
     FilterMode mode;
@@ -132,11 +132,11 @@
 
 - (UISlider*)sliderWithValue:(CGFloat)value minimumValue:(CGFloat)min maximumValue:(CGFloat)max action:(SEL)action
 {
-    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(10, 0, self.view.bounds.size.width - 20, slide_height)];
-    
+    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(30, 0, self.view.bounds.size.width - 60, slide_height)];
+    [slider setBackgroundColor:[UIColor clearColor]];
     UIView *container = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - bottom_height - slide_height, self.view.bounds.size.width, slide_height)];
     container.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
-    container.layer.cornerRadius = slide_height/2;
+//    container.layer.cornerRadius = slide_height/2;
     
     slider.continuous = YES;
     [slider addTarget:self action:action forControlEvents:UIControlEventValueChanged];
