@@ -242,7 +242,6 @@
 		2373E96F1B4E89B30081B33B /* ZDStickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9501B4E89B30081B33B /* ZDStickerView.m */; };
 		2373E9721B4E8A300081B33B /* StickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9711B4E8A300081B33B /* StickerView.m */; };
 		2373E9751B4E8AF30081B33B /* StickerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9741B4E8AF30081B33B /* StickerEditViewController.m */; };
-		791C2A4D1B564BF400F736AD /* PhotoCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 791C2A4C1B564BF400F736AD /* PhotoCropView.m */; };
 		791C2A501B564CA800F736AD /* CropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 791C2A4F1B564CA800F736AD /* CropViewController.m */; };
 		791C2A841B56956000F736AD /* i_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 791C2A521B56956000F736AD /* i_1.png */; };
 		791C2A851B56956000F736AD /* i_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 791C2A531B56956000F736AD /* i_10.png */; };
@@ -286,7 +285,7 @@
 		791C2AAB1B56956000F736AD /* s_22.png in Resources */ = {isa = PBXBuildFile; fileRef = 791C2A791B56956000F736AD /* s_22.png */; };
 		791C2AAC1B56956000F736AD /* s_23.png in Resources */ = {isa = PBXBuildFile; fileRef = 791C2A7A1B56956000F736AD /* s_23.png */; };
 		791C2AAD1B56956000F736AD /* s_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 791C2A7B1B56956000F736AD /* s_24.png */; };
-		791C2AAE1B56956000F736AD /* s_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 791C2A7C1B56956000F736AD /* s_0.png */; };
+		791C2AAE1B56956000F736AD /* s_0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 791C2A7C1B56956000F736AD /* s_0@2x.png */; };
 		791C2AAF1B56956000F736AD /* s_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 791C2A7D1B56956000F736AD /* s_3.png */; };
 		791C2AB01B56956000F736AD /* s_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 791C2A7E1B56956000F736AD /* s_4.png */; };
 		791C2AB11B56956000F736AD /* s_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 791C2A7F1B56956000F736AD /* s_5.png */; };
@@ -333,8 +332,6 @@
 		797525291B4F6894003D37C8 /* BaseWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525271B4F6894003D37C8 /* BaseWorkViewController.m */; };
 		7975252C1B4F6C04003D37C8 /* ToolbarMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975252B1B4F6C04003D37C8 /* ToolbarMenuItem.m */; };
 		7975252F1B4F6DA2003D37C8 /* ImageToolInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975252E1B4F6DA2003D37C8 /* ImageToolInfo.m */; };
-		7975253A1B4FA7B0003D37C8 /* ClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525391B4FA7B0003D37C8 /* ClipViewController.m */; };
-		797525451B4FA862003D37C8 /* PhotoClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525441B4FA862003D37C8 /* PhotoClipView.m */; };
 		7975254B1B4FA879003D37C8 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 797525481B4FA879003D37C8 /* UIImage+Utility.m */; };
 		7975254C1B4FA879003D37C8 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975254A1B4FA879003D37C8 /* UIView+Frame.m */; };
 		797525501B4FAF0D003D37C8 /* RotateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7975254F1B4FAF0D003D37C8 /* RotateViewController.m */; };
@@ -792,8 +789,6 @@
 		2373E9711B4E8A300081B33B /* StickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerView.m; sourceTree = "<group>"; };
 		2373E9731B4E8AF30081B33B /* StickerEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerEditViewController.h; sourceTree = "<group>"; };
 		2373E9741B4E8AF30081B33B /* StickerEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerEditViewController.m; sourceTree = "<group>"; };
-		791C2A4B1B564BF400F736AD /* PhotoCropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoCropView.h; path = Crop/CropView/PhotoCropView.h; sourceTree = "<group>"; };
-		791C2A4C1B564BF400F736AD /* PhotoCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoCropView.m; path = Crop/CropView/PhotoCropView.m; sourceTree = "<group>"; };
 		791C2A4E1B564CA800F736AD /* CropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CropViewController.h; path = Crop/CropViewController.h; sourceTree = "<group>"; };
 		791C2A4F1B564CA800F736AD /* CropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CropViewController.m; path = Crop/CropViewController.m; sourceTree = "<group>"; };
 		791C2A521B56956000F736AD /* i_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_1.png; sourceTree = "<group>"; };
@@ -838,7 +833,7 @@
 		791C2A791B56956000F736AD /* s_22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_22.png; sourceTree = "<group>"; };
 		791C2A7A1B56956000F736AD /* s_23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_23.png; sourceTree = "<group>"; };
 		791C2A7B1B56956000F736AD /* s_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_24.png; sourceTree = "<group>"; };
-		791C2A7C1B56956000F736AD /* s_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_0.png; sourceTree = "<group>"; };
+		791C2A7C1B56956000F736AD /* s_0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s_0@2x.png"; sourceTree = "<group>"; };
 		791C2A7D1B56956000F736AD /* s_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_3.png; sourceTree = "<group>"; };
 		791C2A7E1B56956000F736AD /* s_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_4.png; sourceTree = "<group>"; };
 		791C2A7F1B56956000F736AD /* s_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_5.png; sourceTree = "<group>"; };
@@ -910,10 +905,6 @@
 		7975252B1B4F6C04003D37C8 /* ToolbarMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarMenuItem.m; sourceTree = "<group>"; };
 		7975252D1B4F6DA2003D37C8 /* ImageToolInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageToolInfo.h; sourceTree = "<group>"; };
 		7975252E1B4F6DA2003D37C8 /* ImageToolInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageToolInfo.m; sourceTree = "<group>"; };
-		797525381B4FA7B0003D37C8 /* ClipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClipViewController.h; sourceTree = "<group>"; };
-		797525391B4FA7B0003D37C8 /* ClipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipViewController.m; sourceTree = "<group>"; };
-		797525431B4FA862003D37C8 /* PhotoClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoClipView.h; sourceTree = "<group>"; };
-		797525441B4FA862003D37C8 /* PhotoClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoClipView.m; sourceTree = "<group>"; };
 		797525471B4FA879003D37C8 /* UIImage+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utility.h"; sourceTree = "<group>"; };
 		797525481B4FA879003D37C8 /* UIImage+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
 		797525491B4FA879003D37C8 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
@@ -1472,20 +1463,10 @@
 		791C2A461B564BB300F736AD /* Crop */ = {
 			isa = PBXGroup;
 			children = (
-				791C2A4A1B564BC100F736AD /* CropView */,
 				791C2A4E1B564CA800F736AD /* CropViewController.h */,
 				791C2A4F1B564CA800F736AD /* CropViewController.m */,
 			);
 			name = Crop;
-			sourceTree = "<group>";
-		};
-		791C2A4A1B564BC100F736AD /* CropView */ = {
-			isa = PBXGroup;
-			children = (
-				791C2A4B1B564BF400F736AD /* PhotoCropView.h */,
-				791C2A4C1B564BF400F736AD /* PhotoCropView.m */,
-			);
-			name = CropView;
 			sourceTree = "<group>";
 		};
 		791C2A511B56956000F736AD /* frame */ = {
@@ -1533,7 +1514,7 @@
 				791C2A791B56956000F736AD /* s_22.png */,
 				791C2A7A1B56956000F736AD /* s_23.png */,
 				791C2A7B1B56956000F736AD /* s_24.png */,
-				791C2A7C1B56956000F736AD /* s_0.png */,
+				791C2A7C1B56956000F736AD /* s_0@2x.png */,
 				791C2A7D1B56956000F736AD /* s_3.png */,
 				791C2A7E1B56956000F736AD /* s_4.png */,
 				791C2A7F1B56956000F736AD /* s_5.png */,
@@ -1661,7 +1642,6 @@
 				797525751B511B2A003D37C8 /* Border */,
 				7975254D1B4FAE69003D37C8 /* Rotate */,
 				797525461B4FA879003D37C8 /* Util */,
-				797525371B4FA7B0003D37C8 /* Clip */,
 				797525231B4F6894003D37C8 /* Base */,
 				2373E9281B4E89B30081B33B /* Sticker */,
 				7975250E1B4E96F6003D37C8 /* Adjustment */,
@@ -1738,25 +1718,6 @@
 				7975252E1B4F6DA2003D37C8 /* ImageToolInfo.m */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		797525371B4FA7B0003D37C8 /* Clip */ = {
-			isa = PBXGroup;
-			children = (
-				797525421B4FA862003D37C8 /* ClipView */,
-				797525381B4FA7B0003D37C8 /* ClipViewController.h */,
-				797525391B4FA7B0003D37C8 /* ClipViewController.m */,
-			);
-			path = Clip;
-			sourceTree = "<group>";
-		};
-		797525421B4FA862003D37C8 /* ClipView */ = {
-			isa = PBXGroup;
-			children = (
-				797525431B4FA862003D37C8 /* PhotoClipView.h */,
-				797525441B4FA862003D37C8 /* PhotoClipView.m */,
-			);
-			path = ClipView;
 			sourceTree = "<group>";
 		};
 		797525461B4FA879003D37C8 /* Util */ = {
@@ -1923,7 +1884,7 @@
 				791C2A9F1B56956000F736AD /* s_11.png in Resources */,
 				23003FBA1B54C4A500CFA972 /* 9.jpg in Resources */,
 				791C2A921B56956000F736AD /* i_22.png in Resources */,
-				791C2AAE1B56956000F736AD /* s_0.png in Resources */,
+				791C2AAE1B56956000F736AD /* s_0@2x.png in Resources */,
 				2373E96E1B4E89B30081B33B /* ZDStickerView.bundle in Resources */,
 				23003FA31B54C4A500CFA972 /* 17.acv in Resources */,
 				23003FB11B54C4A500CFA972 /* 4@2x.jpg in Resources */,
@@ -2055,7 +2016,6 @@
 				230042221B54C52000CFA972 /* GPUImageMedianFilter.m in Sources */,
 				23003FBC1B54C4A500CFA972 /* FilterViewController.m in Sources */,
 				230042281B54C52000CFA972 /* GPUImageMovie.m in Sources */,
-				791C2A4D1B564BF400F736AD /* PhotoCropView.m in Sources */,
 				230042551B54C52000CFA972 /* GPUImageSwirlFilter.m in Sources */,
 				230042681B54C52000CFA972 /* GPUImageVoronoiConsumerFilter.m in Sources */,
 				2300425A1B54C52000CFA972 /* GPUImageThresholdedNonMaximumSuppressionFilter.m in Sources */,
@@ -2187,7 +2147,6 @@
 				797524901B4B8091003D37C8 /* TTPT.xcdatamodeld in Sources */,
 				230042421B54C52000CFA972 /* GPUImageRGBOpeningFilter.m in Sources */,
 				797525781B511B2A003D37C8 /* ZZBorderPickViewController.m in Sources */,
-				7975253A1B4FA7B0003D37C8 /* ClipViewController.m in Sources */,
 				230041DA1B54C52000CFA972 /* GPUImageBuffer.m in Sources */,
 				2300423A1B54C52000CFA972 /* GPUImagePosterizeFilter.m in Sources */,
 				797525501B4FAF0D003D37C8 /* RotateViewController.m in Sources */,
@@ -2230,7 +2189,6 @@
 				230042001B54C52000CFA972 /* GPUImageGaussianSelectiveBlurFilter.m in Sources */,
 				2300426E1B54C52000CFA972 /* module.modulemap in Sources */,
 				230041FE1B54C52000CFA972 /* GPUImageGaussianBlurFilter.m in Sources */,
-				797525451B4FA862003D37C8 /* PhotoClipView.m in Sources */,
 				230042431B54C52000CFA972 /* GPUImageSaturationBlendFilter.m in Sources */,
 				2300425B1B54C52000CFA972 /* GPUImageThresholdSketchFilter.m in Sources */,
 				23003FA01B54C4A500CFA972 /* FilterCollectionViewCell.m in Sources */,

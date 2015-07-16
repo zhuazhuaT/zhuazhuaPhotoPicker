@@ -12,7 +12,7 @@
 #import "StickerViewController.h"
 #import "StickerEditViewController.h"
 #import "AdjustmentViewController.h"
-#import "ClipViewController.h"
+//#import "ClipViewController.h"
 #import "FilterViewController.h"
 #import "RotateViewController.h"
 #import "CropViewController.h"
@@ -294,15 +294,15 @@
         [cropvc dismissViewControllerAnimated:YES completion:nil];
     }];
     [self presentViewController:cropvc animated:YES completion:nil];
-    return;
-    ClipViewController* clipvc = [[ClipViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition]];
-    [clipvc setFinish:^(UIImage *image) {
-        [self setNewImage:image];
-        [clipvc dismissViewControllerAnimated:YES completion:nil];
-    } Cancel:^{
-        [clipvc dismissViewControllerAnimated:YES completion:nil];
-    }];
-    [self presentViewController:clipvc animated:YES completion:nil];
+//    return;
+//    ClipViewController* clipvc = [[ClipViewController alloc] initWithImage:[self.photoArray objectAtIndex:self.currentPosition]];
+//    [clipvc setFinish:^(UIImage *image) {
+//        [self setNewImage:image];
+//        [clipvc dismissViewControllerAnimated:YES completion:nil];
+//    } Cancel:^{
+//        [clipvc dismissViewControllerAnimated:YES completion:nil];
+//    }];
+//    [self presentViewController:clipvc animated:YES completion:nil];
 }
 
 -(void)onFrame{

@@ -26,6 +26,7 @@
 @property (nonatomic,strong) UICollectionView* collectionview;
 
 @property (nonatomic,strong) NSArray* acv_array;
+@property(nonatomic, strong) NSArray *name_array;
 @property (nonatomic,strong) NSMutableArray* filterUnitArray;
 @end
 
@@ -34,15 +35,21 @@
 - (void)viewDidLoad {
     
     filter = [[GPUImageFilter alloc] init];
+    _name_array = @[@"原图",@"LOMO",@"湖水",@"淡雅",@"黑白",@"1970",@"哥特风",@"X",@"复古",@"暮光",];
     acv_array = @[@"crossprocess",@"02",@"17",@"aqua",@"yellow-red",@"06",@"purple-green"];
     NSInteger count = acv_array.count+3;
     
     filterUnitArray = [NSMutableArray new];
+    
     for (int i = 0; i < count; i++) {
+        if (i==7) {
+            continue;
+        }
+        
         FilterUnit* funit = [FilterUnit new];
         UIImage* image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg",i+1]];
         funit.image = image;
-        funit.title = [NSString stringWithFormat:@"title %d",i+1];
+        funit.title = self.name_array[i];
         [filterUnitArray addObject:funit];
     }
     
@@ -72,6 +79,10 @@
     self.collectionview.dataSource = self;
     [self.collectionview registerClass:[FilterCollectionViewCell class] forCellWithReuseIdentifier:cellid];
     [self.view addSubview:self.collectionview];
+    
+    NSIndexPath *ip=[NSIndexPath indexPathForRow:0 inSection:0];
+//    [self.collectionview selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionBottom];
+    [self.collectionview selectItemAtIndexPath:ip animated:YES scrollPosition:UICollectionViewScrollPositionBottom];
 }
 
 #pragma mark - UICollection delegate
@@ -144,13 +155,13 @@
         case 6: {
             filter = [[GPUImageToneCurveFilter alloc] initWithACV:@"aqua"];
         } break;
+//        case 7: {
+////            filter = [[GPUImageToneCurveFilter alloc] initWithACV:@"yellow-red"];
+//        } break;
         case 7: {
-            filter = [[GPUImageToneCurveFilter alloc] initWithACV:@"yellow-red"];
-        } break;
-        case 8: {
             filter = [[GPUImageToneCurveFilter alloc] initWithACV:@"06"];
         } break;
-        case 9: {
+        case 8: {
             filter = [[GPUImageToneCurveFilter alloc] initWithACV:@"purple-green"];
         } break;
         default:

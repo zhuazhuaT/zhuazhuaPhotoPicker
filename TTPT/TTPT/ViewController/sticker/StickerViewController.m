@@ -9,7 +9,7 @@
 #import "StickerViewController.h"
 #import "Sticker.h"
 #import "StickerCollectionViewCell.h"
-
+#import "UIView+Frame.h"
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 #define ScreenH [UIScreen mainScreen].bounds.size.height
 
@@ -24,6 +24,7 @@
 @interface StickerViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate>{
     NSInteger currentSection;
     BOOL scrollLock;
+    float collectitemwidth;
 }
 @property (nonatomic,strong) NSArray* categoryarray;
 @property (nonatomic,strong) NSArray* titlearray;
@@ -108,7 +109,12 @@
 }
 
 - (void)initStickers{
+    
+    collectitemwidth = (ScreenW - LeftMenuWidth - 4*space)/3;
+    
     self.collectview = [[UICollectionView alloc] initWithFrame:CGRectMake(LeftMenuWidth+space, TitleHeight+CategoryHeight,ScreenW - LeftMenuWidth-space*2 , ScreenH - TitleHeight-CategoryHeight) collectionViewLayout:[self collectionViewFlowLayout]];
+    
+    
     self.collectview.backgroundColor = [UIColor lightGrayColor];
     self.collectview.delegate = self;
     self.collectview.dataSource = self;
@@ -167,7 +173,7 @@
     
     portraitLayout.minimumInteritemSpacing = space;
     int cellTotalUsableWidth = [UIScreen mainScreen].bounds.size.width - 5*space;
-    portraitLayout.itemSize = CGSizeMake(90, 90);
+    portraitLayout.itemSize = CGSizeMake(collectitemwidth, collectitemwidth);
     portraitLayout.minimumLineSpacing = space;
     portraitLayout.headerReferenceSize = CGSizeMake(ScreenW, 10.f);
     return portraitLayout;

@@ -7,18 +7,20 @@
 //
 
 #import "FilterCollectionViewCell.h"
-#define length 80
-#define titleheight 30
+#define length 60
+#define titleheight 20
 @implementation FilterCollectionViewCell
 
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     float space = (frame.size.width - length)/2;
-    self.thumbimv = [[UIImageView alloc] initWithFrame:CGRectMake(space, space, length, length)];
+    self.thumbimv = [[UIImageView alloc] initWithFrame:CGRectMake(space, 5, length, length)];
     [self addSubview:self.thumbimv];
     
-    self.titlelabel = [[UILabel alloc] initWithFrame:CGRectMake(0, length + 2*space, frame.size.width, titleheight)];
+    self.titlelabel = [[UILabel alloc] initWithFrame:CGRectMake(0, length + 10, frame.size.width, titleheight)];
+    self.titlelabel.backgroundColor = [UIColor clearColor];
+    self.titlelabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:self.titlelabel];
     return self;
 }

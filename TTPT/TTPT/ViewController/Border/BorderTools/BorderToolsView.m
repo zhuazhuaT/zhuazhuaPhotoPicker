@@ -30,7 +30,7 @@
             NSString *fileNames = [NSString stringWithFormat:@"s_%d",i];
             [frameImagearray addObject:[UIImage imageNamed:fileNames]];
             
-            NSString *fileNameb =[NSString stringWithFormat:@"i_%d",i];
+            NSString *fileNameb =[NSString stringWithFormat:@"s_%d",i];
             [frameBigImagearray addObject:[UIImage imageNamed:fileNameb]];
             
         }

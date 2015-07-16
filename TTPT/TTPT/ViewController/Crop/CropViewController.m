@@ -209,6 +209,9 @@
         [bt addTarget:self action:@selector(onRate:) forControlEvents:UIControlEventTouchUpInside];
         [vbtn addSubview:bt];
         [toolview addSubview:vbtn];
+        if (i==1) {
+            [bt setSelected:YES];
+        }
         [self.btns addObject:bt];
     }
     
