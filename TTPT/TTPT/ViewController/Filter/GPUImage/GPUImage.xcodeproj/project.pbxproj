@@ -6,20 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		BC552B361558C6F4001F3FFA /* Documentation */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = BC552B371558C6F4001F3FFA /* Build configuration list for PBXAggregateTarget "Documentation" */;
-			buildPhases = (
-				BC552B3A1558C6FC001F3FFA /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = Documentation;
-			productName = Documentation;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		0DF3FA2B14FA00C9006AF7D9 /* GPUImageVignetteFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DF3FA2914FA00C9006AF7D9 /* GPUImageVignetteFilter.h */; };
 		0DF3FA2C14FA00C9006AF7D9 /* GPUImageVignetteFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF3FA2A14FA00C9006AF7D9 /* GPUImageVignetteFilter.m */; };
@@ -1926,7 +1912,6 @@
 			projectRoot = "";
 			targets = (
 				BCF1A33314DDB1EC00852800 /* GPUImage */,
-				BC552B361558C6F4001F3FFA /* Documentation */,
 				BCE209E41943F20C002FEED8 /* GPUImageFramework */,
 			);
 		};
@@ -1955,19 +1940,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\n# make a new output folder\nmkdir -p ${TARGET_BUILD_DIR}/../Universal\n\n# combine lib files for various platforms into one\nlipo -create \"${TARGET_BUILD_DIR}/../Debug-iphoneos/lib${PRODUCT_NAME}.framework\" \"${TARGET_BUILD_DIR}/../Debug-iphonesimulator/lib${PRODUCT_NAME}.framework\" -output \"${TARGET_BUILD_DIR}/../Universal/lib${PRODUCT_NAME}.framework\"";
-		};
-		BC552B3A1558C6FC001F3FFA /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# docsetutil was moved in Xcode 4.3\n# if you're using Xcode 4.2 or earlier, remove --docsetutil-path\n\"${APPLEDOC_PATH}\" \\\n--project-name \"GPUImage\" \\\n--project-company \"Sunset Lake Software\" \\\n--company-id \"com.sunsetlakesoftware\" \\\n--output \"${SOURCE_ROOT}/../documentation\" \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--create-html \\\n--install-docset \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--exit-threshold 9999 \\\n--clean-output \\\n--ignore .m \\\n--logformat xcode \\\n\"${SOURCE_ROOT}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2315,22 +2287,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		BC552B381558C6F4001F3FFA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLEDOC_PATH = /usr/local/bin/appledoc;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		BC552B391558C6F4001F3FFA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLEDOC_PATH = /usr/local/bin/appledoc;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		BCE209F91943F20D002FEED8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2514,15 +2470,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BC552B371558C6F4001F3FFA /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BC552B381558C6F4001F3FFA /* Debug */,
-				BC552B391558C6F4001F3FFA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		BCE209F81943F20D002FEED8 /* Build configuration list for PBXNativeTarget "GPUImageFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
