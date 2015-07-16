@@ -7,7 +7,7 @@
 //
 
 #import "BorderItemView.h"
-
+#import "UIView+Frame.h"
 @implementation BorderItemView
 -(UIImageView *)stickerImageView{
     if (!_stickerImageView) {
@@ -20,7 +20,13 @@
 
 -(UIImageView *)selectedView{
     if (!_selectedView) {
-        _selectedView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon_frame_select.png"]];
+        CGFloat top =30; // 顶端盖高度
+        CGFloat bottom = 30; // 底端盖高度
+        CGFloat left = 30; // 左端盖宽度
+        CGFloat right = 30; // 右端盖宽度
+        UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right);
+        UIImage *img = [[UIImage imageNamed:@"icon_frame_select.png"] resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
+        _selectedView = [[UIImageView alloc]initWithImage:img];
         [_selectedView setBackgroundColor:[UIColor clearColor]];
     }
     return _selectedView;

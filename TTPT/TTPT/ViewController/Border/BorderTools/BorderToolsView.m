@@ -52,7 +52,10 @@
     if (index == -1) {
         stickerImage = [UIImage imageNamed:@""];
     }else{
+        
         stickerImage = frameBigImagearray[index];
+        
+        
     }
     for (BorderItemView * sticker in self.subviews) {
         if ([sticker isEqual:view]) {

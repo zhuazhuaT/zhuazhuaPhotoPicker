@@ -8,6 +8,7 @@
 
 #import "ZZBorderPickViewController.h"
 #import "UIView+Frame.h"
+
 @implementation ZZBorderPickViewController{
     UIImageView *frameView;
 }
@@ -59,6 +60,13 @@
     
     _borderToolsView = [[BorderToolsView alloc ]initWithFrame:CGRectMake(0, self.view.bounds.size.height - 50 - STICKERITEM_HEIGHT, self.view.bounds.size.width,STICKERITEM_HEIGHT)];
     [_borderToolsView setSelectBlock:^(UIImage *image){
+        // 左端盖宽度
+        CGFloat top = 340; // 顶端盖高度
+        CGFloat bottom = 340; // 底端盖高度
+        CGFloat left = 340; // 左端盖宽度
+        CGFloat right = 340; // 右端盖宽度
+        UIEdgeInsets insets = UIEdgeInsetsMake(top, left, bottom, right);
+        image = [image resizableImageWithCapInsets:insets resizingMode:UIImageResizingModeStretch];
         [frameView setImage:image];
     }];
     [self.view addSubview:_borderToolsView];
