@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ZZEditPhotoViewController.h"
+#import "EditPhotoViewController.h"
 #import "XPhotoPicker.h"
 
 @interface ViewController ()
@@ -35,7 +35,7 @@
     
     XPhotoPicker *xpp = [[XPhotoPicker alloc] initWithViewController:self
                                                                 onOK:^(NSArray *assets) {
-        ZZEditPhotoViewController *zzpvc = [[ZZEditPhotoViewController alloc] init];
+        EditPhotoViewController *zzpvc = [[EditPhotoViewController alloc] init];
         [zzpvc setMyPhotoArray:assets];
         [zzpvc setEditedPhotoBlock:^(NSArray *photoArray){
             

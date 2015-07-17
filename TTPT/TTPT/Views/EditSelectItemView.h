@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 typedef void (^OnClickButton)(NSInteger position);
-@interface ZZEditSelectItemView : UIView{
+@interface EditSelectItemView : UIView{
     OnClickButton onClickButtonBlock;
 }
 //@property(nonatomic,strong)UIButton * button1;

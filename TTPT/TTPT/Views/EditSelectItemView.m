@@ -6,13 +6,13 @@
 //  Copyright (c) 2015年 Quan. All rights reserved.
 //
 
-#import "ZZEditSelectItemView.h"
+#import "EditSelectItemView.h"
 #import "ButtonView.h"
-@interface ZZEditSelectItemView()
+@interface EditSelectItemView()
 @property(nonatomic,strong)UIImageView * backGroundImageView;
 @end
 
-@implementation ZZEditSelectItemView
+@implementation EditSelectItemView
 
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];

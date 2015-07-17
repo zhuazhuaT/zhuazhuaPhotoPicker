@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 Quan. All rights reserved.
 //
 
-#import "ZZEditPhotoViewController.h"
+#import "EditPhotoViewController.h"
 #import "PhotoCollectionCell.h"
 #import "XPhotoPicker.h"
 #import "StickerViewController.h"
@@ -20,7 +20,7 @@
 #define MAX_COUNT  9
 #define ADJUSTMENT_HEIGHT 80
 #define BOTTOM_HEIGHT    70
-@implementation ZZEditPhotoViewController{
+@implementation EditPhotoViewController{
     NSMutableArray *selectArray;
     NSMutableArray *delArray;
 }
@@ -87,9 +87,9 @@
     return _buttonImages;
 }
 
--(ZZEditSelectItemView *)editSelectItem{
+-(EditSelectItemView *)editSelectItem{
     if(!_editSelectItem){
-        _editSelectItem = [[ZZEditSelectItemView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height - BOTTOM_HEIGHT, self.view.bounds.size.width,BOTTOM_HEIGHT)];
+        _editSelectItem = [[EditSelectItemView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height - BOTTOM_HEIGHT, self.view.bounds.size.width,BOTTOM_HEIGHT)];
         [_editSelectItem setOnClickButtonBlock:^(NSInteger position) {
             [self selectButton:position];
         }];

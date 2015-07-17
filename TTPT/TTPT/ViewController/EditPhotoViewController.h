@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "ZZBorderPickViewController.h"
-#import "ZZEditSelectItemView.h"
+#import "EditSelectItemView.h"
 #import "AdjustToolsView.h"
 typedef void  (^ReturnEditedPhotos)(NSArray *photoArray);
-@interface ZZEditPhotoViewController : UIViewController<UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UICollectionViewDelegate>
+@interface EditPhotoViewController : UIViewController<UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UICollectionViewDelegate>
 
 //@property(strong, nonatomic) UIImage *currentImage;//当前编辑的视图
 @property NSInteger currentPosition;//当前编辑的视图编号
@@ -23,7 +23,7 @@ typedef void  (^ReturnEditedPhotos)(NSArray *photoArray);
 @property(nonatomic,strong)UIImageView * imageView;//编辑图ImageView
 
 @property(nonatomic,strong)UIImageView * imageSticker;//边框
-@property(nonatomic,strong)ZZEditSelectItemView * editSelectItem;//选项卡
+@property(nonatomic,strong)EditSelectItemView * editSelectItem;//选项卡
 @property(nonatomic,strong)AdjustToolsView *adjustView;
 @property(nonatomic)NSInteger selectedItemIndex;//选择的
 

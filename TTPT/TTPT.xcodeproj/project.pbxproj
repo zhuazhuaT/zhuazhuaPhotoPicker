@@ -307,9 +307,9 @@
 		797524961B4B8091003D37C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 797524941B4B8091003D37C8 /* Main.storyboard */; };
 		797524981B4B8091003D37C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 797524971B4B8091003D37C8 /* Images.xcassets */; };
 		7975249B1B4B8091003D37C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 797524991B4B8091003D37C8 /* LaunchScreen.xib */; };
-		797524C11B4BB246003D37C8 /* ZZEditSelectItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524C01B4BB246003D37C8 /* ZZEditSelectItemView.m */; };
+		797524C11B4BB246003D37C8 /* EditSelectItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524C01B4BB246003D37C8 /* EditSelectItemView.m */; };
 		797524C81B4BC176003D37C8 /* icon_frame_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 797524C71B4BC176003D37C8 /* icon_frame_select.png */; };
-		797524D31B4BD52B003D37C8 /* ZZEditPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524D21B4BD52B003D37C8 /* ZZEditPhotoViewController.m */; };
+		797524D31B4BD52B003D37C8 /* EditPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524D21B4BD52B003D37C8 /* EditPhotoViewController.m */; };
 		797524E81B4CFCF7003D37C8 /* AlbumListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524D61B4CFCF7003D37C8 /* AlbumListViewController.m */; };
 		797524E91B4CFCF7003D37C8 /* AlbumTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524D81B4CFCF7003D37C8 /* AlbumTableviewCell.m */; };
 		797524EA1B4CFCF7003D37C8 /* SelectPhotoAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 797524DB1B4CFCF7003D37C8 /* SelectPhotoAssets.m */; };
@@ -852,11 +852,11 @@
 		7975249A1B4B8091003D37C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		797524A51B4B8091003D37C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		797524A61B4B8091003D37C8 /* TTPTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTPTTests.m; sourceTree = "<group>"; };
-		797524BF1B4BB246003D37C8 /* ZZEditSelectItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZEditSelectItemView.h; sourceTree = "<group>"; };
-		797524C01B4BB246003D37C8 /* ZZEditSelectItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZEditSelectItemView.m; sourceTree = "<group>"; };
+		797524BF1B4BB246003D37C8 /* EditSelectItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSelectItemView.h; sourceTree = "<group>"; };
+		797524C01B4BB246003D37C8 /* EditSelectItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditSelectItemView.m; sourceTree = "<group>"; };
 		797524C71B4BC176003D37C8 /* icon_frame_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_frame_select.png; sourceTree = "<group>"; };
-		797524D11B4BD52B003D37C8 /* ZZEditPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZEditPhotoViewController.h; sourceTree = "<group>"; };
-		797524D21B4BD52B003D37C8 /* ZZEditPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZEditPhotoViewController.m; sourceTree = "<group>"; };
+		797524D11B4BD52B003D37C8 /* EditPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPhotoViewController.h; sourceTree = "<group>"; };
+		797524D21B4BD52B003D37C8 /* EditPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPhotoViewController.m; sourceTree = "<group>"; };
 		797524D51B4CFCF7003D37C8 /* AlbumListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumListViewController.h; sourceTree = "<group>"; };
 		797524D61B4CFCF7003D37C8 /* AlbumListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumListViewController.m; sourceTree = "<group>"; };
 		797524D71B4CFCF7003D37C8 /* AlbumTableviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumTableviewCell.h; sourceTree = "<group>"; };
@@ -1598,8 +1598,8 @@
 			children = (
 				794D7B4F1B54E87F0008F588 /* ButtonView.h */,
 				794D7B501B54E87F0008F588 /* ButtonView.m */,
-				797524BF1B4BB246003D37C8 /* ZZEditSelectItemView.h */,
-				797524C01B4BB246003D37C8 /* ZZEditSelectItemView.m */,
+				797524BF1B4BB246003D37C8 /* EditSelectItemView.h */,
+				797524C01B4BB246003D37C8 /* EditSelectItemView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1617,8 +1617,8 @@
 				7975250E1B4E96F6003D37C8 /* Adjustment */,
 				797524F11B4D2E12003D37C8 /* PhotoCollectionCell.h */,
 				797524F21B4D2E12003D37C8 /* PhotoCollectionCell.m */,
-				797524D11B4BD52B003D37C8 /* ZZEditPhotoViewController.h */,
-				797524D21B4BD52B003D37C8 /* ZZEditPhotoViewController.m */,
+				797524D11B4BD52B003D37C8 /* EditPhotoViewController.h */,
+				797524D21B4BD52B003D37C8 /* EditPhotoViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2014,7 +2014,7 @@
 				2300424A1B54C52000CFA972 /* GPUImageSketchFilter.m in Sources */,
 				23003F9F1B54C4A500CFA972 /* DLCGrayscaleContrastFilter.m in Sources */,
 				230042321B54C52000CFA972 /* GPUImageParallelCoordinateLineTransformFilter.m in Sources */,
-				797524D31B4BD52B003D37C8 /* ZZEditPhotoViewController.m in Sources */,
+				797524D31B4BD52B003D37C8 /* EditPhotoViewController.m in Sources */,
 				230042571B54C52000CFA972 /* GPUImageTextureOutput.m in Sources */,
 				230042701B54C52000CFA972 /* GPUImageMovieWriter.m in Sources */,
 				230041F11B54C52000CFA972 /* GPUImageDivideBlendFilter.m in Sources */,
@@ -2056,7 +2056,7 @@
 				230042301B54C52000CFA972 /* GPUImageOutput.m in Sources */,
 				230042291B54C52000CFA972 /* GPUImageMovieComposition.m in Sources */,
 				2373E9751B4E8AF30081B33B /* StickerEditViewController.m in Sources */,
-				797524C11B4BB246003D37C8 /* ZZEditSelectItemView.m in Sources */,
+				797524C11B4BB246003D37C8 /* EditSelectItemView.m in Sources */,
 				2300420B1B54C52000CFA972 /* GPUImageHistogramGenerator.m in Sources */,
 				230041D71B54C52000CFA972 /* GPUImageBilateralFilter.m in Sources */,
 				230042691B54C52000CFA972 /* GPUImageWeakPixelInclusionFilter.m in Sources */,
