@@ -173,7 +173,6 @@
         
     }
     
-	
     GLint backingWidth, backingHeight;
 
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &backingWidth);

@@ -47,8 +47,12 @@
 }
 
 -(void)layoutSubviews{
-    [self.stickerImageView setFrame:self.bounds];
-    [self.selectedView setFrame:self.bounds];
+    float w = self.width;
+    float h = self.height;
+    float space = 8;
+    
+    [self.stickerImageView setFrame:CGRectMake(space, space, w - space*2, h - space*2)];
+    [self.selectedView setFrame:self.stickerImageView.frame];
     if (self.isSelected) {
         [self.selectedView setHidden:NO];
     }else{

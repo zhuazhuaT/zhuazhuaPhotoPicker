@@ -89,7 +89,7 @@ static NSString* const kCLRotateToolFlipVerticalIconName = @"flipVerticalIconAss
     [btn3 setTitle:@"水平翻转"];
     [btn4 setTitle:@"垂直翻转"];
     
-    [btn1 setIconString:@"\U0000e64e"];
+    [btn1 setIconString:@"\U0000e658"];
     [btn2 setIconString:@"\U0000e64e"];
     [btn3 setIconString:@"\U0000e652"];
     [btn4 setIconString:@"\U0000e657"];
