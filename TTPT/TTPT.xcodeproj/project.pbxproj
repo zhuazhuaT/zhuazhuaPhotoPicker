@@ -208,7 +208,6 @@
 		230042711B54C52000CFA972 /* GPUImagePicture+TextureSubimage.m in Sources */ = {isa = PBXBuildFile; fileRef = 230041C41B54C52000CFA972 /* GPUImagePicture+TextureSubimage.m */; };
 		230042721B54C52000CFA972 /* GPUImagePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 230041C61B54C52000CFA972 /* GPUImagePicture.m */; };
 		230042731B54C52000CFA972 /* GPUImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 230041C81B54C52000CFA972 /* GPUImageView.m */; };
-		2373E9231B4E52180081B33B /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 2373E9221B4E52180081B33B /* UIActionSheet+Blocks.m */; };
 		2373E9511B4E89B30081B33B /* emoji0.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E92A1B4E89B30081B33B /* emoji0.png */; };
 		2373E9521B4E89B30081B33B /* emoji1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E92B1B4E89B30081B33B /* emoji1.png */; };
 		2373E9531B4E89B30081B33B /* emoji10.png in Resources */ = {isa = PBXBuildFile; fileRef = 2373E92C1B4E89B30081B33B /* emoji10.png */; };
@@ -736,8 +735,6 @@
 		230041C61B54C52000CFA972 /* GPUImagePicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImagePicture.m; sourceTree = "<group>"; };
 		230041C71B54C52000CFA972 /* GPUImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageView.h; sourceTree = "<group>"; };
 		230041C81B54C52000CFA972 /* GPUImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageView.m; sourceTree = "<group>"; };
-		2373E9211B4E52180081B33B /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
-		2373E9221B4E52180081B33B /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
 		2373E92A1B4E89B30081B33B /* emoji0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji0.png; sourceTree = "<group>"; };
 		2373E92B1B4E89B30081B33B /* emoji1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji1.png; sourceTree = "<group>"; };
 		2373E92C1B4E89B30081B33B /* emoji10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji10.png; sourceTree = "<group>"; };
@@ -1358,15 +1355,6 @@
 			path = Framework;
 			sourceTree = "<group>";
 		};
-		2373E9201B4E52180081B33B /* ActionSheetBlock */ = {
-			isa = PBXGroup;
-			children = (
-				2373E9211B4E52180081B33B /* UIActionSheet+Blocks.h */,
-				2373E9221B4E52180081B33B /* UIActionSheet+Blocks.m */,
-			);
-			path = ActionSheetBlock;
-			sourceTree = "<group>";
-		};
 		2373E9281B4E89B30081B33B /* Sticker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1543,7 +1531,6 @@
 				797524D41B4CFCF7003D37C8 /* XPhotoPicker */,
 				797524BE1B4BB1BE003D37C8 /* Views */,
 				797524B11B4BAF62003D37C8 /* Resource */,
-				2373E9201B4E52180081B33B /* ActionSheetBlock */,
 				7975248B1B4B8091003D37C8 /* AppDelegate.h */,
 				7975248C1B4B8091003D37C8 /* AppDelegate.m */,
 				797524911B4B8091003D37C8 /* ViewController.h */,
@@ -2110,7 +2097,6 @@
 				797525501B4FAF0D003D37C8 /* RotateViewController.m in Sources */,
 				2300421A1B54C52000CFA972 /* GPUImageLocalBinaryPatternFilter.m in Sources */,
 				230042011B54C52000CFA972 /* GPUImageGlassSphereFilter.m in Sources */,
-				2373E9231B4E52180081B33B /* UIActionSheet+Blocks.m in Sources */,
 				230042091B54C52000CFA972 /* GPUImageHistogramEqualizationFilter.m in Sources */,
 				230041DB1B54C52000CFA972 /* GPUImageBulgeDistortionFilter.m in Sources */,
 				230041CE1B54C52000CFA972 /* GLProgram.m in Sources */,

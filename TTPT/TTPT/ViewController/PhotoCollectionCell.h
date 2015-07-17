@@ -15,7 +15,7 @@ typedef void (^OnClickDel)(int position);
 @property (assign) int position;
 @property (strong, nonatomic) UIImageView *img;
 @property (strong, nonatomic) UIView *imgBg;
-@property (strong, nonatomic) UIImageView *i_del;
+@property (strong, nonatomic) UILabel *i_del;
 @property (strong, nonatomic) UIImageView *i_finish;
 @property (strong, nonatomic) OnLongPress onLongPress;
 @property (strong, nonatomic) OnClickDel onClickDel;

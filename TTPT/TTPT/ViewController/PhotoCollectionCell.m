@@ -14,8 +14,13 @@
     if (self) {
 //        self.clipsToBounds = YES;
         isCanLongPress = YES;
+        
         _img = [[UIImageView alloc] initWithFrame:CGRectMake(2, 5, 58, 58)];
-        _i_del = [[UIImageView alloc] initWithFrame:CGRectMake(51, 0, 15, 15)];
+        _i_del = [[UILabel alloc] initWithFrame:CGRectMake(51, 0, 15, 15)];
+        UIFont *font = [UIFont fontWithName:@"iconfont" size:15];
+        [_i_del setFont:font];
+        [_i_del setText:@"\U0000e641"];
+        [_i_del setClipsToBounds:YES];
         _i_del.layer.cornerRadius = 7.5;
         _i_del.backgroundColor = [UIColor orangeColor];
         _imgBg = [[UIImageView alloc] initWithFrame:_img.frame];
