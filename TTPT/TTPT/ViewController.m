@@ -41,8 +41,7 @@
             
         }];
         [self.navigationController pushViewController:zzpvc animated:YES];
-    }
-                                                            onCancel:^{
+    } onCancel:^{
         
     }];
     xpp.maxCount = 9;

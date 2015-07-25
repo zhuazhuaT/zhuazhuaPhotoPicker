@@ -8,6 +8,7 @@
 
 #import "StickerEditViewController.h"
 #import "WorkView.h"
+#import "StickerViewController.h"
 @interface StickerEditViewController ()
 @property (nonatomic,strong) WorkView* workview;
 @end
@@ -17,6 +18,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"X"
+                                                                              style:UIBarButtonItemStyleDone
+                                                                             target:self
+                                                                             action:@selector(onpickStricker)];
+    float w = 160;
+    float h = bottom_height;
+    UIButton *btn_pick = [[UIButton alloc] initWithFrame:CGRectMake((self.bottomView.frame.size.width - w)/2, 0, w, h)];
+    [btn_pick addTarget:self action:@selector(onpickStricker) forControlEvents:UIControlEventTouchUpInside];
+    [btn_pick setTitle:@"贴纸" forState:UIControlStateNormal];
+    [self.bottomView addSubview:btn_pick];
+}
+
+-(void) onpickStricker{
+    StickerViewController* stickervc = [[StickerViewController alloc] init];
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:stickervc];
+    [stickervc setSelectBlock:^(Sticker *sticker) {
+        [nav dismissViewControllerAnimated:YES completion:nil];
+        [self.workview addSticker:sticker];
+        
+    }];
+    
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (instancetype)initWithImage:(UIImage*)image

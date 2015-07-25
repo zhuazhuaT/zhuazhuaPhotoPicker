@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class Sticker;
-@interface WorkView : UIView
+@interface WorkView : UIView<UIGestureRecognizerDelegate>
 - (BOOL)hasImage;
 - (void)setBaseImage:(UIImage *)baseImage;
 

@@ -7,7 +7,7 @@
 
 #import "ZDStickerView.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import "UIView+Frame.h"
 #define kSPUserResizableViewGlobalInset 5.0
 #define kSPUserResizableViewDefaultMinWidth 48.0
 #define kSPUserResizableViewInteractiveBorderSize 10.0
@@ -24,8 +24,9 @@
 
 @property (nonatomic) float deltaAngle;
 @property (nonatomic) CGPoint prevPoint;
+@property (nonatomic) CGFloat preScale;
 @property (nonatomic) CGAffineTransform startTransform;
-
+@property (nonatomic) NSInteger flipState1;
 @property (nonatomic) CGPoint touchStart;
 
 @end
@@ -34,6 +35,7 @@
 @synthesize contentView, touchStart;
 
 @synthesize prevPoint;
+@synthesize preScale;
 @synthesize deltaAngle, startTransform; //rotation
 @synthesize resizingControl, deleteControl, customControl;
 @synthesize preventsPositionOutsideSuperview;
@@ -41,7 +43,7 @@
 @synthesize preventsDeleting;
 @synthesize preventsCustomButton;
 @synthesize minWidth, minHeight;
-
+@synthesize flipState1 = _flipState1;
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -50,7 +52,38 @@
     // Drawing code
 }
 */
+- (CATransform3D)rotateTransform:(CATransform3D)initialTransform clockwise:(BOOL)clockwise
+{
+    _flipState1 = (_flipState1==0) ? 1 : 0;
+    CGFloat arg = 0*M_PI;
+    if(!clockwise){
+        arg *= -1;
+    }
+    
+    CATransform3D transform = initialTransform;
+    transform = CATransform3DRotate(transform, arg, 0, 0, 1);
+    transform = CATransform3DRotate(transform, _flipState1*M_PI, 0, 1, 0);
+    transform = CATransform3DRotate(transform, 0*M_PI, 1, 0, 0);
+    
+    return transform;
+}
 
+- (void)rotateStateDidChange
+{
+    CATransform3D transform = [self rotateTransform:CATransform3DIdentity clockwise:YES];
+    
+    CGFloat arg = 0*M_PI;
+    CGFloat Wnew = fabs(self.frame.size.width * cos(arg)) + fabs(self.frame.size.height * sin(arg));
+    CGFloat Hnew = fabs(self.frame.size.width * sin(arg)) + fabs(self.frame.size.height * cos(arg));
+    
+    CGFloat Rw = self.frame.size.width / Wnew;
+    CGFloat Rh = self.frame.size.height / Hnew;
+    CGFloat scale = MIN(Rw, Rh) * 1;
+    
+    transform = CATransform3DScale(transform, scale, scale, 1);
+    contentView.layer.transform = transform;
+    
+}
 #ifdef ZDSTICKERVIEW_LONGPRESS
 -(void)longPress:(UIPanGestureRecognizer *)recognizer
 {
@@ -65,6 +98,7 @@
 -(void)singleTap:(UIPanGestureRecognizer *)recognizer
 {
     if (NO == self.preventsDeleting) {
+//        [self rotateStateDidChange];
         UIView * close = (UIView *)[recognizer view];
         [close.superview removeFromSuperview];
     }
@@ -77,9 +111,11 @@
 -(void)customTap:(UIPanGestureRecognizer *)recognizer
 {
     if (NO == self.preventsCustomButton) {
-        if([_delegate respondsToSelector:@selector(stickerViewDidCustomButtonTap:)]) {
-            [_delegate stickerViewDidCustomButtonTap:self];
-        }
+        [self rotateStateDidChange];
+    }
+    
+    if([_delegate respondsToSelector:@selector(stickerViewDidCustomButtonTap:)]) {
+        [_delegate stickerViewDidCustomButtonTap:self];
     }
 }
 
@@ -174,6 +210,84 @@
     }
 }
 
+-(void)handlePinch:(UIPinchGestureRecognizer *)recognizer
+{
+    
+    if ([recognizer state] == UIGestureRecognizerStateChanged){
+        if (self.bounds.size.width < minWidth || self.bounds.size.height < minHeight)
+        {
+            self.bounds = CGRectMake(self.bounds.origin.x,
+                                     self.bounds.origin.y,
+                                     minWidth+1,
+                                     minHeight+1);
+            resizingControl.frame =CGRectMake(self.bounds.size.width-kZDStickerViewControlSize,
+                                              self.bounds.size.height-kZDStickerViewControlSize,
+                                              kZDStickerViewControlSize,
+                                              kZDStickerViewControlSize);
+            deleteControl.frame = CGRectMake(0, 0,
+                                             kZDStickerViewControlSize, kZDStickerViewControlSize);
+            customControl.frame =CGRectMake(self.bounds.size.width-kZDStickerViewControlSize,
+                                            0,
+                                            kZDStickerViewControlSize,
+                                            kZDStickerViewControlSize);
+            preScale = recognizer.scale;
+            
+        } else {
+            float scale = recognizer.scale;
+            float wChange = 0.0, hChange = 0.0;
+            
+            wChange = self.width * (scale - preScale);
+            hChange = self.height * (scale - preScale);
+            
+            if (ABS(wChange) > 20.0f || ABS(hChange) > 20.0f) {
+                
+                preScale = recognizer.scale;
+                return;
+            }
+            
+            if (YES == self.preventsLayoutWhileResizing) {
+                if (wChange < 0.0f && hChange < 0.0f) {
+                    float change = MIN(wChange, hChange);
+                    wChange = change;
+                    hChange = change;
+                }
+                if (wChange < 0.0f) {
+                    hChange = wChange;
+                } else if (hChange < 0.0f) {
+                    wChange = hChange;
+                } else {
+                    float change = MAX(wChange, hChange);
+                    wChange = change;
+                    hChange = change;
+                }
+            }
+            
+            self.bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y,
+                                     self.bounds.size.width + (wChange),
+                                     self.bounds.size.height + (hChange));
+            resizingControl.frame =CGRectMake(self.bounds.size.width-kZDStickerViewControlSize,
+                                              self.bounds.size.height-kZDStickerViewControlSize,
+                                              kZDStickerViewControlSize, kZDStickerViewControlSize);
+            deleteControl.frame = CGRectMake(0, 0,
+                                             kZDStickerViewControlSize, kZDStickerViewControlSize);
+            customControl.frame =CGRectMake(self.bounds.size.width-kZDStickerViewControlSize,
+                                            0,
+                                            kZDStickerViewControlSize,
+                                            kZDStickerViewControlSize);
+            
+        }
+        
+        borderView.frame = CGRectInset(self.bounds, kSPUserResizableViewGlobalInset, kSPUserResizableViewGlobalInset);
+        [borderView setNeedsDisplay];
+        
+        [self setNeedsDisplay];
+        
+    }else if ([recognizer state] == UIGestureRecognizerStateEnded){
+        
+    }
+    
+}
+
 - (void)setupDefaultAttributes {
     borderView = [[SPGripViewBorderView alloc] initWithFrame:CGRectInset(self.bounds, kSPUserResizableViewGlobalInset, kSPUserResizableViewGlobalInset)];
     [borderView setHidden:YES];
@@ -186,11 +300,14 @@
         self.minWidth = self.bounds.size.width*0.5;
         self.minHeight = self.bounds.size.height*0.5;
     }
-    self.preventsPositionOutsideSuperview = YES;
+    self.preventsPositionOutsideSuperview = NO;
     self.preventsLayoutWhileResizing = YES;
     self.preventsResizing = NO;
     self.preventsDeleting = NO;
     self.preventsCustomButton = YES;
+    
+    UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(handlePinch:)];
+    [self addGestureRecognizer:pinchGestureRecognizer];
 #ifdef ZDSTICKERVIEW_LONGPRESS
     UILongPressGestureRecognizer* longpress = [[UILongPressGestureRecognizer alloc]
                                                initWithTarget:self
@@ -200,7 +317,7 @@
     deleteControl = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0,
                                                                  kZDStickerViewControlSize, kZDStickerViewControlSize)];
     deleteControl.backgroundColor = [UIColor clearColor];
-    deleteControl.image = [UIImage imageNamed:@"ZDStickerView.bundle/ZDBtn3.png" ];
+    deleteControl.image = [UIImage imageNamed:@"ZDStickerView.bundle/zd_btnrotate.png" ];
     deleteControl.userInteractionEnabled = YES;
     UITapGestureRecognizer * singleTap = [[UITapGestureRecognizer alloc]
                                           initWithTarget:self
@@ -213,7 +330,7 @@
                                                                    kZDStickerViewControlSize, kZDStickerViewControlSize)];
     resizingControl.backgroundColor = [UIColor clearColor];
     resizingControl.userInteractionEnabled = YES;
-    resizingControl.image = [UIImage imageNamed:@"ZDStickerView.bundle/ZDBtn2.png.png" ];
+    resizingControl.image = [UIImage imageNamed:@"ZDStickerView.bundle/zd_btnscale.png" ];
     UIPanGestureRecognizer* panResizeGesture = [[UIPanGestureRecognizer alloc]
                                                 initWithTarget:self
                                                 action:@selector(resizeTranslate:)];
@@ -225,7 +342,7 @@
                                                                    kZDStickerViewControlSize, kZDStickerViewControlSize)];
     customControl.backgroundColor = [UIColor clearColor];
     customControl.userInteractionEnabled = YES;
-    customControl.image = nil;
+    customControl.image = [UIImage imageNamed:@"ZDStickerView.bundle/zd_btnrotate.png" ];
     UITapGestureRecognizer * customTapGesture = [[UITapGestureRecognizer alloc]
                                           initWithTarget:self
                                           action:@selector(customTap:)];
